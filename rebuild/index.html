@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta name="description" content="Graphic designer. Photographer/photojournalist. Competitive fencer. Professional referee.">
+    <meta name="author" content="Jonathan Alumbaugh">
+
+    <title>Jonathan Alumbaugh</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/isotope.css" rel="stylesheet">
+    <link href="css/vue.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900" rel="stylesheet">
+
+    <!-- Temporary navbar container fix -->
+    <style>
+      .navbar-toggler {
+        z-index: 1;
+      }
+      @media (max-width: 576px) {
+        nav > .container {
+          width: 100%;
+        }
+      }
+
+    </style>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      { "@context": "http://schema.org", "@type": "Person", "image": "http://www.jonathanalumbaugh.com/avatar.JPG", "name": "Jonathan Alumbaugh", "url": "http://www.jonathanalumbaugh.com", "alumniOf": "University of Massachusetts Dartmouth", "height": "6
+      ft 3 in ", " description ": "A New England native with an education in photojournalism and graphic design. He’s interested in promoting community through design.", " sameAs ": [ " http: //www.linkedin.com/in/jonathanalumbaugh",
+      "http://instagram.com/jonathan_alumbaugh", "http://www.facebook.com/jonathan.alumbaugh" ] }
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        },
+        i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-46345049-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </head>
+
+  <body>
+
+    <!-- Page Content -->
+
+    <div id="main-vue" class="container">
+
+      <!-- Header -->
+      <vue-header></vue-header>
+      <!-- Navigation -->
+      <vue-nav></vue-nav>
+
+      <transition appear>
+        <!-- Intro -->
+        <vue-t>Jonathan is</vue-t>
+      </transition>
+      <vue-tt>A
+
+      </vue-tt>
+
+      <!-- Sort -->
+      <vue-sort></vue-sort>
+      <!-- Grid -->
+      <vue-grid>
+        <vue-grid-item name="senior project" category="design"></vue-grid-item>
+
+        <vue-grid-item name="patterns" category="photography"></vue-grid-item>
+
+        <vue-grid-item name="exhibition catalog" category="design"></vue-grid-item>
+
+        <vue-grid-item name="human interest" category="photojournalism"></vue-grid-item>
+
+        <vue-grid-item name="STING vodka branding" category="design"></vue-grid-item>
+
+        <vue-grid-item name="instagram" category="photography"></vue-grid-item>
+
+        <vue-grid-item name="Benoit golf tournament" category="design"></vue-grid-item>
+
+        <vue-grid-item name="multimedia fun" category="multimedia"></vue-grid-item>
+      </vue-grid>
+
+      <!-- Under construction -->
+      <vue-grid v-if="false">
+        <vue-grid-item name="film" category="photography"></vue-grid-item>
+
+        <vue-grid-item name="black and white" category="photography"></vue-grid-item>
+
+        <vue-grid-item name="more photojournalism" category="photojournalism"></vue-grid-item>
+      </vue-grid>
+
+      <!-- WIP -->
+      <vue-t>right now Jonathan is working on</vue-t>
+      <vue-wip name="Simmons Mill Pond signage" category="design"></vue-wip>
+
+      <!-- Info -->
+      <vue-t>and in his spare time he's</vue-t>
+      <vue-tt>Learning Vue.js and rebuilding this website with it. He plans on learning and implementing Nuxt.js, and maybe React.js after that.</vue-tt>
+
+      <!-- Footer -->
+      <vue-footer></vue-footer>
+      <!-- Contact -->
+      <vue-contact></vue-contact>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="jquery/jquery.min.js"></script>
+    <script src="tether/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- Isotope -->
+    <script src="jquery/isotope.pkgd.js"></script>
+    <script src="jquery/isotope.js"></script>
+
+  </body>
+
+</html>
