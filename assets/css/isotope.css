@@ -9,10 +9,10 @@ body {
 /* ---- button-group ---- */
 
 .button-group {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
-.button-group:after {
+.button-group::after {
   content: '';
   display: block;
   clear: both;
@@ -37,7 +37,7 @@ body {
 
 /* clear fix */
 
-.grid:after {
+.grid::after {
   content: '';
   display: block;
   clear: both;
@@ -77,12 +77,12 @@ body {
 }
 
 .element-item.photography {
-  background: #f80;
+  background: #f90;
   background: hsl(36, 100%, 50%);
 }
 
 .element-item.photojournalism {
-  background: #0ff;
+  background: #00bfff;
   background: hsl(195, 100%, 50%);
 }
 

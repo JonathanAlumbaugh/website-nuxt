@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="row mb-160">
        <div class="offset-md-1 col-sm-9 box-shadow">
-            <a href="wip.html">
+            <nuxt-link to="wip">
                  <div class="hvrbox wip">
                       <img :src="imgPath" :alt="name" class="img-fluid hvrbox-layer_bottom grayscale">
                       <div class="hvrbox-layer_top">
@@ -11,26 +11,32 @@
                            </div>
                       </div>
                  </div>
-            </a>
+            </nuxt-link>
        </div>
   </div>
 </template>
 
 <script>
-export default {
-	props: {
-		name: {
-			required: true
-		},
-		category: {
-			required: true
-		}
-	},
+export default
+{
+  props:
+  {
+    name:
+    {
+      required: true
+    },
+    category:
+    {
+      required: true
+    }
+  },
 
-	computed: {
-		imgPath: function () {
-			return 'img/' + this.category + '/' + this.name.toLowerCase().replace( / /g, '-' ) + '/' + this.name.toLowerCase().replace( / /g, '-' ) + '-cover' + '.jpg'
-		}
-	}
+  computed:
+  {
+    imgPath: function ()
+    {
+      return 'img/' + this.category + '/' + this.name.toLowerCase().replace( / /g, '-' ) + '/' + this.name.toLowerCase().replace( / /g, '-' ) + '-cover' + '.jpg'
+    }
+  }
 }
 </script>

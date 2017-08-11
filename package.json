@@ -13,9 +13,13 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "jquery": "^3.2.1",
+    "masonry-layout": "^4.2.0",
     "nuxt": "^1.0.0-rc4",
-    "vue-slideout": "^1.5.1",
-    "vuebar": "0.0.16"
+    "v-img": "0.0.8",
+    "vue-js-modal": "^1.2.8",
+    "vuebar": "0.0.16",
+    "vueisotope": "^3.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

@@ -1,18 +1,19 @@
-<template>
-<div id="slideoutNav">
-  <Slideout menu="#menu" panel="#panel" :toggleSelectors="['.toggle-button']" @on-open="open">
-    <nav id="menu">
-      <div>Menu</div>
-    </nav>
-    <main id="panel">
-      <header>
-        <div>
-          <button class="toggle-button">☰</button> Panel
-        </div>
-      </header>
-    </main>
-  </Slideout>
-</div>
+<template lang="html">
+  <div id="slideoutNav">
+    <Slideout menu="#menu" panel="#panel" :toggleSelectors="['.toggle-button']" @on-open="open">
+      <nav id="menu">
+        <div>Menu</div>
+      </nav>
+      <main id="panel">
+        <header>
+          <div>
+            <button class="toggle-button">☰</button>
+            Panel
+          </div>
+        </header>
+      </main>
+    </Slideout>
+  </div>
 </template>
 
 <script>
@@ -37,8 +38,8 @@ export default
 
 <style>
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
 }
 
@@ -48,7 +49,7 @@ body {
   bottom: 0;
   width: 256px;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: hide;
   -webkit-overflow-scrolling: touch;
   z-index: 0;
   display: none;
