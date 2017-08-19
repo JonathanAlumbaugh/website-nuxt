@@ -10,9 +10,18 @@
           <nuxt-link class="nav-link" to="/about">about</nuxt-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#contact">contact</a>
+          <a class="nav-link"><contact-modal>contact</contact-modal></a>
         </li>
       </ul>
     </nav>
   </div>
 </template>
+
+<script>
+import contactModal from '~/components/mainContactModal.vue'
+export default {
+  components: {
+    contactModal
+  }
+}
+</script>
