@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <section id="patterns">
     <!-- 01 -->
     <t>sometimes Jonathan looks so close that he finds
     </t>
@@ -14,7 +14,9 @@
     <img-one name="patterns" category="photography" img-number="08"></img-one>
     <img-one name="patterns" category="photography" img-number="06"></img-one>
     <img-one name="patterns" category="photography" img-number="09"></img-one>
-  </div>
+    
+    <home-btn></home-btn>
+  </section>
 </template>
 
 <script>
@@ -23,14 +25,15 @@ import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
+import homeBtn from '~/components/homeBtn.vue'
 export default {
-  layout: 'projectLayout',
   components: {
     t,
     tt,
     imgOne,
     imgTwo,
-    imgThree
+    imgThree,
+    homeBtn
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <section id="sting-vodka-branding">
     <!-- 01 -->
     <t>for a branding project Jonathan created</t>
     <tt>A vodka brand called STING and developed a logo and packaging for the product. The project was to create a product which incorporated bugs and/or bug byproducts to ship inventory for the fictional company Insecta.</tt>
@@ -25,7 +25,8 @@
     <!-- 06 -->
     <img-one name="sting vodka branding" category="design" img-number="07"></img-one>
 
-  </div>
+    <home-btn></home-btn>
+  </section>
 </template>
 
 <script>
@@ -34,14 +35,15 @@ import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
+import homeBtn from '~/components/homeBtn.vue'
 export default {
-  layout: 'projectLayout',
   components: {
     t,
     tt,
     imgOne,
     imgTwo,
-    imgThree
+    imgThree,
+    homeBtn
   }
 }
 </script>

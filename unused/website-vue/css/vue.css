@@ -1,0 +1,12 @@
+.appear-enter-active, .appear-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.appear-enter-active {
+  transition-delay: .25s;
+}
+
+.appear-enter, .appear-leave-active {
+  opacity: 0
+}

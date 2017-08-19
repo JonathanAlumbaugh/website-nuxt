@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <section id="benoit-golf-tournament">
     <t>recently Jonathan overhauled</t>
     <tt>Print collateral for the Matt T. Benoit Memorial Scholarship Fund's 11th annual golf classic. Given free reign to make nearly any change, a clean system that worked across all of the formats required for the tournament was quickly developed.
     </tt>
@@ -29,10 +29,11 @@
     <!-- 06 -->
     <img-two name="benoit golf tournament" category="design" img-number1="11" img-number2="12"></img-two>
     <tt>A list of sponsors was kept in an Excel doc, making it easy to set up an InDesign file for a datamerge, which resulted in about 40 different sponsor signs in a matter of seconds with minimal editing afterwards.<br/>
-
       <br/>The client required the printed files in time for the event and factoring in print time, the amount of time to design came out to a day. All materials were designed, proofed, and sent to print on time.
     </tt>
-  </div>
+
+    <home-btn></home-btn>
+  </section>
 </template>
 
 <script>
@@ -41,14 +42,15 @@ import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
+import homeBtn from '~/components/homeBtn.vue'
 export default {
-  layout: 'projectLayout',
   components: {
     t,
     tt,
     imgOne,
     imgTwo,
-    imgThree
+    imgThree,
+    homeBtn
   }
 }
 </script>

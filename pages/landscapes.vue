@@ -1,7 +1,8 @@
 <template lang="html">
-  <div>
+  <section>
     <t>landscapse</t>
-  </div>
+    <home-btn></home-btn>
+  </section>
 </template>
 
 <script>
@@ -10,13 +11,15 @@ import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
+import homeBtn from '~/components/homeBtn.vue'
 export default {
   components: {
     t,
     tt,
     imgOne,
     imgTwo,
-    imgThree
+    imgThree,
+    homeBtn
   }
 }
 </script>

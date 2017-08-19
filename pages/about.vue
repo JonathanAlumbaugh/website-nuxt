@@ -231,8 +231,10 @@ import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
-export default {
-  components: {
+export default
+{
+  components:
+  {
     t,
     tt,
     imgOne,

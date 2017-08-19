@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <section id="instagram">
     <!-- 01 -->
     <t>Jonathan is always looking for</t>
     <tt>Sunrises, water, reflections, and other cliche things to take pictures of. Ninety-nine percent of his photos are taken on his phone &#40;a Nexus 6&#41; and edited with Snapseed and VSCO.
@@ -145,7 +145,9 @@
       </blockquote>
       <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
     </tt>
-  </div>
+
+    <home-btn></home-btn>
+  </section>
 </template>
 
 <script>
@@ -154,14 +156,15 @@ import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
+import homeBtn from '~/components/homeBtn.vue'
 export default {
-  layout: 'projectLayout',
   components: {
     t,
     tt,
     imgOne,
     imgTwo,
-    imgThree
+    imgThree,
+    homeBtn
   }
 }
 </script>

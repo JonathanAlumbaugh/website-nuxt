@@ -7,8 +7,8 @@
 
     <!-- 02 -->
     <img-one name="senior project" category="design" img-number="01"></img-one>
-    <tt>A problem was identified. There is an inverse relationship between technological advancement and infrastructure and a country’s strength of community. In essence, citizens of more technologically advanced countries are less likely to feel a sense
-      of or be a part of a community.<br/>
+    <tt>A problem was identified. There is an inverse relationship between technological advancement and infrastructure and a country’s strength of community. In essence, citizens of more technologically advanced countries are less likely to feel a
+      sense of or be a part of a community.<br/>
       <br/>The decision was made to focus on strengthening the sense of community amongst accepted and incoming students by giving them the tools needed to improve on the foundations laid by preceding generations of students.</tt>
 
     <!-- 03 -->
@@ -46,26 +46,25 @@
       <br/>The inside/back of each piece displayed a large poster of each student's work. To prevent waste, students who receive the informational package are encouraged to use the posters to decorate dorms and apartments.<br/>
       <br/>To fully appreciate the entire project in person, or to see a digital copy of the process book, please hit the contact button.</tt>
 
-      <home-btn/>
-
+    <home-btn></home-btn>
   </section>
 </template>
 
-<script>
-import t from '~/components/textH2.vue'
-import tt from '~/components/textH3.vue'
-import imgOne from '~/components/projectImgA.vue'
-import imgTwo from '~/components/projectImgB.vue'
-import imgThree from '~/components/projectImgC.vue'
-import homeBtn from '~/components/homeBtn.vue'
-export default {
-  components: {
-    t,
-    tt,
-    imgOne,
-    imgTwo,
-    imgThree,
-    homeBtn
+  <script>
+  import t from '~/components/textH2.vue'
+  import tt from '~/components/textH3.vue'
+  import imgOne from '~/components/projectImgA.vue'
+  import imgTwo from '~/components/projectImgB.vue'
+  import imgThree from '~/components/projectImgC.vue'
+  import homeBtn from '~/components/homeBtn.vue'
+  export default {
+    components: {
+      t,
+      tt,
+      imgOne,
+      imgTwo,
+      imgThree,
+      homeBtn
+    }
   }
-}
-</script>
+  </script>
