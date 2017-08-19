@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name: 'projectImgA',
   props: {
     name: {
       required: true

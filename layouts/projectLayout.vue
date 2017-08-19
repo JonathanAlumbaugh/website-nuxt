@@ -12,7 +12,6 @@
 import mainHeader from '~/components/mainHeader.vue'
 import mainNav from '~/components/mainNav.vue'
 import mainFooter from '~/components/mainFooter.vue'
-import mainContact from '~/components/mainContact.vue'
 import homeBtn from '~/components/homeBtn.vue'
 export default {
   components: {

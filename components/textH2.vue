@@ -7,3 +7,9 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'textH2'
+}
+</script>

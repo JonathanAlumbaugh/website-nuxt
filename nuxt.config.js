@@ -14,7 +14,7 @@ module.exports = {
     // { src: '~plugins/vuebar.js', ssr: false }
     // { src: '~plugins/isotope.js' }
     // { src: '~plugins/jquery.fancybox.js', ssr: false }
-    { src: '~plugins/vue-js-modal.js' },
+    // { src: '~plugins/vue-js-modal.js' },
     { src: '~plugins/ga.js', ssr: false }
   ],
 
@@ -41,6 +41,7 @@ module.exports = {
     // https://nuxtjs.org/faq/window-document-undefined/
     // !-------------------------------------------------------------------------!
     // vendor: ['vueisotope', 'isotope-layout', 'vue-js-modal', 'vuebar']
+    // !-------------------------------------------------------------------------!
     // loaders: [
     //   {
     //     test: require.resolve('jquery'),

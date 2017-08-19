@@ -17,24 +17,19 @@
 </template>
 
 <script>
-export default
-{
-  props:
-  {
-    name:
-    {
+export default {
+  name: 'mainWip',
+  props: {
+    name: {
       required: true
     },
-    category:
-    {
+    category: {
       required: true
     }
   },
 
-  computed:
-  {
-    imgPath: function ()
-    {
+  computed: {
+    imgPath: function () {
       return 'img/' + this.category + '/' + this.name.toLowerCase().replace( / /g, '-' ) + '/' + this.name.toLowerCase().replace( / /g, '-' ) + '-cover' + '.jpg'
     }
   }

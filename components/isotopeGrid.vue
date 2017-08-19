@@ -13,6 +13,7 @@
 <script>
 import isotopeItem from '~/components/isotopeItem.vue'
 export default {
+  name: 'isotopeGrid',
   components: {
     isotopeItem
   }

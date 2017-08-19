@@ -24,6 +24,7 @@
 
 <script>
 export default {
+  name: 'projectImgC',
   props: {
     name: {
       required: true

@@ -9,14 +9,6 @@
 //
 // ==================================================
 
-if (process.BROWSER_BUILD) {
-  const $ = require('jquery')
-  $(function () {
-    console.log('document ready!')
-    // do whatever you want with html and jquery
-  })
-}
-
 // Include bootstrap JS only
 ;(function (window, document, $, undefined) {
   'use strict'
@@ -530,7 +522,6 @@ if (process.BROWSER_BUILD) {
       self.$refs = {
         container: $container
       }
-
       ;[
         'bg',
         'inner',
@@ -618,7 +609,6 @@ if (process.BROWSER_BUILD) {
           opts = $.type(opts) === 'object' ? opts : {}
 
           obj.src = 'src' in data ? data.src : opts.src || $item.attr('href')
-
           ;['width', 'height', 'thumb', 'type', 'filter'].forEach(function (
             item
           ) {

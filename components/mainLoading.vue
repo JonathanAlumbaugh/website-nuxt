@@ -5,20 +5,16 @@
 </template>
 
 <script>
-export default
-{
-  data: () => (
-  {
+export default {
+  name: 'mainLoading',
+  data: () => ( {
     loading: false
   } ),
-  methods:
-  {
-    start()
-    {
+  methods: {
+    start() {
       this.loading = true
     },
-    finish()
-    {
+    finish() {
       this.loading = false
     }
   }

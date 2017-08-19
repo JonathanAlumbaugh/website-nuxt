@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: 'projectImgB',
   props: {
     name: {
       required: true
