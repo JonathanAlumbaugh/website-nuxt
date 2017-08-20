@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "website-nuxt",
   "version": "1.0.0",
   "description": "test",
   "author": "Jonathan Alumbaugh",
@@ -13,14 +13,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "^3.1.20",
-    "jquery": "^3.2.1",
-    "masonry-layout": "^4.2.0",
     "nuxt": "^1.0.0-rc4",
-    "vue-fancybox": "^1.0.2",
-    "vue-server-renderer": "^2.4.2",
-    "vuebar": "0.0.16",
-    "vueisotope": "^3.1.0"
+    "vue-js-modal": "^1.2.8"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

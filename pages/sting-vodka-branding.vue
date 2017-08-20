@@ -37,6 +37,26 @@ import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
 export default {
+  // Head content all up in here
+  name: 'sting-vodka-branding',
+  data: function () {
+    return {
+      title: 'STING vodka branding'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Jonathan created a vodka brand called STING and developed a logo and packaging for the product'
+        }
+      ]
+    }
+  },
+  // /Head content
   components: {
     t,
     tt,

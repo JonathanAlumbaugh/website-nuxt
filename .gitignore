@@ -12,3 +12,9 @@ dist
 
 # Resilio Sync
 .sync
+
+# Large Files
+*.mov
+
+# PPK
+*.ppk

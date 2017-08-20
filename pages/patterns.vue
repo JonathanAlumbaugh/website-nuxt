@@ -14,7 +14,7 @@
     <img-one name="patterns" category="photography" img-number="08"></img-one>
     <img-one name="patterns" category="photography" img-number="06"></img-one>
     <img-one name="patterns" category="photography" img-number="09"></img-one>
-    
+
     <home-btn></home-btn>
   </section>
 </template>
@@ -27,6 +27,26 @@ import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
 export default {
+  // Head content all up in here
+  name: 'patterns',
+  data: function () {
+    return {
+      title: 'Patterns'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Jonathan takes pictures of patterns, in water drops, glass blocks, and ink blots'
+        }
+      ]
+    }
+  },
+  // /Head content
   components: {
     t,
     tt,

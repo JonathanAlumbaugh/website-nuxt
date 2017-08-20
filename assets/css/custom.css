@@ -114,18 +114,68 @@ button {
 }
 
 button:hover {
-  background-color: #404040;
+  background-color: #aaa;
   background-color: rgba(0, 0, 0, 0.02);
   cursor: pointer;
   cursor: hand;
 }
 
 .btn-secondary:hover {
-  color: darkred;
+  color: black;
   background-color: grey;
   background-color: rgba(0, 0, 0, 0.05);
   cursor: pointer;
   cursor: hand;
+}
+
+.dialog-content {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 40px;
+}
+
+.dialog-buttons button {
+  background: rgba(255, 255, 255, 1);
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  line-height: 44px;
+  height: 44px;
+}
+
+.dialog-buttons {
+  display: flex;
+  flex: 0 1 auto;
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+
+.dialog-buttons a {
+  text-decoration: none;
+  display: flex;
+  flex: 0 1 auto;
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+
+.dialog-buttons button:hover {
+  background-color: #eee;
+  cursor: pointer;
+  cursor: hand;
+  transition: all 0.25s;
+}
+
+.error-contact {
+  color: #00bfff;
+  color: hsl(195, 100%, 50%);
+}
+
+.error-contact:hover {
+  color: black;
+  cursor: pointer;
+  cursor: hand;
+  transition: all 0.25s;
 }
 
 .avatar {
@@ -150,10 +200,6 @@ button:hover {
 
 .button-header {
   margin-top: 7px;
-}
-
-.modal-footer button {
-  height: 35px;
 }
 
 .input-button {
@@ -211,6 +257,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.02);
   cursor: pointer;
   cursor: hand;
+  transition: all 0.25s;
 }
 
 a.nav-link {
@@ -219,6 +266,7 @@ a.nav-link {
 
 li.nav-item a.nav-link:hover {
   color: #aaa;
+  transition: all 0.25s;
 }
 
 .school > li {
