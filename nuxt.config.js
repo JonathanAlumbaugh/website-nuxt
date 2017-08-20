@@ -10,11 +10,10 @@ module.exports = {
     // least something online.
     // GO TO HEAD TAG AND REMOVE THAT SHIT WHEN YOU FIX THIS
     // !-------------------------------------------------------------------------!
-    // { src: '~/plugins/jquery.fancybox.js', ssr: false },
     // { src: '~plugins/vuebar.js', ssr: false }
     // { src: '~plugins/isotope.js' }
     // { src: '~plugins/jquery.fancybox.js', ssr: false }
-    // { src: '~plugins/vue-js-modal.js' },
+    { src: '~plugins/vue-js-modal.js' },
     { src: '~plugins/ga.js', ssr: false }
   ],
 
@@ -55,13 +54,14 @@ module.exports = {
     '~assets/css/bootstrap.min.css',
     '~assets/css/isotope.css',
     '~assets/css/custom.css',
+    '~assets/css/animate.css',
     // Fix so that you don't include this on every page, only the ones that need it
     '~assets/css/jquery.fancybox.css'
   ],
 
   // Headers of the page
   head: {
-    title: 'test',
+    title: '',
     meta: [
       {
         charset: 'utf-8'
@@ -71,16 +71,20 @@ module.exports = {
         content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
       },
       {
-        hid: 'description',
-        name: 'description',
-        content: 'test'
+        name: 'author',
+        content: 'Jonathan Alumbaugh'
+      },
+      {
+        hid: 'default hid description',
+        name: 'default description',
+        content: 'default content'
       }
     ],
     link: [
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon.ico'
+        href: '/favicon/favicon.ico'
       }
     ],
     script: [

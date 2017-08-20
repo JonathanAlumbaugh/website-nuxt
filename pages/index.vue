@@ -17,6 +17,7 @@
       <isotope-item name="instagram" category="photography"></isotope-item>
     </isotope-grid>
     <!--
+      <isotope-item name="this-website" category="design"></isotope-item>
        <isotope-item name="mental-health-branding" category="design"></isotope-item>
        <isotope-item name="3d-keychain" category="multimedia"></isotope-item>
        <isotope-item name="multimedia fun" category="multimedia"></isotope-item>
@@ -41,6 +42,26 @@ import isotopeSort from '~/components/isotopeSort.vue'
 import isotopeItem from '~/components/isotopeItem.vue'
 import mainWip from '~/components/mainWip.vue'
 export default {
+  // Head content all up in here
+  name: 'home',
+  data: function () {
+    return {
+      title: 'Jonathan.com was taken'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Graphic designer. Photographer/photojournalist. Competitive fencer. Professional referee.'
+        }
+      ]
+    }
+  },
+  // /Head content
   components: {
     t,
     tt,
@@ -48,6 +69,6 @@ export default {
     isotopeSort,
     isotopeItem,
     mainWip
-  }
+  },
 }
 </script>

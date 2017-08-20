@@ -24,7 +24,7 @@
     <!-- 03 -->
     <img-two name="simmons mill pond signage" category="design" img-number1="08" img-number2="09"></img-two>
     <img-one name="simmons mill pond signage" category="design" img-number="01"></img-one>
-    
+
     <home-btn></home-btn>
   </section>
 </template>
@@ -37,6 +37,26 @@ import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
 export default {
+  // Head content all up in here
+  name: 'wip',
+  data: function () {
+    return {
+      title: 'Work in progress'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Jonathan is making signage for Simmons Mill Pond Wildlife Management Area'
+        }
+      ]
+    }
+  },
+  // /Head content
   components: {
     t,
     tt,

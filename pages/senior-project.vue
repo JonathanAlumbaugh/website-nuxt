@@ -58,6 +58,26 @@
   import imgThree from '~/components/projectImgC.vue'
   import homeBtn from '~/components/homeBtn.vue'
   export default {
+    // Head content all up in here
+    name: 'senior-project',
+    data: function () {
+      return {
+        title: 'Senior project'
+      }
+    },
+    head() {
+      return {
+        title: this.title,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Jonathan made an information package for the UMass Dartmouth graphic design program'
+          }
+        ]
+      }
+    },
+    // /Head content
     components: {
       t,
       tt,

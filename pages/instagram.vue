@@ -158,6 +158,26 @@ import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
 export default {
+  // Head content all up in here
+  name: 'instagram',
+  data: function () {
+    return {
+      title: 'Instagram'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Jonathan takes pictures of sunrises, water, reflections, and other cliche things'
+        }
+      ]
+    }
+  },
+  // /Head content
   components: {
     t,
     tt,

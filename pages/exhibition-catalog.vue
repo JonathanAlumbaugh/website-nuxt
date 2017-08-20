@@ -22,7 +22,7 @@
 
     <!-- 05 -->
     <img-one name="exhibition catalog" category="design" img-number="07"></img-one>
-    
+
     <home-btn></home-btn>
   </section>
 </template>
@@ -35,6 +35,26 @@ import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
 export default {
+  // Head content all up in here
+  name: 'exhibition-catalog',
+  data: function () {
+    return {
+      title: 'Exhibition catalog'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Jonathan designed an exhibition catalog to supplement the abridged information found in an exhibit'
+        }
+      ]
+    }
+  },
+  // /Head content
   components: {
     t,
     tt,

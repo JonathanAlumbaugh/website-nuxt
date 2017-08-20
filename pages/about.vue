@@ -221,6 +221,7 @@
       </div>
     </div>
 
+    <home-btn/>
   </div>
 </section>
 </template>
@@ -231,15 +232,35 @@ import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
-export default
-{
-  components:
-  {
+import homeBtn from '~/components/homeBtn.vue'
+export default {
+  // Head content all up in here
+  name: 'about',
+  data: function () {
+    return {
+      title: 'About'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Jonathan is a New England native with an education in photojournalism and graphic design'
+        }
+      ]
+    }
+  },
+  // /Head content
+  components: {
     t,
     tt,
     imgOne,
     imgTwo,
-    imgThree
+    imgThree,
+    homeBtn
   }
 }
 </script>
