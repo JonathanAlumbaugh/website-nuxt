@@ -1,8 +1,18 @@
+// !-------------------------------------------------------------------------!
 // Idk if this works much less anything else
+// !-------------------------------------------------------------------------!
 // const webpack = require('webpack')
+// !-------------------------------------------------------------------------!
+// This is for putting shit in another (i.e. src) folder
+// !-------------------------------------------------------------------------!
+const { resolve } = require('path')
 
 module.exports = {
-  // PLUGINS FUCK
+  // !-------------------------------------------------------------------------!
+  // Change src directory
+  // !-------------------------------------------------------------------------!
+  srcDir: resolve('./src'),
+
   plugins: [
     // !-------------------------------------------------------------------------!
     // Hack solution: include all the stuff that isn't working as JS where
@@ -17,7 +27,6 @@ module.exports = {
     { src: '~plugins/ga.js', ssr: false }
   ],
 
-  // BUILDERS Dear god why won't it work
   build: {
     // !-------------------------------------------------------------------------!
     // If shit worked this could make jQery work but I have no idea what the
@@ -49,17 +58,17 @@ module.exports = {
     // ],
   },
 
-  // Global CSS files
   css: [
     '~assets/css/bootstrap.min.css',
     '~assets/css/isotope.css',
     '~assets/css/custom.css',
     '~assets/css/animate.css',
+    // !-------------------------------------------------------------------------!
     // Fix so that you don't include this on every page, only the ones that need it
+    // !-------------------------------------------------------------------------!
     '~assets/css/jquery.fancybox.css'
   ],
 
-  // Headers of the page
   head: {
     title: '',
     meta: [
@@ -75,7 +84,7 @@ module.exports = {
         content: 'Jonathan Alumbaugh'
       },
       {
-        hid: 'default hid description',
+        hid: 'default HID description',
         name: 'default description',
         content: 'default content'
       }
@@ -99,13 +108,18 @@ module.exports = {
     ]
   },
 
-  // Progress bar options
   loading: {
+    // !-------------------------------------------------------------------------!
+    // Progress bar options.
+    // !-------------------------------------------------------------------------!
     color: '#00bfff',
     height: '2px'
   },
 
   router: {
+    // !-------------------------------------------------------------------------!
+    // Make this smooth scroll?
+    // !-------------------------------------------------------------------------!
     scrollBehavior: function (to, from, savedPosition) {
       return { x: 0, y: 0 }
     }
@@ -113,8 +127,14 @@ module.exports = {
 
   // Run ESLINT on save
   extend (config, ctx) {
+    // !-------------------------------------------------------------------------!
+    // This shit will never work and I don't really want it to anymore
+    // !-------------------------------------------------------------------------!
     // config.resolve.alias['masonry'] = 'masonry-layout'
     // config.resolve.alias['isotope'] = 'isotope-layout'
+    // !-------------------------------------------------------------------------!
+    // This is the terrible linter that runs on save it's so strict.
+    // !-------------------------------------------------------------------------!
     //  if (ctx.dev && ctx.isClient) {
     //    config.module.rules.push({
     //      enforce: 'pre',
@@ -123,12 +143,6 @@ module.exports = {
     //      exclude: /(node_modules)/
     //    })
     //  }
+    // !-------------------------------------------------------------------------!
   }
-
-  // Just me fucking around with the output dir
-  // output: {
-  //   path: path.join(__dirname, 'dist'),
-  //   publicPath: '/dist',
-  //   filename: 'bundle.js'
-  // }
 }
