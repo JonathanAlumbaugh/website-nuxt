@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "nuxt": "^1.0.0-rc4",
-    "vue-js-modal": "^1.2.8"
+    "vue-js-modal": "^1.2.8",
+    "vue-sticky": "^3.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
