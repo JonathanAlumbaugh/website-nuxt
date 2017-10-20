@@ -42,15 +42,18 @@ import isotopeGrid from '~/components/isotopeGrid.vue'
 import isotopeSort from '~/components/isotopeSort.vue'
 import isotopeItem from '~/components/isotopeItem.vue'
 import mainWip from '~/components/mainWip.vue'
-export default {
+export default
+{
   // Head content all up in here
   name: 'home',
-  data: function () {
+  data: function ()
+  {
     return {
       title: 'Jonathan.com was taken'
     }
   },
-  head() {
+  head()
+  {
     return {
       title: this.title,
       meta: [
@@ -63,7 +66,8 @@ export default {
     }
   },
   // /Head content
-  components: {
+  components:
+  {
     t,
     tt,
     isotopeGrid,
