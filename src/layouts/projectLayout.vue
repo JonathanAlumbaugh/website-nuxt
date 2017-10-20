@@ -11,12 +11,14 @@
 
 <script>
 import mainHeader from '~/components/mainHeader.vue'
-import mainNav from '~/components/mainNav.vue'
+import mainNav from '~/components/projectNav.vue'
 import mainFooter from '~/components/mainFooter.vue'
-export default {
-  components: {
+export default
+{
+  components:
+  {
     mainHeader,
-    mainNav,
+    projectNav,
     mainFooter,
   }
 }

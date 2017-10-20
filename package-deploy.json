@@ -1,7 +1,9 @@
 {
   "name": "nuxt-website",
   "dependencies": {
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "vue-js-modal": "^1.2.8",
+    "vue-sticky": "^3.2.0"
   },
   "scripts": {
     "dev": "nuxt",
