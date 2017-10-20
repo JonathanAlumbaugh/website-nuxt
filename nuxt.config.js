@@ -23,6 +23,7 @@ module.exports = {
     // { src: '~plugins/vuebar.js', ssr: false }
     // { src: '~plugins/isotope.js' }
     // { src: '~plugins/jquery.fancybox.js', ssr: false }
+    { src: '~plugins/vue-sticky.js' },
     { src: '~plugins/vue-js-modal.js' },
     { src: '~plugins/ga.js', ssr: false }
   ],

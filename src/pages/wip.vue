@@ -6,7 +6,7 @@
       confused, thus the need for better signage was realized.</tt>
 
     <!-- 01 -->
-    <img-one name="simmons mill pond signage" category="design" img-number="02"></img-one>
+    <img-one name="simmons mill pond signage" category="design" img-number="10"></img-one>
     <tt>Early sketches of the map on the computer were incongruent with the beautiful natural environment. It was hard to imagine any hard copy fitting in on the wooded trails.</tt>
 
     <!-- 02 -->
@@ -24,6 +24,11 @@
     <!-- 03 -->
     <img-two name="simmons mill pond signage" category="design" img-number1="08" img-number2="09"></img-two>
     <img-one name="simmons mill pond signage" category="design" img-number="01"></img-one>
+    <tt>Early sketches/Google map view of the area.</tt>
+
+    <!-- 04 -->
+    <img-one name="simmons mill pond signage" category="design" img-number="11"></img-one>
+    <tt>Currently the fourth draft of the sign, the first to be painted, is about to be completed and submitted for review.</tt>
 
     <home-btn></home-btn>
   </section>

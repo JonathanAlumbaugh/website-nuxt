@@ -51,6 +51,7 @@
 </template>
 
   <script>
+  import projectNav from '~/components/projectNavButtons.vue'
   import t from '~/components/textH2.vue'
   import tt from '~/components/textH3.vue'
   import imgOne from '~/components/projectImgA.vue'
@@ -79,6 +80,7 @@
     },
     // /Head content
     components: {
+      projectNav,
       t,
       tt,
       imgOne,
