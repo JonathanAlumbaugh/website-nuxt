@@ -5,15 +5,8 @@
  */
 @font-face {
   font-family: 'Source Sans Pro Black';
-  src: url('../fonts/sourcesanspro-black-webfont.woff2') format('woff2'), url('../fonts/sourcesanspro-black-webfont.woff') format('woff');
+  src: url('../fonts/archivo-bold-webfont.woff2') format('woff2'), url('../fonts/archivo-bold-webfont.woff') format('woff');
   font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Source Sans Pro Light';
-  src: url('../fonts/sourcesanspro-light-webfont.woff2') format('woff2'), url('../fonts/sourcesanspro-light-webfont.woff') format('woff');
-  font-weight: 300;
   font-style: normal;
 }
 
@@ -21,6 +14,13 @@
   font-family: 'Source Sans Pro Regular';
   src: url('../fonts/sourcesanspro-regular-webfont.woff2') format('woff2'), url('../fonts/sourcesanspro-regular-webfont.woff') format('woff');
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Light';
+  src: url('../fonts/sourcesanspro-light-webfont.woff2') format('woff2'), url('../fonts/sourcesanspro-light-webfont.woff') format('woff');
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -34,77 +34,34 @@
   opacity: 0;
 }
 
-nav {
-  background-color: rgba(255, 255, 255, 1);
-  -webkit-box-shadow: 0 35px 60px -31px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 35px 60px -31px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 35px 60px -31px rgba(0, 0, 0, 0.15);
-}
-
-.nav {
-  padding-left: 33vw;
-  padding-right: 33vw;
-}
-
-.nav-item {
-  color: #aaa;
-  background-color: rgba(0, 0, 0, 0);
-  width: 33%;
-  transition: all 0.2s ease-in-out;
-}
-
-.nav-item:hover {
-  background-color: rgba(0, 0, 0, 1);
-}
-
-.full-width {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
-.padding-shim {
-  height: 80px;
-}
-
-/* body {
-  padding-top: 80px;
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 80px;
-  }
-} */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* Styles */
+html {
+  font-size: 62.5%;
 }
 
 h1 {
-  font-family: 'Source Sans Pro Light', 'Arial', sans-serif;
-  font-size: 1.2em;
+  font-family: 'Source Sans Pro Black', 'Arial', sans-serif;
+  font-size: 2rem;
+  padding: 0;
 }
 
 h2 {
   font-family: 'Source Sans Pro Black', 'Arial', sans-serif;
-  font-size: 10pt;
-  padding-bottom: 1.125em;
+  font-size: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
 }
 
 h3 {
   font-family: 'Source Sans Pro Regular', 'Arial', sans-serif;
-  font-size: 1.4em;
+  font-size: 1.7rem;
+  margin-top: 0;
   padding-bottom: 0.57em;
 }
 
 h4 {
   font-family: 'Source Sans Pro Light', 'Arial', sans-serif;
-  font-size: 0.8em;
-  letter-spacing: 0.15em;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
   line-height: 1.5em;
 }
 
@@ -114,9 +71,22 @@ h5 {
 }
 
 p {
-  font-family: 'Source Sans Pro light', 'Arial', sans-serif;
-  font-size: 1.4em;
+  font-family: 'Source Sans Pro Light', 'Arial', sans-serif;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 0;
   margin-bottom: 0.8em;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0 35px 60px -27px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 35px 60px -27px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 35px 60px -27px rgba(0, 0, 0, 0.1);
 }
 
 input {
@@ -132,6 +102,7 @@ textarea {
 
 a {
   color: black;
+  text-decoration: none;
 }
 
 a:hover {
@@ -140,40 +111,93 @@ a:hover {
 
 button {
   font-family: 'Source Sans Pro Black', sans-serif;
-  font-size: 10pt;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  cursor: hand;
+  transition: all 0.25s;
+}
+
+button:hover,
+button:focus {
+  background-color: #808080;
+  background-color: rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: black;
   cursor: pointer;
   cursor: hand;
 }
 
-button:hover {
-  background-color: #aaa;
+a.nav-link {
+  color: #aaa;
+}
+
+li.nav-item a.nav-link {
+  display: block;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+li.nav-item a.nav-link:hover {
+  color: #aaa;
+  transition: all 0.25s;
+}
+
+.nav-item {
+  color: #aaa;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: 'Source Sans Pro Light', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-left: 14px;
+  margin-right: 14px;
+  -webkit-box-shadow: -18px 6px 50px -10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -18px 6px 50px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: -18px 6px 50px -10px rgba(0, 0, 0, 0.1);
+  -o-transition: background-color 300ms ease;
+  -moz-transition: background-color 300ms ease;
+  -webkit-transition: background-color 300ms ease;
+  -ms-transition: background-color 300ms ease;
+  transition: background-color 300ms ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.nav-item:hover {
+  background-color: #404040;
   background-color: rgba(0, 0, 0, 0.02);
   cursor: pointer;
   cursor: hand;
+  transition: all 0.25s;
 }
 
-.btn-secondary:hover {
-  color: black;
-  background-color: grey;
-  background-color: rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-  cursor: hand;
+.btn {
+  font-size: 3.5rem;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0 0.75rem;
+  border-radius: 0.25rem;
+  border-color: #ccc;
+  border-color: rgba(204, 204, 204, 1);
+}
+
+.btn:first-child {
+  margin-right: 12.5px;
+}
+
+.btn:nth-child(2) {
+  margin-right: 12.5px;
 }
 
 .dialog-content {
+  background-color: #fff;
   background-color: rgba(255, 255, 255, 1);
   padding: 40px;
-}
-
-.dialog-buttons button {
-  background: rgba(255, 255, 255, 1);
-  padding: 0;
-  margin: 0;
-  border: 0;
-  cursor: pointer;
-  box-sizing: border-box;
-  line-height: 44px;
-  height: 44px;
 }
 
 .dialog-buttons {
@@ -191,8 +215,21 @@ button:hover {
   border-top: 1px solid #eee;
 }
 
+.dialog-buttons button {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  line-height: 44px;
+  height: 44px;
+}
+
 .dialog-buttons button:hover {
   background-color: #eee;
+  background-color: rgba(238, 238, 238, 1);
   cursor: pointer;
   cursor: hand;
   transition: all 0.25s;
@@ -263,46 +300,12 @@ button:hover {
   max-width: 100%;
 }
 
-.nav-item {
-  font-family: 'Source Sans Pro Light', sans-serif;
-  font-size: 0.8em;
-  text-align: center;
-  padding: 10px;
-  margin-left: 14px;
-  margin-right: 14px;
-  -webkit-box-shadow: -20px 0 50px -9px rgba(0, 0, 0, 0.04);
-  -moz-box-shadow: -20px 0 50px -9px rgba(0, 0, 0, 0.04);
-  box-shadow: -20px 0 50px -9px rgba(0, 0, 0, 0.04);
-  -o-transition: background-color 300ms ease;
-  -moz-transition: background-color 300ms ease;
-  -webkit-transition: background-color 300ms ease;
-  -ms-transition: background-color 300ms ease;
-  transition: background-color 300ms ease-in-out;
-}
-
-.nav-item:hover {
-  background-color: #404040;
-  background-color: rgba(0, 0, 0, 0.02);
-  cursor: pointer;
-  cursor: hand;
-  transition: all 0.25s;
-}
-
-a.nav-link {
-  color: #aaa;
-}
-
-li.nav-item a.nav-link:hover {
-  color: #aaa;
-  transition: all 0.25s;
-}
-
 .school > li {
   margin-bottom: 1em;
 }
 
 .box-shadow {
-  padding: 10px;
+  padding: 0 10px 10px;
   -webkit-box-shadow: -20px 0 50px -9px rgba(0, 0, 0, 0.04);
   -moz-box-shadow: -20px 0 50px -9px rgba(0, 0, 0, 0.04);
   box-shadow: -20px 0 50px -9px rgba(0, 0, 0, 0.04);
@@ -315,55 +318,31 @@ li.nav-item a.nav-link:hover {
   box-shadow: 0 -20px 50px -9px rgba(0, 0, 0, 0.04);
 }
 
-.ma {
-  margin-bottom: auto;
-}
-
-.pr-20 {
-  padding-right: 20px;
-}
-
-.pb-40 {
-  padding-bottom: 40px;
-}
-
-.pb-20 {
-  padding-bottom: 20px;
-}
-
-.pb-10 {
-  padding-bottom: 10px;
-}
-
-.pt-80 {
-  padding-top: 80px;
-}
-
-.pt-40 {
-  padding-top: 40px;
-}
-
-.mr-20 {
-  margin-right: 20px;
-}
-
-.mb-40 {
-  margin-bottom: 20px;
-}
-
-.mb-80 {
-  margin-bottom: 80px;
-}
-
-.mb-160 {
-  margin-bottom: 160px;
-}
-
 .school {
-  font-size: 10pt;
+  font-family: 'Source Sans Pro Light', sans-serif;
+  font-size: 1.7rem;
   letter-spacing: 1.5px;
   list-style: none;
   padding: 0;
+}
+
+div a {
+  display: block;
+}
+
+.img-fluid-one {
+  width: 100%;
+  height: auto;
+}
+
+.img-fluid-two {
+  width: 47.5%;
+  height: auto;
+}
+
+.img-fluid-three {
+  width: 32%;
+  height: auto;
 }
 
 .img-autoheight2 {
@@ -372,23 +351,22 @@ li.nav-item a.nav-link:hover {
 }
 
 .img-autoheight {
-  height: 50vh;
-  width: auto;
+  width: 100%;
 }
 
 @media only screen and (max-width: 767px) {
   .img-autoheight {
     height: auto;
     width: 100vw;
-    overflow: hidden;
+    object-fit: cover;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
   .img-autoheight {
-    height: 50vh;
-    width: auto;
-    overflow: hidden;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
   }
 }
 

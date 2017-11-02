@@ -1,15 +1,12 @@
 <template lang="html">
-  <div class="row">
-    <div class="col-sm-12">
-      <h2>
-        <slot></slot>
-      </h2>
-    </div>
-  </div>
+    <h2 class="t">
+      <slot></slot>
+    </h2>
 </template>
 
 <script>
-export default {
+export default
+{
   name: 'textH2'
 }
 </script>

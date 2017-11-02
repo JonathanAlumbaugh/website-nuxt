@@ -1,20 +1,18 @@
 <template lang="html">
-  <div class='row mb-160'>
-    <div class='offset-md-1 col-sm-9'>
-      <div id='vue-grid-items' class='grid'>
-        <div class='grid-sizer'></div>
-        <slot></slot>
-        <!-- <isotope-item v-for="item in items">{{ name.category }}</isotope-item> -->
-      </div>
-    </div>
+  <div id='vue-grid-items' class='isotope-grid grid'>
+    <div class='grid-sizer'></div>
+    <slot></slot>
+    <!-- <isotope-item v-for="item in items">{{ name.category }}</isotope-item> -->
   </div>
 </template>
 
 <script>
 import isotopeItem from '~/components/isotopeItem.vue'
-export default {
+export default
+{
   name: 'isotopeGrid',
-  components: {
+  components:
+  {
     isotopeItem
   }
 

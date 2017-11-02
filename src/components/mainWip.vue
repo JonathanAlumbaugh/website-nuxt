@@ -1,35 +1,37 @@
 <template lang="html">
-  <div class="row mb-160">
-       <div class="offset-md-1 col-sm-9 box-shadow">
-            <nuxt-link to="wip">
-                 <div class="hvrbox wip">
-                      <img :src="imgPath" :alt="name" class="img-fluid hvrbox-layer_bottom grayscale">
-                      <div class="hvrbox-layer_top">
-                           <div class="hvrbox-text">
-                                <h5>{{ name }}</h5>
-                                <h4>{{ category }}</h4>
-                           </div>
-                      </div>
-                 </div>
-            </nuxt-link>
-       </div>
-  </div>
+    <nuxt-link to="wip" class="main-wip box-shadow">
+      <div class="hvrbox wip">
+        <img :src="imgPath" :alt="name" class="img-fluid hvrbox-layer_bottom grayscale">
+        <div class="hvrbox-layer_top">
+          <div class="hvrbox-text">
+            <h5>{{ name }}</h5>
+            <h4>{{ category }}</h4>
+          </div>
+        </div>
+      </div>
+    </nuxt-link>
 </template>
 
 <script>
-export default {
+export default
+{
   name: 'mainWip',
-  props: {
-    name: {
+  props:
+  {
+    name:
+    {
       required: true
     },
-    category: {
+    category:
+    {
       required: true
     }
   },
 
-  computed: {
-    imgPath: function () {
+  computed:
+  {
+    imgPath: function ()
+    {
       return 'img/' + this.category + '/' + this.name.toLowerCase().replace( / /g, '-' ) + '/' + this.name.toLowerCase().replace( / /g, '-' ) + '-cover' + '.jpg'
     }
   }
