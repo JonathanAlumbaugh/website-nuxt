@@ -60,7 +60,12 @@ module.exports = {
   },
 
   css: [
-    '~assets/css/bootstrap.min.css',
+    // !-------------------------------------------------------------------------!
+    // Can I ditch Bootstrap?
+    // !-------------------------------------------------------------------------!
+    // '~assets/css/bootstrap.min.css',
+    '~assets/css/normalize.css',
+    '~assets/css/layout.css',
     '~assets/css/isotope.css',
     '~assets/css/custom.css',
     '~assets/css/animate.css',

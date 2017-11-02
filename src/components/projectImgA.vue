@@ -1,10 +1,8 @@
 <template lang="html">
-  <div class="row">
-    <div class="offset-md-1 col-sm-9 box-shadow mb-40">
-      <a data-fancybox="gallery" :href="imgPath">
-        <img :src="imgPath" :alt="altText" class="img-fluid hvrbox-layer_bottom grayscale">
-      </a>
-    </div>
+  <div class="box-shadow img-one">
+    <a data-fancybox="gallery" :href="imgPath">
+      <img :src="imgPath" :alt="altText" class="img-fluid-one hvrbox-layer_bottom grayscale">
+    </a>
   </div>
 </template>
 

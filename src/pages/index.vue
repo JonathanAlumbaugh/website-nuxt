@@ -1,20 +1,23 @@
 <template lang="html">
   <!-- Add v-bar to div when you finally get that figured out -->
   <section id="home">
-    <t>Jonathan is</t>
-    <tt>A
-      <span class="designer">graphic design student</span>,
-      <span class="photographer">photographer</span>, &amp;
-      <span class="photojournalist">photojournalist</span>, competitive fencer, &amp; professional referee currently located in Massachusetts. He's interested in the ways technology and community shape our lives.</tt>
-    <isotope-sort/>
-    <isotope-grid>
+    <isotope-sort>I'm Jonathan, a
+      <button class="btn designer" data-filter=".design">graphic designer,</button>
+      <button class="btn photographer" data-filter=".photography">
+          photographer,</button>
+      <button class="btn photojournalist" data-filter=".photojournalism">
+          photojournalist,</button>
+          competitive fencer, and professional referee based in Massachussets
+      <button class="btn" data-filter="*">&#9679;</button></isotope-sort>
+    <div class='isotope-grid grid'>
+      <div class="grid-sizer"></div>
       <isotope-item name="senior project" category="design"></isotope-item>
       <isotope-item name="textile patterns" category="design"></isotope-item>
       <isotope-item name="STING vodka branding" category="design"></isotope-item>
       <isotope-item name="exhibition catalog" category="design"></isotope-item>
       <isotope-item name="patterns" category="photography"></isotope-item>
       <isotope-item name="human interest" category="photojournalism"></isotope-item>
-    </isotope-grid>
+    </div>
     <!--
     <isotope-item name="VML Hub Branding" category="design"></isotope-item>
       <isotope-item name="Benoit golf tournament" category="design"></isotope-item>
@@ -26,10 +29,10 @@
       <isotope-item name="film" category="photography"></isotope-item>
       <isotope-item name="more photojournalism" category="photojournalism"></isotope-item>
      -->
-    <t>right now Jonathan is working on</t>
+    <t>right now I'm working on</t>
     <main-wip name="Simmons Mill Pond signage" category="design"></main-wip>
-    <t>and in his spare time he's</t>
-    <tt>Continuously rebuilding this website using the latest web technologies! Currently, he's working on implementing CSS grids and ditching Bootstrap, while still working within the Nuxt.js framework.</tt>
+    <t>and in my spare time I like to</t>
+    <tt>play with this website. Since successfully implementing a server-side rendered build of Vue.js, I've been working on implementing CSS grids, ditching Bootstrap, refining the copy, and improving the content on this site.</tt>
     <script src="/js/isotope-init.js"></script>
     <script src="/js/isotope.pkgd.js"></script>
   </section>
@@ -42,18 +45,15 @@ import isotopeGrid from '~/components/isotopeGrid.vue'
 import isotopeSort from '~/components/isotopeSort.vue'
 import isotopeItem from '~/components/isotopeItem.vue'
 import mainWip from '~/components/mainWip.vue'
-export default
-{
+export default {
   // Head content all up in here
   name: 'home',
-  data: function ()
-  {
+  data: function () {
     return {
       title: 'Jonathan.com was taken'
     }
   },
-  head()
-  {
+  head() {
     return {
       title: this.title,
       meta: [
@@ -66,8 +66,7 @@ export default
     }
   },
   // /Head content
-  components:
-  {
+  components: {
     t,
     tt,
     isotopeGrid,
