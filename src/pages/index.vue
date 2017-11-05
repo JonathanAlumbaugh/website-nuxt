@@ -9,7 +9,7 @@
           photojournalist,</button>
           competitive fencer, and professional referee based in Massachussets
       <button class="btn" data-filter="*">&#9679;</button></isotope-sort>
-    <div class='isotope-grid grid'>
+    <div id="isotope-grid" class='isotope-grid grid'>
       <div class="grid-sizer"></div>
       <isotope-item name="senior project" category="design"></isotope-item>
       <isotope-item name="textile patterns" category="design"></isotope-item>
@@ -45,15 +45,18 @@ import isotopeGrid from '~/components/isotopeGrid.vue'
 import isotopeSort from '~/components/isotopeSort.vue'
 import isotopeItem from '~/components/isotopeItem.vue'
 import mainWip from '~/components/mainWip.vue'
-export default {
+export default
+{
   // Head content all up in here
   name: 'home',
-  data: function () {
+  data: function ()
+  {
     return {
       title: 'Jonathan.com was taken'
     }
   },
-  head() {
+  head()
+  {
     return {
       title: this.title,
       meta: [
@@ -66,7 +69,8 @@ export default {
     }
   },
   // /Head content
-  components: {
+  components:
+  {
     t,
     tt,
     isotopeGrid,
