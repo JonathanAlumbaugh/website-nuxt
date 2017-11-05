@@ -15,6 +15,12 @@ dist
 
 # Large Files
 *.mov
+unused
+multimedia
 
 # PPK
 *.ppk
+id_rsa_openssh*
+
+# Other
+_.swp
