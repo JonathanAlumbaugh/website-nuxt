@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<url>
+		<loc>1.00</loc>
+		<xhtml:link rel="alternate" hreflang="priority" href="1.00" />
+		<xhtml:link rel="alternate" hreflang="loc" href="http://jonathanalumbaugh.com/" />
+		<xhtml:link rel="alternate" hreflang="lastmod" href="2017-07-22T01:02:18+00:00" />
+		<xhtml:link rel="alternate" hreflang="changefreq" href="weekly" />
+	</url>
+	<url>
+		<loc>0.80</loc>
+		<xhtml:link rel="alternate" hreflang="priority" href="0.80" />
+		<xhtml:link rel="alternate" hreflang="loc" href="http://jonathanalumbaugh.com/about.html" />
+		<xhtml:link rel="alternate" hreflang="lastmod" href="2017-07-22T01:19:32+00:00" />
+		<xhtml:link rel="alternate" hreflang="changefreq" href="weekly" />
+	</url>
+	<url>
+		<loc>0.80</loc>
+		<xhtml:link rel="alternate" hreflang="priority" href="0.80" />
+		<xhtml:link rel="alternate" hreflang="loc" href="http://jonathanalumbaugh.com/senior-project.html" />
+		<xhtml:link rel="alternate" hreflang="lastmod" href="2017-07-22T01:02:20+00:00" />
+		<xhtml:link rel="alternate" hreflang="changefreq" href="weekly" />
+	</url>
+	<url>
+		<loc>0.80</loc>
+		<xhtml:link rel="alternate" hreflang="priority" href="0.80" />
+		<xhtml:link rel="alternate" hreflang="loc" href="http://jonathanalumbaugh.com/patterns.html" />
+		<xhtml:link rel="alternate" hreflang="lastmod" href="2017-07-22T01:02:20+00:00" />
+		<xhtml:link rel="alternate" hreflang="changefreq" href="weekly" />
+	</url>
+	<url>
+		<loc>0.80</loc>
+		<xhtml:link rel="alternate" hreflang="priority" href="0.80" />
+		<xhtml:link rel="alternate" hreflang="loc" href="http://jonathanalumbaugh.com/exhibition-catalog.html" />
+		<xhtml:link rel="alternate" hreflang="lastmod" href="2017-07-22T01:02:20+00:00" />
+		<xhtml:link rel="alternate" hreflang="changefreq" href="weekly" />
+	</url>
+	<url>
+		<loc>0.80</loc>
+		<xhtml:link rel="alternate" hreflang="priority" href="0.80" />
+		<xhtml:link rel="alternate" hreflang="loc" href="http://jonathanalumbaugh.com/human-interest.html" />
+		<xhtml:link rel="alternate" hreflang="lastmod" href="2017-07-22T01:02:18+00:00" />
+		<xhtml:link rel="alternate" hreflang="changefreq" href="weekly" />
+	</url>
+	<url>
+		<loc>0.80</loc>
+		<xhtml:link rel="alternate" hreflang="priority" href="0.80" />
+		<xhtml:link rel="alternate" hreflang="loc" href="http://jonathanalumbaugh.com/vodka-branding.html" />
+		<xhtml:link rel="alternate" hreflang="lastmod" href="2017-07-22T04:16:52+00:00" />
+		<xhtml:link rel="alternate" hreflang="changefreq" href="weekly" />
+	</url>
+	<url>
+		<loc>0.80</loc>
+		<xhtml:link rel="alternate" hreflang="priority" href="0.80" />
+		<xhtml:link rel="alternate" hreflang="loc" href="http://jonathanalumbaugh.com/wip.html" />
+		<xhtml:link rel="alternate" hreflang="lastmod" href="2017-07-22T01:02:20+00:00" />
+		<xhtml:link rel="alternate" hreflang="changefreq" href="weekly" />
+	</url>
+	<url>
+		<loc>0.64</loc>
+		<xhtml:link rel="alternate" hreflang="priority" href="0.64" />
+		<xhtml:link rel="alternate" hreflang="loc" href="http://jonathanalumbaugh.com/index.html" />
+		<xhtml:link rel="alternate" hreflang="lastmod" href="2017-07-22T01:02:18+00:00" />
+		<xhtml:link rel="alternate" hreflang="changefreq" href="weekly" />
+	</url>
+</urlset>

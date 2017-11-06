@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://jonathanalumbaugh.com/</loc>
+  <lastmod>2017-07-22T01:02:18+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://jonathanalumbaugh.com/about.html</loc>
+  <lastmod>2017-07-22T01:19:32+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://jonathanalumbaugh.com/senior-project.html</loc>
+  <lastmod>2017-07-22T01:02:20+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://jonathanalumbaugh.com/patterns.html</loc>
+  <lastmod>2017-07-22T01:02:20+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://jonathanalumbaugh.com/exhibition-catalog.html</loc>
+  <lastmod>2017-07-22T01:02:20+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://jonathanalumbaugh.com/human-interest.html</loc>
+  <lastmod>2017-07-22T01:02:18+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://jonathanalumbaugh.com/vodka-branding.html</loc>
+  <lastmod>2017-07-22T04:16:52+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://jonathanalumbaugh.com/wip.html</loc>
+  <lastmod>2017-07-22T01:02:20+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://jonathanalumbaugh.com/index.html</loc>
+  <lastmod>2017-07-22T01:02:18+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+</urlset>
