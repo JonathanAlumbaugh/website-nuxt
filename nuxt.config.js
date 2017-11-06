@@ -23,9 +23,14 @@ module.exports = {
     // { src: '~plugins/vuebar.js', ssr: false }
     // { src: '~plugins/isotope.js' }
     // { src: '~plugins/jquery.fancybox.js', ssr: false }
-    { src: '~plugins/vue-sticky.js' },
-    { src: '~plugins/vue-js-modal.js' },
-    { src: '~plugins/ga.js', ssr: false }
+    { src: '~/plugins/vue-sticky.js' },
+    { src: '~/plugins/vue-js-modal.js' },
+    // !-------------------------------------------------------------------------!
+    // Someday I'll get VueAffix working.
+    // !-------------------------------------------------------------------------!
+    // { src: '~/plugins/vue-affix.js' },
+    // !-------------------------------------------------------------------------!
+    { src: '~/plugins/ga.js', ssr: false }
   ],
 
   build: {
@@ -64,6 +69,7 @@ module.exports = {
     // Can I ditch Bootstrap?
     // !-------------------------------------------------------------------------!
     // '~assets/css/bootstrap.min.css',
+    // !-------------------------------------------------------------------------!
     '~assets/css/normalize.css',
     '~assets/css/layout.css',
     '~assets/css/isotope.css',
