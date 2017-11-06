@@ -20,7 +20,7 @@ multimedia
 
 # PPK
 *.ppk
-*id_rsa_openssh*
+*.rsa
 
 # Other
 _.swp
