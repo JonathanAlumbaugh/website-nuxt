@@ -4,7 +4,7 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 4.5fr 2fr 2fr 2fr 2fr 2fr 1fr;
-  grid-template-rows: [head] auto [body] auto [foot] auto;
+  grid-template-rows: [head] auto [abt-body] auto [foot] auto;
   grid-template-areas:
     "pr header . . . . . pl"
     "pr content col col col col col pl"
@@ -22,8 +22,8 @@
   grid-column: pr / pl-end;
   grid-row: head;
   align-self: center;
-  padding-top: 7.5px;
-  padding-bottom: 7.5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 nav ul {
@@ -87,28 +87,29 @@ section {
   grid-column: span 1 colz;
 }
 
-/* !--------------------------!
-             .section
-   !--------------------------! */
+.space-6 {
+  grid-area: space-6;
+  height: 80px;
+}
 
-#about {
-  grid-column: content / col-end;
-  display: grid;
-  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 2fr;
-  grid-template-areas:
-    "intro-1 body-1 body-1 body-1 body-1 body-1"
-    "space-1 space-1 space-1 space-1 space-1 space-1"
-    "intro-2 body-2 body-2 body-2 body-2 body-2"
-    "space-2 space-2 space-2 space-2 space-2 space-2"
-    "intro-3 body-3 body-3 body-3 body-3 body-3"
-    "intro-3 body-3 body-3 body-3 body-3 body-3"
-    "intro-4 body-4 body-4 body-4 body-4 body-4"
-    "intro-5 body-5 body-5 body-5 body-5 body-5"
-    "intro-6 body-6 body-6 body-6 body-6 body-6"
-    "intro-6 body-7 body-7 body-7 body-7 body-7"
-    "intro-8 body-8 body-8 body-8 body-8 body-8"
-    "home-btn home-btn home-btn home-btn home-btn home-btn";
-  grid-gap: 3rem 10px;
+.space-5 {
+  grid-area: space-5;
+  height: 80px;
+}
+
+.space-4 {
+  grid-area: space-4;
+  height: 80px;
+}
+
+.space-3 {
+  grid-area: space-3;
+  height: 80px;
+}
+
+.space-2 {
+  grid-area: space-2;
+  height: 80px;
 }
 
 .space-1 {
@@ -116,80 +117,45 @@ section {
   height: 80px;
 }
 
+.spacer-6 {
+  grid-area: spacer-6;
+  height: auto;
+  width: auto;
+}
+
+.spacer-5 {
+  grid-area: spacer-5;
+  height: auto;
+  width: auto;
+}
+
+.spacer-4 {
+  grid-area: spacer-4;
+  height: auto;
+  width: auto;
+}
+
+.spacer-3 {
+  grid-area: spacer-3;
+  height: auto;
+  width: auto;
+}
+
+.spacer-2 {
+  grid-area: spacer-2;
+  height: auto;
+  width: auto;
+}
+
+.spacer-1 {
+  grid-area: spacer-1;
+  height: auto;
+  width: auto;
+}
+
 .home-btn {
   grid-area: home-btn;
-}
-
-.intro-8 {
-  grid-area: intro-8;
-}
-
-.body-8 {
-  grid-area: body-8;
-  grid-column: span 1;
-}
-
-.intro-7 {
-  grid-area: intro-7;
-}
-
-.body-7 {
-  grid-area: body-7;
-  grid-column: span 1;
-}
-
-.intro-6 {
-  grid-area: intro-6;
-}
-
-.body-6 {
-  grid-area: body-6;
-  grid-column: span 1;
-}
-
-.intro-5 {
-  grid-area: intro-5;
-}
-
-.body-5 {
-  grid-area: body-5;
-  grid-column: span 1;
-}
-
-.intro-4 {
-  grid-area: intro-4;
-}
-
-.body-4 {
-  grid-area: body-4;
-  grid-column: span 2;
-}
-
-.intro-3 {
-  grid-area: intro-3;
-}
-
-.body-3 {
-  grid-area: body-3;
-  grid-column: span 2;
-  grid-row: span 1;
-}
-
-.intro-2 {
-  grid-area: intro-2;
-}
-
-.body-2 {
-  grid-area: body-2;
-  grid-column: span 2;
-}
-
-.intro-1 {
-  grid-area: intro-1;
-}
-
-.body-1 {
-  grid-area: body-1;
+  text-align: center;
 }
 
 /* !--------------------------!
@@ -205,8 +171,276 @@ section {
   grid-column: span 3;
 }
 
-/* !--------------------------! */
-.home-btn {
-  grid-column: 1/7;
-  text-align: center;
+/* !--------------------------!
+             #home
+   !--------------------------! */
+
+#home {
+  grid-column: content / col-end;
+  display: grid;
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 2fr;
+  grid-template-areas:
+    "home-int-1 home-body-1 home-body-1 home-body-1 home-body-1 ......"
+    "space-1 space-1 space-1 space-1 space-1 space-1"
+    "home-int-2 home-body-2 home-body-2 home-body-2 home-body-2 ......"
+    "space-2 space-2 space-2 space-2 space-2 space-2"
+    "home-int-3 home-body-3 home-body-3 home-body-3 home-body-3 ......"
+    "space-3 space-3 space-3 space-3 space-3 space-3"
+    "home-btn home-btn home-btn home-btn home-btn home-btn";
+  grid-gap: 3rem 10px;
+}
+
+.wip img {
+  width: 100%;
+  height: auto;
+}
+
+.home-int-3 {
+  grid-area: home-int-3;
+}
+
+.home-body-3 {
+  grid-area: home-body-3;
+  grid-row: span 1;
+}
+
+.home-int-2 {
+  grid-area: home-int-2;
+}
+
+.home-body-2 {
+  grid-area: home-body-2;
+  grid-column: span 4;
+}
+
+.home-int-1 {
+  grid-area: home-int-1;
+}
+
+.home-body-1 {
+  grid-area: home-body-1;
+  grid-column: span 4;
+}
+
+/* !--------------------------!
+             #about
+   !--------------------------! */
+
+#about {
+  grid-column: content / col-end;
+  display: grid;
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 2fr;
+  grid-template-areas:
+    "abt-int-1 abt-body-1 abt-body-1 abt-body-1 abt-body-1 ......"
+    "space-1 space-1 space-1 space-1 space-1 space-1"
+    "abt-int-2 abt-body-2 abt-body-2 abt-body-2 abt-body-2 abt-body-2"
+    "space-2 space-2 space-2 space-2 space-2 space-2"
+    "abt-int-3 abt-body-3 abt-body-3 abt-body-3 abt-body-3 abt-body-3"
+    "abt-int-3 abt-body-3 abt-body-3 abt-body-3 abt-body-3 abt-body-3"
+    "space-3 space-3 space-3 space-3 space-3 space-3"
+    "abt-int-4 abt-body-4 abt-body-4 abt-body-4 abt-body-4 abt-body-4"
+    "space-4 space-4 space-4 space-4 space-4 space-4"
+    "abt-int-5 abt-body-5 abt-body-5 abt-body-5 abt-body-5 abt-body-5"
+    "space-5 space-5 space-5 space-5 space-5 space-5"
+    "abt-int-6 abt-body-6 abt-body-6 abt-body-6 abt-body-6 abt-body-6"
+    "abt-int-6 abt-body-7 abt-body-7 abt-body-7 abt-body-7 abt-body-7"
+    "space-6 space-6 space-6 space-6 space-6 space-6"
+    "abt-int-8 abt-body-8 abt-body-8 abt-body-8 abt-body-8 abt-body-8"
+    "home-btn home-btn home-btn home-btn home-btn home-btn";
+  grid-gap: 3rem 10px;
+}
+
+.abt-int-8 {
+  grid-area: abt-int-8;
+}
+
+.abt-body-8 {
+  grid-area: abt-body-8;
+  grid-column: span 1;
+}
+
+.abt-int-7 {
+  grid-area: abt-int-7;
+}
+
+.abt-body-7 {
+  grid-area: abt-body-7;
+  grid-column: span 1;
+}
+
+.abt-int-6 {
+  grid-area: abt-int-6;
+}
+
+.abt-body-6 {
+  grid-area: abt-body-6;
+  grid-column: span 1;
+}
+
+.abt-int-5 {
+  grid-area: abt-int-5;
+}
+
+.abt-body-5 {
+  grid-area: abt-body-5;
+  grid-column: span 1;
+}
+
+.abt-int-4 {
+  grid-area: abt-int-4;
+}
+
+.abt-body-4 {
+  grid-area: abt-body-4;
+  grid-column: span 2;
+}
+
+.abt-int-3 {
+  grid-area: abt-int-3;
+}
+
+.abt-body-3 {
+  grid-area: abt-body-3;
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.abt-int-2 {
+  grid-area: abt-int-2;
+}
+
+.abt-body-2 {
+  grid-area: abt-body-2;
+  grid-column: span 2;
+}
+
+.abt-int-1 {
+  grid-area: abt-int-1;
+}
+
+.abt-body-1 {
+  grid-area: abt-body-1;
+}
+
+/* !--------------------------!
+             #senior-project
+   !--------------------------! */
+
+#senior-project {
+  grid-column: content / col-end;
+  display: grid;
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 2fr;
+  grid-template-areas:
+    "sp-int-1 sp-body-1 sp-body-1 sp-body-1 sp-body-1 sp-body-1"
+    "space-1 space-1 space-1 space-1 space-1 space-1"
+    "spacer-1 sp-img-1 sp-img-1 sp-img-1 sp-img-1 thmb-1"
+    "spacer-1 sp-img-1 sp-img-1 sp-img-1 sp-img-1 thmb-2"
+    "capt-1 sp-body-2 sp-body-2 sp-body-2 sp-body-2 ......"
+    "space-2 space-2 space-2 space-2 space-2 space-2"
+    "spacer-2 sp-img-2 sp-img-2 sp-img-2 sp-img-2 thmb-3"
+    "spacer-2 sp-body-4 sp-body-4 sp-body-4 sp-body-4 ......"
+    "space-4 space-4 space-4 space-4 space-4 space-4"
+    "spacer-3 sp-img-3 sp-img-3 sp-img-3 sp-img-3 thmb-4"
+    "spacer-3 sp-img-3 sp-img-3 sp-img-3 sp-img-3 thmb-5"
+    "spacer-3 sp-body-5 sp-body-5 sp-body-5 sp-body-5 ......"
+    "space-5 space-5 space-5 space-5 space-5 space-5"
+    "spacer-4 sp-img-4 sp-img-4 sp-img-4 sp-img-4 thmb-6"
+    "spacer-4 sp-body-6 sp-body-6 sp-body-6 sp-body-6 ......"
+    "home-btn home-btn home-btn home-btn home-btn home-btn";
+  grid-gap: 3rem 10px;
+}
+
+.capt-2 {
+  grid-area: capt-2;
+  align-self: start;
+  justify-self: end;
+}
+
+.capt-1 {
+  grid-area: capt-1;
+  align-self: start;
+  justify-self: end;
+}
+
+.thmb-6 {
+  grid-area: thmb-6;
+  align-self: center;
+}
+
+.thmb-5 {
+  grid-area: thmb-5;
+  align-self: start;
+}
+
+.thmb-4 {
+  grid-area: thmb-4;
+  align-self: end;
+}
+
+.thmb-3 {
+  grid-area: thmb-3;
+  align-self: center;
+}
+
+.thmb-2 {
+  grid-area: thmb-2;
+  align-self: start;
+}
+
+.thmb-1 {
+  grid-area: thmb-1;
+  align-self: end;
+}
+
+.sp-body-6 {
+  grid-area: sp-body-6;
+  grid-column: span 4;
+}
+
+.sp-body-5 {
+  grid-area: sp-body-5;
+  grid-column: span 4;
+}
+
+.sp-body-4 {
+  grid-area: sp-body-4;
+  grid-column: span 4;
+}
+
+.sp-body-2 {
+  grid-area: sp-body-2;
+  grid-column: span 4;
+}
+
+.sp-body-1 {
+  grid-area: sp-body-1;
+  grid-column: span 4;
+}
+
+.sp-img-4 {
+  grid-area: sp-img-4;
+  grid-column: span 4;
+}
+
+.sp-img-3 {
+  grid-area: sp-img-3;
+  grid-column: span 4;
+}
+
+.sp-img-2 {
+  grid-area: sp-img-2;
+  grid-column: span 4;
+}
+
+.sp-img-1 {
+  grid-area: sp-img-1;
+  grid-column: span 4;
+}
+
+.sp-int-2 {
+  grid-area: sp-int-2;
+}
+
+.sp-int-1 {
+  grid-area: sp-int-1;
 }

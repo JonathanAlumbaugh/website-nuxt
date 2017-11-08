@@ -1,7 +1,8 @@
 <template lang="html">
+
   <!-- Add v-bar to div when you finally get that figured out -->
   <section id="home">
-    <isotope-sort>I'm Jonathan, a
+    <isotope-sort class="home-int-1">I'm Jonathan, a
       <button class="btn designer" data-filter=".design">graphic designer,</button>
       <button class="btn photographer" data-filter=".photography">
           photographer,</button>
@@ -9,7 +10,7 @@
           photojournalist,</button>
           competitive fencer, and professional referee based in Massachussets
       <button class="btn" data-filter="*">&#9679;</button></isotope-sort>
-    <div id="isotope-grid" class='isotope-grid grid'>
+    <div id="isotope-grid" class='home-body-1 isotope-grid grid'>
       <div class="grid-sizer"></div>
       <isotope-item name="senior project" category="design"></isotope-item>
       <isotope-item name="textile patterns" category="design"></isotope-item>
@@ -18,6 +19,9 @@
       <isotope-item name="patterns" category="photography"></isotope-item>
       <isotope-item name="human interest" category="photojournalism"></isotope-item>
     </div>
+
+    <div class="space-1"></div>
+
     <!--
     <isotope-item name="VML Hub Branding" category="design"></isotope-item>
       <isotope-item name="Benoit golf tournament" category="design"></isotope-item>
@@ -29,10 +33,20 @@
       <isotope-item name="film" category="photography"></isotope-item>
       <isotope-item name="more photojournalism" category="photojournalism"></isotope-item>
      -->
-    <t>right now I'm working on</t>
-    <main-wip name="Simmons Mill Pond signage" category="design"></main-wip>
-    <t>and in my spare time I like to</t>
-    <tt>play with this website. Since successfully implementing a server-side rendered build of Vue.js, I've been working on implementing CSS grids, ditching Bootstrap, refining the copy, and improving the content on this site.</tt>
+
+     <!-- WIP -->
+    <t class="home-int-2">right now I'm working on</t>
+    <main-wip class="home-body-2" name="Simmons Mill Pond signage" category="design"></main-wip>
+
+    <div class="space-2"></div>
+
+    <!-- Extra -->
+    <t class="home-int-3">and in my spare time I like to</t>
+    <tt class="home-body-3">play with this website. Since successfully implementing a server-side rendered build of Vue.js, I've implemented CSS grids, ditched Bootstrap, and work to refine copy and improve content.</tt>
+
+    <div class="space-3"></div>
+
+    <!-- Scripts -->
     <script src="/js/isotope-init.js"></script>
     <script src="/js/isotope.pkgd.js"></script>
   </section>
@@ -45,18 +59,15 @@ import isotopeGrid from '~/components/isotopeGrid.vue'
 import isotopeSort from '~/components/isotopeSort.vue'
 import isotopeItem from '~/components/isotopeItem.vue'
 import mainWip from '~/components/mainWip.vue'
-export default
-{
+export default {
   // Head content all up in here
   name: 'home',
-  data: function ()
-  {
+  data: function () {
     return {
       title: 'Jonathan.com was taken'
     }
   },
-  head()
-  {
+  head() {
     return {
       title: this.title,
       meta: [
@@ -69,8 +80,7 @@ export default
     }
   },
   // /Head content
-  components:
-  {
+  components: {
     t,
     tt,
     isotopeGrid,

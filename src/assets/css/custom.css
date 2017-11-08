@@ -52,8 +52,8 @@ h2 {
 }
 
 h3 {
-  font-family: 'Source Sans Pro Regular', 'Arial', sans-serif;
-  font-size: 1.7rem;
+  font-family: 'Source Sans Pro Black', 'Arial', sans-serif;
+  font-size: 2rem;
   margin-top: 0;
   padding-bottom: 0.57em;
 }
@@ -76,6 +76,38 @@ p {
   line-height: 3rem;
   margin-top: 0;
   margin-bottom: 0.8em;
+}
+
+caption {
+  color: rgba(0, 0, 0, 0.3);
+  font-family: 'Source Sans Pro Light', 'Arial', sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.09rem;
+  line-height: 1.9rem;
+  margin-top: 5px;
+  margin-right: 2rem;
+  text-align: right;
+  transition: 0.4s ease;
+}
+
+caption:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+span {
+  font-size: 2rem;
+  color: #333;
+  color: transparent;
+  text-shadow: 0 0 #333, 0.08em 0 0 #fff, 0 0, -0.08em 0 0 #fff;
+  background: -webkit-linear-gradient(#999, #999) right 1.09em no-repeat;
+  background: linear-gradient(#999, #999) right 1.09em no-repeat;
+  background-size: 96% 1px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+span:hover {
+  background-size: 99% 1px;
 }
 
 nav ul {
@@ -301,7 +333,7 @@ li.nav-item a.nav-link:hover {
 }
 
 .school > li {
-  margin-bottom: 1em;
+  margin-bottom: 1.5rem;
 }
 
 .box-shadow {
