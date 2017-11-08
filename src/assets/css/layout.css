@@ -88,6 +88,111 @@ section {
 }
 
 /* !--------------------------!
+             .section
+   !--------------------------! */
+
+#about {
+  grid-column: content / col-end;
+  display: grid;
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 2fr;
+  grid-template-areas:
+    "intro-1 body-1 body-1 body-1 body-1 body-1"
+    "space-1 space-1 space-1 space-1 space-1 space-1"
+    "intro-2 body-2 body-2 body-2 body-2 body-2"
+    "space-2 space-2 space-2 space-2 space-2 space-2"
+    "intro-3 body-3 body-3 body-3 body-3 body-3"
+    "intro-3 body-3 body-3 body-3 body-3 body-3"
+    "intro-4 body-4 body-4 body-4 body-4 body-4"
+    "intro-5 body-5 body-5 body-5 body-5 body-5"
+    "intro-6 body-6 body-6 body-6 body-6 body-6"
+    "intro-6 body-7 body-7 body-7 body-7 body-7"
+    "intro-8 body-8 body-8 body-8 body-8 body-8"
+    "home-btn home-btn home-btn home-btn home-btn home-btn";
+  grid-gap: 3rem 10px;
+}
+
+.space-1 {
+  grid-area: space-1;
+  height: 80px;
+}
+
+.home-btn {
+  grid-area: home-btn;
+}
+
+.intro-8 {
+  grid-area: intro-8;
+}
+
+.body-8 {
+  grid-area: body-8;
+  grid-column: span 1;
+}
+
+.intro-7 {
+  grid-area: intro-7;
+}
+
+.body-7 {
+  grid-area: body-7;
+  grid-column: span 1;
+}
+
+.intro-6 {
+  grid-area: intro-6;
+}
+
+.body-6 {
+  grid-area: body-6;
+  grid-column: span 1;
+}
+
+.intro-5 {
+  grid-area: intro-5;
+}
+
+.body-5 {
+  grid-area: body-5;
+  grid-column: span 1;
+}
+
+.intro-4 {
+  grid-area: intro-4;
+}
+
+.body-4 {
+  grid-area: body-4;
+  grid-column: span 2;
+}
+
+.intro-3 {
+  grid-area: intro-3;
+}
+
+.body-3 {
+  grid-area: body-3;
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.intro-2 {
+  grid-area: intro-2;
+}
+
+.body-2 {
+  grid-area: body-2;
+  grid-column: span 2;
+}
+
+.intro-1 {
+  grid-area: intro-1;
+}
+
+.body-1 {
+  grid-area: body-1;
+}
+
+/* !--------------------------!
           .isotope-grid
    !--------------------------! */
 .isotope-grid {
