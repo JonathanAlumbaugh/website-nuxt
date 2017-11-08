@@ -59,10 +59,11 @@
     <tt class="sp-body-5">Each student piece contains an edited interview with a selection of that
     student's work. The selected work shows a wide range of pieces designed both in and out of
     class, and captions show which year/class/professor each piece was designed with when
-    applicable.<br/> <br/>The front shows a brief rundown of topics the student talks about, as
-    shown in the table of contents, their fist initial, and a very short bio. On the back students
-    had more room to speak about their senior project and goals after graduating as well as showcase
-    a few more pieces of work.<br/>
+    applicable.<br/>
+
+    <br/>The front shows a brief rundown of topics the student talks about, their fist initial, and a
+    very short bio. On the back students had more room to speak about their senior project and goals
+    after graduating as well as showcase a few more pieces of work.<br/>
 
     <br/>In addition, the back contained a number of resources relating to the content of the
     interview and a colophon specifying typefaces and paper type, for the graphic design nerds.

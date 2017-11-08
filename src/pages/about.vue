@@ -10,7 +10,6 @@
     Someday I'll find myself halfway across the world (likely without a jacket or a clean pair of socks) in pursuit of a design challenge. In the meantime, I seek a design challenge on the homefront, in the Rhode Island/Southcoast/Boston area.
   </tt>
 
-  <div class="space-1"></div>
 
   <!-- Education -->
   <t class="abt-int-2">My education spans 5 years and 2 schools</t>
@@ -40,7 +39,6 @@
     </ul>
   </div>
 
-  <div class="space-2"></div>
 
   <!-- Experience -->
   <t class="abt-int-3">my work experience includes titles like</t>
@@ -82,7 +80,6 @@
     description="Volunteered over 200 hours at local organization that supports underprivileged families">
   </blk-lg>
 
-  <div class="space-3"></div>
 
   <!-- Awards -->
   <t class="abt-int-4">I received an award for</t>
@@ -94,7 +91,6 @@
     subtitle="Society of Professional Journalists, 2014"
     description="Received 3rd place statewide for news photo in a newspaper with under 18,000 circulation"/>
 
-    <div class="space-4"></div>
 
   <!-- Programs -->
   <t class="abt-int-5">and am a pro with industry standard programs like</t>
@@ -107,7 +103,6 @@
 
   <blk-sm class="abt-body-5" title="Ps" description="Adobe Photoshop"/>
 
-  <div class="space-5"></div>
 
   <!-- More -->
   <t class="abt-int-6">plus I can work with</t>
@@ -128,7 +123,6 @@
 
   <blk-sm class="abt-body-7" title="Pr" description="Adobe Premiere Pro"/>
 
-  <div class="space-6"></div>
 
   <!-- Meta -->
   <t class="abt-int-8">I built this website using</t>

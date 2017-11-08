@@ -6,7 +6,7 @@
   grid-template-columns: 1fr 4.5fr 2fr 2fr 2fr 2fr 2fr 1fr;
   grid-template-rows: [head] auto [abt-body] auto [foot] auto;
   grid-template-areas:
-    "pr header . . . . . pl"
+    "pr header ... ... ... ... ... pl"
     "pr content col col col col col pl"
     "footer footer footer footer footer footer footer footer";
   grid-gap: 8rem 10px;
@@ -56,8 +56,8 @@ nav ul {
 section {
   grid-column: content / col-end;
   display: grid;
-  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 2fr;
-  grid-template-areas: "content colz colz colz colz colz";
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
+  grid-template-areas: "content col col col col img";
   grid-gap: 12rem 10px;
 }
 
@@ -68,23 +68,24 @@ section {
 .tt,
 .isotope-grid,
 .main-wip {
-  grid-column: colz;
+  grid-column: col;
+  margin-bottom: 8vh;
 }
 
 .img-one {
-  grid-column: colz;
+  grid-column: col;
 }
 
 .img-two {
-  grid-column: content;
+  grid-column: img;
 }
 
 .blk-lg {
-  grid-column: span 2 colz;
+  grid-column: span 2 col;
 }
 
 .blk-sm {
-  grid-column: span 1 colz;
+  grid-column: span 1 col;
 }
 
 .space-6 {
@@ -229,7 +230,7 @@ section {
 #about {
   grid-column: content / col-end;
   display: grid;
-  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 2fr;
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
   grid-template-areas:
     "abt-int-1 abt-body-1 abt-body-1 abt-body-1 abt-body-1 ......"
     "space-1 space-1 space-1 space-1 space-1 space-1"
@@ -329,7 +330,7 @@ section {
 #senior-project {
   grid-column: content / col-end;
   display: grid;
-  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 2fr;
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
   grid-template-areas:
     "sp-int-1 sp-body-1 sp-body-1 sp-body-1 sp-body-1 sp-body-1"
     "space-1 space-1 space-1 space-1 space-1 space-1"
@@ -443,4 +444,16 @@ section {
 
 .sp-int-1 {
   grid-area: sp-int-1;
+}
+
+/* !--------------------------!
+         #textile-patterns
+   !--------------------------! */
+
+#textile-patterns {
+  grid-column: content / col-end;
+  display: grid;
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
+  grid-template-areas: "content col col col col img";
+  grid-gap: 3rem 10px;
 }
