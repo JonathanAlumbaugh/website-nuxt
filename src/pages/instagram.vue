@@ -1,9 +1,11 @@
 <template lang="html">
   <section id="instagram">
+
     <!-- 01 -->
     <t>Jonathan is always looking for</t>
     <tt>Sunrises, water, reflections, and other cliche things to take pictures of. Ninety-nine percent of his photos are taken on his phone &#40;a Nexus 6&#41; and edited with Snapseed and VSCO.
     </tt>
+
 
     <!-- 02 -->
     <tt>
@@ -146,7 +148,6 @@
       <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
     </tt>
 
-    <home-btn></home-btn>
   </section>
 </template>
 
@@ -157,15 +158,18 @@ import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
-export default {
+export default
+{
   // Head content all up in here
   name: 'instagram',
-  data: function () {
+  data: function ()
+  {
     return {
       title: 'Instagram'
     }
   },
-  head() {
+  head()
+  {
     return {
       title: this.title,
       meta: [
@@ -178,7 +182,8 @@ export default {
     }
   },
   // /Head content
-  components: {
+  components:
+  {
     t,
     tt,
     imgOne,

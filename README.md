@@ -1,22 +1,5 @@
-# test
+# Welcome to the repo for jonathanalumbaugh.com
 
-> test
+This repository chronicles the long and arduous process of implementing Vue.js, Nuxt.js, Isotope, CSS grids, and learning how the hell to use git (I stil don't know).
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ npm install # Or yarn install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+Built with love and [Nuxt.js](https://github.com/nuxt/nuxt.js).

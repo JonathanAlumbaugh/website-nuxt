@@ -28,11 +28,10 @@
 
     <!-- 06 -->
     <img-two name="benoit golf tournament" category="design" img-number1="11" img-number2="12"></img-two>
-    <tt>A list of sponsors was kept in an Excel doc, making it easy to set up an InDesign file for a datamerge, which resulted in about 40 different sponsor signs in a matter of seconds with minimal editing afterwards.<br/>
-      <br/>The client required the printed files in time for the event and factoring in print time, the amount of time to design came out to a day. All materials were designed, proofed, and sent to print on time.
+    <tt>A list of sponsors was kept in an Excel doc, making it easy to set up an InDesign file for a datamerge, which resulted in about 40 different sponsor signs in a matter of seconds with minimal editing afterwards.<br />
+      <br />The client required the printed files in time for the event and factoring in print time, the amount of time to design came out to a day. All materials were designed, proofed, and sent to print on time.
     </tt>
 
-    <home-btn></home-btn>
   </section>
 </template>
 
@@ -43,8 +42,10 @@ import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
-export default {
-  components: {
+export default
+{
+  components:
+  {
     t,
     tt,
     imgOne,

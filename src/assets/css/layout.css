@@ -1,5 +1,6 @@
 /* !--------------------------!
           .container
+      TODO: Fix lint error?
    !--------------------------! */
 .container {
   display: grid;
@@ -80,6 +81,10 @@ section {
   grid-column: img;
 }
 
+.img-three {
+  grid-column: img;
+}
+
 .blk-lg {
   grid-column: span 2 col;
 }
@@ -115,6 +120,11 @@ section {
 
 .space-1 {
   grid-area: space-1;
+  height: 80px;
+}
+
+.space {
+  grid-column: 1 / 7;
   height: 80px;
 }
 
@@ -162,6 +172,7 @@ section {
 /* !--------------------------!
           .isotope-grid
    !--------------------------! */
+
 .isotope-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -180,14 +191,7 @@ section {
   grid-column: content / col-end;
   display: grid;
   grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 2fr;
-  grid-template-areas:
-    "home-int-1 home-body-1 home-body-1 home-body-1 home-body-1 ......"
-    "space-1 space-1 space-1 space-1 space-1 space-1"
-    "home-int-2 home-body-2 home-body-2 home-body-2 home-body-2 ......"
-    "space-2 space-2 space-2 space-2 space-2 space-2"
-    "home-int-3 home-body-3 home-body-3 home-body-3 home-body-3 ......"
-    "space-3 space-3 space-3 space-3 space-3 space-3"
-    "home-btn home-btn home-btn home-btn home-btn home-btn";
+  grid-template-areas: "home-int  home-body  home-body  home-body home-body  .....";
   grid-gap: 3rem 10px;
 }
 
@@ -196,31 +200,14 @@ section {
   height: auto;
 }
 
-.home-int-3 {
-  grid-area: home-int-3;
-}
-
-.home-body-3 {
-  grid-area: home-body-3;
+.home-int {
+  grid-area: home-int;
   grid-row: span 1;
 }
 
-.home-int-2 {
-  grid-area: home-int-2;
-}
-
-.home-body-2 {
-  grid-area: home-body-2;
-  grid-column: span 4;
-}
-
-.home-int-1 {
-  grid-area: home-int-1;
-}
-
-.home-body-1 {
-  grid-area: home-body-1;
-  grid-column: span 4;
+.home-body {
+  grid-area: home-body;
+  grid-row: span 1;
 }
 
 /* !--------------------------!
@@ -232,22 +219,15 @@ section {
   display: grid;
   grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
   grid-template-areas:
-    "abt-int-1 abt-body-1 abt-body-1 abt-body-1 abt-body-1 ......"
-    "space-1 space-1 space-1 space-1 space-1 space-1"
-    "abt-int-2 abt-body-2 abt-body-2 abt-body-2 abt-body-2 abt-body-2"
-    "space-2 space-2 space-2 space-2 space-2 space-2"
-    "abt-int-3 abt-body-3 abt-body-3 abt-body-3 abt-body-3 abt-body-3"
-    "abt-int-3 abt-body-3 abt-body-3 abt-body-3 abt-body-3 abt-body-3"
-    "space-3 space-3 space-3 space-3 space-3 space-3"
-    "abt-int-4 abt-body-4 abt-body-4 abt-body-4 abt-body-4 abt-body-4"
-    "space-4 space-4 space-4 space-4 space-4 space-4"
-    "abt-int-5 abt-body-5 abt-body-5 abt-body-5 abt-body-5 abt-body-5"
-    "space-5 space-5 space-5 space-5 space-5 space-5"
-    "abt-int-6 abt-body-6 abt-body-6 abt-body-6 abt-body-6 abt-body-6"
-    "abt-int-6 abt-body-7 abt-body-7 abt-body-7 abt-body-7 abt-body-7"
-    "space-6 space-6 space-6 space-6 space-6 space-6"
-    "abt-int-8 abt-body-8 abt-body-8 abt-body-8 abt-body-8 abt-body-8"
-    "home-btn home-btn home-btn home-btn home-btn home-btn";
+    "abt-int-1   abt-body-1   abt-body-1   abt-body-1   abt-body-1   ......"
+    "abt-int-2   abt-body-2   abt-body-2   abt-body-2   abt-body-2   abt-body-2"
+    "abt-int-3   abt-body-3   abt-body-3   abt-body-3   abt-body-3   abt-body-3"
+    "abt-int-3   abt-body-3   abt-body-3   abt-body-3   abt-body-3   abt-body-3"
+    "abt-int-4   abt-body-4   abt-body-4   abt-body-4   abt-body-4   abt-body-4"
+    "abt-int-5   abt-body-5   abt-body-5   abt-body-5   abt-body-5   abt-body-5"
+    "abt-int-6   abt-body-6   abt-body-6   abt-body-6   abt-body-6   abt-body-6"
+    "abt-int-6   abt-body-7   abt-body-7   abt-body-7   abt-body-7   abt-body-7"
+    "abt-int-8   abt-body-8   abt-body-8   abt-body-8   abt-body-8   abt-body-8";
   grid-gap: 3rem 10px;
 }
 
@@ -324,7 +304,7 @@ section {
 }
 
 /* !--------------------------!
-             #senior-project
+         #senior-project
    !--------------------------! */
 
 #senior-project {
@@ -332,22 +312,17 @@ section {
   display: grid;
   grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
   grid-template-areas:
-    "sp-int-1 sp-body-1 sp-body-1 sp-body-1 sp-body-1 sp-body-1"
-    "space-1 space-1 space-1 space-1 space-1 space-1"
-    "spacer-1 sp-img-1 sp-img-1 sp-img-1 sp-img-1 thmb-1"
-    "spacer-1 sp-img-1 sp-img-1 sp-img-1 sp-img-1 thmb-2"
-    "capt-1 sp-body-2 sp-body-2 sp-body-2 sp-body-2 ......"
-    "space-2 space-2 space-2 space-2 space-2 space-2"
-    "spacer-2 sp-img-2 sp-img-2 sp-img-2 sp-img-2 thmb-3"
-    "spacer-2 sp-body-4 sp-body-4 sp-body-4 sp-body-4 ......"
-    "space-4 space-4 space-4 space-4 space-4 space-4"
-    "spacer-3 sp-img-3 sp-img-3 sp-img-3 sp-img-3 thmb-4"
-    "spacer-3 sp-img-3 sp-img-3 sp-img-3 sp-img-3 thmb-5"
-    "spacer-3 sp-body-5 sp-body-5 sp-body-5 sp-body-5 ......"
-    "space-5 space-5 space-5 space-5 space-5 space-5"
-    "spacer-4 sp-img-4 sp-img-4 sp-img-4 sp-img-4 thmb-6"
-    "spacer-4 sp-body-6 sp-body-6 sp-body-6 sp-body-6 ......"
-    "home-btn home-btn home-btn home-btn home-btn home-btn";
+    "sp-int-1   sp-body-1   sp-body-1   sp-body-1   sp-body-1   sp-body-1"
+    "spacer-1   sp-img-1    sp-img-1    sp-img-1    sp-img-1    thmb-1"
+    "spacer-1   sp-img-1    sp-img-1    sp-img-1    sp-img-1    thmb-2"
+    "capt-1     sp-body-2   sp-body-2   sp-body-2   sp-body-2   ......"
+    "spacer-2   sp-img-2    sp-img-2    sp-img-2    sp-img-2    thmb-3"
+    "spacer-2   sp-body-4   sp-body-4   sp-body-4   sp-body-4   ......"
+    "spacer-3   sp-img-3    sp-img-3    sp-img-3    sp-img-3    thmb-4"
+    "spacer-3   sp-img-3    sp-img-3    sp-img-3    sp-img-3    thmb-5"
+    "spacer-3   sp-body-5   sp-body-5   sp-body-5   sp-body-5   ......"
+    "spacer-4   sp-img-4    sp-img-4    sp-img-4    sp-img-4    thmb-6"
+    "spacer-4   sp-body-6   sp-body-6   sp-body-6   sp-body-6   ......";
   grid-gap: 3rem 10px;
 }
 
@@ -451,6 +426,66 @@ section {
    !--------------------------! */
 
 #textile-patterns {
+  grid-column: content / col-end;
+  display: grid;
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
+  grid-template-areas: "content col col col col img";
+  grid-gap: 3rem 10px;
+}
+
+/* !--------------------------!
+       #sting-vodka-branding
+   !--------------------------! */
+
+#sting-vodka-branding {
+  grid-column: content / col-end;
+  display: grid;
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
+  grid-template-areas: "content col col col col img";
+  grid-gap: 3rem 10px;
+}
+
+/* !--------------------------!
+       #exhibition-catalog
+   !--------------------------! */
+
+#exhibition-catalog {
+  grid-column: content / col-end;
+  display: grid;
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
+  grid-template-areas: "content col col col col img";
+  grid-gap: 3rem 10px;
+}
+
+/* !--------------------------!
+           #patterns
+   !--------------------------! */
+
+#patterns {
+  grid-column: content / col-end;
+  display: grid;
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
+  grid-template-areas: "content col col col col img";
+  grid-gap: 3rem 10px;
+}
+
+/* !--------------------------!
+         #human-interest
+   !--------------------------! */
+
+#human-interest {
+  grid-column: content / col-end;
+  display: grid;
+  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
+  grid-template-areas: "content col col col col img";
+  grid-gap: 3rem 10px;
+}
+
+/* !--------------------------!
+         #wip
+   !--------------------------! */
+
+#wip {
   grid-column: content / col-end;
   display: grid;
   grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
