@@ -26,7 +26,11 @@
 
     <!-- TODO: Add VML Hub Branding -->
     <!-- TODO: Add 3D keychain -->
+<<<<<<< HEAD
     <!-- TODO: Add film photos -->
+=======
+    <!-- TODO: Add film -->
+>>>>>>> origin/master
     <!--
     <isotope-item name="VML Hub Branding" category="design"></isotope-item>
       <isotope-item name="Benoit golf tournament" category="design"></isotope-item>
