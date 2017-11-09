@@ -3,11 +3,10 @@
 
     <!-- abt-int -->
     <t class="abt-int-1">I'm Jonathan Alumbaugh,</t>
-    <tt class="abt-body-1">
-      a New England native with an education in photojournalism and graphic design. I'm interested in ways of promoting community through design. I hope to observe, tell the story of, and refine the interaction between people and design, and between people
-      and people.<br/>
-    </br/>
-    Someday I'll find myself halfway across the world (likely without a jacket or a clean pair of socks) in pursuit of a design challenge. In the meantime, I seek a design challenge on the homefront, in the Rhode Island/Southcoast/Boston area.
+
+    <tt class="abt-body-1">a New England native with an education in photojournalism and graphic design. I'm interested in ways of promoting community through design. I hope to observe, tell the story of, and refine the interaction between people and design, and between people and people.<br />
+
+    <br />Someday I'll find myself halfway across the world (likely without a jacket or a clean pair of socks) in pursuit of a design challenge. In the meantime, I seek a design challenge on the homefront, in the Rhode Island/Southcoast/Boston area.
   </tt>
 
 
@@ -43,14 +42,16 @@
   <!-- Experience -->
   <t class="abt-int-3">my work experience includes titles like</t>
 
-  <blk-lg class="abt-body-3"
+  <blk-lg
+    class="abt-body-3"
     category="designer"
     title="In house designer"
     subtitle="Minuteman Press Dartmouth, May 2017-present"
     description="Took over design and print prep work enabling staff to go on more in-person sales &amp; customer service calls">
   </blk-lg>
 
-  <blk-lg class="abt-body-3"
+  <blk-lg
+    class="abt-body-3"
     category="photographer"
     title="Staff photographer"
     subtitle="Horizons Inc, 2014-2016"
@@ -62,8 +63,7 @@
     category="photojournalist"
     title="Freelance photographer"
     subtitle="The Chronicle Newspaper, 2012-2015"
-    description="Consistently
-  delivered engaging, high-quality human interest photos for use as standalone features or to go with stories">
+    description="Consistently delivered engaging, high-quality human interest photos for use as standalone features or to go with stories">
   </blk-lg>
 
   <!-- <blk-lg class="abt-body-3"
@@ -135,8 +135,7 @@
 
   <blk-sm class="abt-body-8" title="Nuxt.js" description="Vue.js, but SSR!"/>
 
-  <home-btn class="home-btn"/>
-</section>
+  </section>
 </template>
 
 <script>
@@ -145,15 +144,18 @@ import tt from '~/components/textH3.vue'
 import blkLg from '~/components/blockLarge.vue'
 import blkSm from '~/components/blockSmall.vue'
 import homeBtn from '~/components/homeBtn.vue'
-export default {
+export default
+{
   // Head content all up in here
   name: 'about',
-  data: function () {
+  data: function ()
+  {
     return {
       title: 'About'
     }
   },
-  head() {
+  head()
+  {
     return {
       title: this.title,
       meta: [
@@ -166,7 +168,8 @@ export default {
     }
   },
   // /Head content
-  components: {
+  components:
+  {
     t,
     tt,
     blkLg,

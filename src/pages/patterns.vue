@@ -1,21 +1,24 @@
 <template lang="html">
   <section id="patterns">
+
     <!-- 01 -->
-    <t>sometimes Jonathan looks so close that he finds
-    </t>
-    <tt>Patterns, in water drops, glass blocks, and ink blots. Part of being a designer is to collect, take apart, and recombine individual bits into something new, fun, interesting, informative. Patterns are one of the things Jonathan collects.
-    </tt>
+    <t>sometimes I look so close that I find</t>
+
+    <tt>Patterns, in water drops, glass blocks, and ink blots. Part of being a designer is collecting, deconstructing, and recombining individual bits into something new, fun, interesting, informative. Patterns are one of the things I collect.</tt>
+
 
     <!-- 02 -->
     <img-one name="patterns" category="photography" img-number="01"></img-one>
     <img-two name="patterns" category="photography" img-number1="02" img-number2="03-hq"></img-two>
-    <img-one name="patterns" category="photography" img-number="04"></img-one>
-    <img-two name="patterns" category="photography" img-number1="05" img-number2="07"></img-two>
-    <img-one name="patterns" category="photography" img-number="08"></img-one>
-    <img-one name="patterns" category="photography" img-number="06"></img-one>
-    <img-one name="patterns" category="photography" img-number="09"></img-one>
 
-    <home-btn></home-btn>
+    <img-one name="patterns" category="photography" img-number="05"></img-one>
+    <img-two name="patterns" category="photography" img-number1="04" img-number2="07"></img-two>
+
+    <img-one name="patterns" category="photography" img-number="09"></img-one>
+    <img-two name="patterns" category="photography" img-number1="08" img-number2="06"></img-two>
+
+    <!-- TODO: Fix spacing on bottom. -->
+
   </section>
 </template>
 
@@ -26,15 +29,18 @@ import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
-export default {
+export default
+{
   // Head content all up in here
   name: 'patterns',
-  data: function () {
+  data: function ()
+  {
     return {
       title: 'Patterns'
     }
   },
-  head() {
+  head()
+  {
     return {
       title: this.title,
       meta: [
@@ -47,7 +53,8 @@ export default {
     }
   },
   // /Head content
-  components: {
+  components:
+  {
     t,
     tt,
     imgOne,
