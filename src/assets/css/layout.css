@@ -492,3 +492,7 @@ section {
   grid-template-areas: "content col col col col img";
   grid-gap: 3rem 10px;
 }
+
+/* !--------------------------!
+       TODO: add breakpoints
+   !--------------------------! */
