@@ -53,18 +53,15 @@ import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
-export default
-{
+export default {
   // Head content all up in here
   name: 'human-interest',
-  data: function ()
-  {
+  data: function () {
     return {
       title: 'Human interest'
     }
   },
-  head()
-  {
+  head() {
     return {
       title: this.title,
       meta: [
@@ -77,8 +74,7 @@ export default
     }
   },
   // /Head content
-  components:
-  {
+  components: {
     t,
     tt,
     imgOne,
