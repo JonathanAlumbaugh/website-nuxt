@@ -1,6 +1,7 @@
 <template lang="html">
   <section id="home">
 
+    <!-- TODO: Implement vue-affix here -->
     <!-- Isotope sort -->
     <isotope-sort class="home-int">I'm Jonathan, a
       <button class="btn designer" data-filter=".design">graphic designer,</button>
