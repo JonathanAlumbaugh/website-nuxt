@@ -42,10 +42,8 @@ import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
-export default
-{
-  components:
-  {
+export default {
+  components: {
     t,
     tt,
     imgOne,

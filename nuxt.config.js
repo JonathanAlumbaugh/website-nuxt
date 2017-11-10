@@ -26,7 +26,7 @@ module.exports = {
     { src: '~/plugins/vue-sticky.js' },
     { src: '~/plugins/vue-js-modal.js' },
     // !-------------------------------------------------------------------------!
-    // Someday I'll get VueAffix working.
+    // TODO: Someday I'll get VueAffix working.
     // !-------------------------------------------------------------------------!
     // { src: '~/plugins/vue-affix.js' },
     // !-------------------------------------------------------------------------!
