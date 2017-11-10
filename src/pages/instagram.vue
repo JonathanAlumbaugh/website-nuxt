@@ -2,8 +2,8 @@
   <section id="instagram">
 
     <!-- 01 -->
-    <t>Jonathan is always looking for</t>
-    <tt>Sunrises, water, reflections, and other cliche things to take pictures of. Ninety-nine percent of his photos are taken on his phone &#40;a Nexus 6&#41; and edited with Snapseed and VSCO.
+    <t>I'm always looking for</t>
+    <tt>Sunrises, water, reflections, and other cliche things to take pictures of. Ninety-nine percent of my photos are taken on my phone &#40;a Nexus 6&#41; and edited with Snapseed and VSCO.
     </tt>
 
 

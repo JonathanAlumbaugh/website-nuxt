@@ -76,7 +76,7 @@ module.exports = {
     '~assets/css/custom.css',
     '~assets/css/animate.css',
     // !-------------------------------------------------------------------------!
-    // Fix so that you don't include this on every page, only the ones that need it
+    // TODO: Fix so that this is not included on every page, only where necessary
     // !-------------------------------------------------------------------------!
     '~assets/css/jquery.fancybox.css'
   ],
