@@ -1,6 +1,7 @@
 /* !--------------------------!
           .container
       TODO: Fix lint error?
+  TODO: Fix nav in small screens
    !--------------------------! */
 .container {
   display: grid;
@@ -193,6 +194,22 @@ section {
   grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 2fr;
   grid-template-areas: 'home-int  home-body  home-body  home-body home-body  .....';
   grid-gap: 3rem 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  section#home {
+    grid-column: content / col-end;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'main';
+    grid-gap: 3rem 10px;
+  }
+
+  section .home-int,
+  section .home-body {
+    grid-area: main;
+    grid-row: span 1;
+  }
 }
 
 .wip img {

@@ -15,14 +15,14 @@
   width: 31.8%;
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (min-width: 1080px) and (max-width: 1325px) {
   .grid-sizer,
   .element-item {
     width: 48%;
   }
 }
 
-@media only screen and (max-width: 944px) {
+@media only screen and (max-width: 1079px) {
   .grid-sizer,
   .element-item {
     width: 98%;
