@@ -192,7 +192,7 @@ section {
   grid-column: content / col-end;
   display: grid;
   grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 2fr;
-  grid-template-areas: 'home-int  home-body  home-body  home-body home-body  .....';
+  grid-template-areas: 'intro  body  body  body body  .....';
   grid-gap: 3rem 10px;
 }
 
@@ -218,18 +218,19 @@ section {
 }
 
 .home-int {
-  grid-area: home-int;
+  grid-area: intro;
   grid-row: span 1;
 }
 
 .home-body {
-  grid-area: home-body;
+  grid-area: body;
   grid-row: span 1;
 }
 
 /* !--------------------------!
              #about
      TODO: Fix this stupidness
+   TODO: Add another breakpoint
    !--------------------------! */
 
 #about {
@@ -249,75 +250,91 @@ section {
   grid-gap: 3rem 10px;
 }
 
-.abt-int-8 {
+@media only screen and (max-width: 990px) {
+  section#about {
+    grid-column: content / col-end;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'main';
+    grid-gap: 3rem 10px;
+  }
+
+  section#about .abt-int,
+  section#about .abt-body {
+    grid-area: main;
+    grid-row: span 1;
+  }
+}
+
+.abt-int.int-8 {
   grid-area: abt-int-8;
 }
 
-.abt-body-8 {
+.abt-body.body-8 {
   grid-area: abt-body-8;
   grid-column: span 1;
 }
 
-.abt-int-7 {
+.abt-int.int-6 {
   grid-area: abt-int-7;
 }
 
-.abt-body-7 {
+.abt-body.body-7 {
   grid-area: abt-body-7;
   grid-column: span 1;
 }
 
-.abt-int-6 {
+.abt-int.int-6 {
   grid-area: abt-int-6;
 }
 
-.abt-body-6 {
+.abt-body.body-6 {
   grid-area: abt-body-6;
   grid-column: span 1;
 }
 
-.abt-int-5 {
+.abt-int.int-5 {
   grid-area: abt-int-5;
 }
 
-.abt-body-5 {
+.abt-body.body-5 {
   grid-area: abt-body-5;
   grid-column: span 1;
 }
 
-.abt-int-4 {
+.abt-int.int-4 {
   grid-area: abt-int-4;
 }
 
-.abt-body-4 {
+.abt-body.body-4 {
   grid-area: abt-body-4;
   grid-column: span 2;
 }
 
-.abt-int-3 {
+.abt-int.int-3 {
   grid-area: abt-int-3;
 }
 
-.abt-body-3 {
+.abt-body.body-3 {
   grid-area: abt-body-3;
   grid-column: span 2;
   grid-row: span 1;
 }
 
-.abt-int-2 {
+.abt-int.int-2 {
   grid-area: abt-int-2;
 }
 
-.abt-body-2 {
+.abt-body.body-2 {
   grid-area: abt-body-2;
   grid-column: span 2;
 }
 
-.abt-int-1 {
+.abt-int.int-1 {
   grid-area: abt-int-1;
 }
 
-.abt-body-1 {
+.abt-body.body-1 {
   grid-area: abt-body-1;
 }
 
@@ -342,6 +359,22 @@ section {
     'spacer-4   sp-img-4    sp-img-4    sp-img-4    sp-img-4    thmb-6'
     'spacer-4   sp-body-6   sp-body-6   sp-body-6   sp-body-6   ......';
   grid-gap: 3rem 10px;
+}
+
+@media only screen and (max-width: 1080px) {
+  section#senior-project {
+    grid-column: content / col-end;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'main';
+    grid-gap: 3rem 10px;
+  }
+
+  section#senior-project .abt-int,
+  section#senior-project .abt-body {
+    grid-area: main;
+    grid-row: span 1;
+  }
 }
 
 .capt-2 {
