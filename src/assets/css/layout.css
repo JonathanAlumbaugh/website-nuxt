@@ -191,7 +191,7 @@ section {
 #home {
   grid-column: content / col-end;
   display: grid;
-  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 2fr;
+  grid-template-columns: 2.25fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: 'intro  body  body  body body  .....';
   grid-gap: 3rem 10px;
 }

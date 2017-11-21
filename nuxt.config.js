@@ -66,14 +66,15 @@ module.exports = {
 
   css: [
     // !-------------------------------------------------------------------------!
-    // Can I ditch Bootstrap?
+    // TODO: Implement SASS
+    // TODO: Make normalize a mixin
     // !-------------------------------------------------------------------------!
-    // '~assets/css/bootstrap.min.css',
+    // '~assets/css/custom.css',
+    // '~assets/css/isotope.css',
     // !-------------------------------------------------------------------------!
     '~assets/css/normalize.css',
+    '~assets/sass/main.scss',
     '~assets/css/layout.css',
-    '~assets/css/isotope.css',
-    '~assets/css/custom.css',
     '~assets/css/animate.css',
     // !-------------------------------------------------------------------------!
     // TODO: Fix so that this is not included on every page, only where necessary
