@@ -66,11 +66,10 @@ module.exports = {
 
   css: [
     // !-------------------------------------------------------------------------!
-    // Can I ditch Bootstrap?
-    // !-------------------------------------------------------------------------!
-    // '~assets/css/bootstrap.min.css',
+    // TODO: Implement SASS
     // !-------------------------------------------------------------------------!
     '~assets/css/normalize.css',
+    '~assets/sass/test.scss',
     '~assets/css/layout.css',
     '~assets/css/isotope.css',
     '~assets/css/custom.css',
