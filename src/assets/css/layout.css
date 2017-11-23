@@ -50,6 +50,7 @@ nav ul {
 .main-footer {
   grid-area: footer;
   text-align: center;
+  margin-top: 4vh;
 }
 
 /* !--------------------------!
@@ -71,7 +72,6 @@ section {
 .isotope-grid,
 .main-wip {
   grid-column: col;
-  margin-bottom: 8vh;
 }
 
 .img-one {
@@ -193,7 +193,7 @@ section {
   display: grid;
   grid-template-columns: 2.25fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: 'intro  body  body  body body  .....';
-  grid-gap: 3rem 10px;
+  grid-gap: 8rem 10px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -202,7 +202,7 @@ section {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 'main';
-    grid-gap: 3rem 10px;
+    grid-gap: 4rem 10px;
   }
 
   section .home-int,
@@ -247,7 +247,7 @@ section {
     'abt-int-6   abt-body-6   abt-body-6   abt-body-6   abt-body-6   abt-body-6'
     'abt-int-6   abt-body-7   abt-body-7   abt-body-7   abt-body-7   abt-body-7'
     'abt-int-8   abt-body-8   abt-body-8   abt-body-8   abt-body-8   abt-body-8';
-  grid-gap: 3rem 10px;
+  grid-gap: 8rem 10px;
 }
 
 @media only screen and (max-width: 990px) {
@@ -547,3 +547,137 @@ section {
 /* !--------------------------!
        TODO: add breakpoints
    !--------------------------! */
+
+/* !--------------------------!
+        Responsive classes
+   !--------------------------! */
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  section#textile-patterns,
+  section#sting-vodka-branding,
+  section#exhibition-catalog,
+  section#patterns,
+  section#human-interest {
+    grid-column: content / col-end;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+    grid-template-areas: 'intro main main img';
+    grid-gap: 3rem 10px;
+  }
+
+  section#textile-patterns .t,
+  section#sting-vodka-branding .t,
+  section#exhibition-catalog .t,
+  section#patterns .t,
+  section#human-interest .t {
+    grid-column: span 2 / 3;
+  }
+
+  section#textile-patterns .tt,
+  section#sting-vodka-branding .tt,
+  section#exhibition-catalog .tt,
+  section#patterns .tt,
+  section#human-interest .tt,
+  section#senior-project .tt,
+  .img-one {
+    grid-column: span 2 / 4;
+  }
+
+  .img-two,
+  .img-three {
+    grid-column: img;
+  }
+
+  .img-fluid-two {
+    width: 160%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  section#textile-patterns,
+  section#sting-vodka-branding,
+  section#exhibition-catalog,
+  section#patterns,
+  section#human-interest {
+    grid-column: content / col-end;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+    grid-template-areas: 'intro main main img';
+    grid-gap: 3rem 10px;
+  }
+
+  section#textile-patterns .t,
+  section#sting-vodka-branding .t,
+  section#exhibition-catalog .t,
+  section#patterns .t,
+  section#human-interest .t {
+    grid-column: span 3 / 4;
+  }
+
+  section#textile-patterns .tt,
+  section#sting-vodka-branding .tt,
+  section#exhibition-catalog .tt,
+  section#patterns .tt,
+  section#human-interest .tt,
+  section#senior-project .tt,
+  .img-one {
+    grid-column: span 2 / 4;
+  }
+
+  .img-two,
+  .img-three {
+    grid-column: img;
+  }
+
+  .img-fluid-two {
+    width: 160%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section#textile-patterns,
+  section#sting-vodka-branding,
+  section#exhibition-catalog,
+  section#patterns,
+  section#human-interest {
+    grid-column: content / col-end;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+    grid-template-areas: 'intro main main img';
+    grid-gap: 3rem 10px;
+  }
+
+  section#textile-patterns .t,
+  section#sting-vodka-branding .t,
+  section#exhibition-catalog .t,
+  section#patterns .t,
+  section#human-interest .t {
+    grid-column: span 3 / 4;
+  }
+
+  section#textile-patterns .tt,
+  section#sting-vodka-branding .tt,
+  section#exhibition-catalog .tt,
+  section#patterns .tt,
+  section#human-interest .tt,
+  section#senior-project .tt {
+    grid-column: span 4 / 5;
+  }
+
+  .nav-item-1 {
+    z-index: -100;
+  }
+
+  .img-one {
+    grid-column: span 3 / 4;
+  }
+
+  .img-two,
+  .img-three {
+    grid-column: img;
+  }
+
+  .img-fluid-two {
+    width: 160%;
+  }
+}

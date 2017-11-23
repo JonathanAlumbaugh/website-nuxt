@@ -48,7 +48,7 @@
 
     <!-- Extra -->
     <t class="home-int">and in my spare<br /> time I enjoy</t>
-    <tt class="home-body">Play with this website. Since successfully implementing a server-side rendered build of Vue.js, I've implemented CSS grids, ditched Bootstrap, and work to refine copy and improve content.</tt>
+    <tt class="home-body">Playing with this website. Since successfully implementing a server-side rendered build of Vue.js, I've implemented CSS grids, ditched Bootstrap, and work to refine copy and improve content.</tt>
 
 
     <!-- Scripts -->

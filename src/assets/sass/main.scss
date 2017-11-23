@@ -178,6 +178,10 @@ a {
   }
 }
 
+.main-header {
+  padding-right: 20px;
+}
+
 //////////////////////////
 //       Buttons       //
 //////////////////////////
@@ -445,7 +449,7 @@ button {
     -o-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     display: inline-block;
-    font-size: 18px;
+    font-size: 2rem;
     left: 50%;
     position: absolute;
     text-align: center;
@@ -456,7 +460,7 @@ button {
   .hvrbox-text_mobile {
     border-top: 1px solid rgb(179, 179, 179);
     display: none;
-    font-size: 15px;
+    font-size: 1.5rem;
 
     // for old browsers
     margin-top: 5px;
@@ -470,7 +474,7 @@ button {
 }
 
 ////////////////////////////
-//       Isotop: ;       //
+//       Isotope        //
 //////////////////////////
 
 .grid-sizer,
