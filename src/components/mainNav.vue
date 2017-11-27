@@ -6,6 +6,7 @@
 
           <!-- Add active class to both li and nuxt-link based on which is active -->
           <!-- Home -->
+          <!-- TODO: Fix home button so it disappears on small screens > 600px -->
           <li class="nav-item-1 nav-item">
             <nuxt-link class="nav-link" exact to="/">Home</nuxt-link>
           </li>
@@ -43,12 +44,15 @@
 
 <script>
 import VueSticky from 'vue-sticky'
-export default {
+export default
+{
   name: 'mainNav',
-  directives: {
+  directives:
+  {
     'sticky': VueSticky
   },
-  data() {
+  data()
+  {
     return {
       // !-------------------------------------------------!
       // Set scroll position to nothing to begin with
@@ -56,42 +60,52 @@ export default {
       scrollPosition: null,
       // !-------------------------------------------------!
       classPicker: null,
-      stickyConfig: {
+      stickyConfig:
+      {
         zIndex: 100,
         stickyTop: 0
       },
     }
   },
-  methods: {
+  methods:
+  {
     // !-------------------------------------------------!
     // Update scroll position once there's been a change
     // !-------------------------------------------------!
-    updateScroll() {
+    updateScroll()
+    {
       this.scrollPosition = window.scrollY
     },
     // !-------------------------------------------------!
-    show() {
+    show()
+    {
       this.$modal.show( 'contact-modal' );
     },
-    hide() {
+    hide()
+    {
       this.$modal.hide( 'contact-modal' );
     }
   },
   // !-------------------------------------------------!
   // Update scroll position when the page is mounted
   // !-------------------------------------------------!
-  mounted() {
+  mounted()
+  {
     window.addEventListener( 'scroll', this.updateScroll );
   },
   // !-------------------------------------------------!
   // Change the class based on the position in page
   // !-------------------------------------------------!
-  computed: {
-    navHider: {
-      get: function () {
+  computed:
+  {
+    navHider:
+    {
+      get: function ()
+      {
         return this.firstName + ' ' + this.lastName
       },
-      set: function ( newValue ) {
+      set: function ( newValue )
+      {
         var names = newValue.split( ' ' )
         this.firstName = names[ 0 ]
         this.lastName = names[ names.length - 1 ]
@@ -108,7 +122,8 @@ export default {
   // !-------------------------------------------------!
   // Destroy listener on page destroy
   // !-------------------------------------------------!
-  destroy() {
+  destroy()
+  {
     window.removeEventListener( 'scroll', this.updateScroll )
   }
   // !-------------------------------------------------!

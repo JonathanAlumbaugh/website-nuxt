@@ -25,8 +25,6 @@
     <!-- 05 -->
     <img-one name="exhibition catalog" category="design" img-number="07"></img-one>
 
-    <!-- TODO: Fix spacing on bottom -->
-
   </section>
 </template>
 
@@ -37,15 +35,18 @@ import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
-export default {
+export default
+{
   // Head content all up in here
   name: 'exhibition-catalog',
-  data: function () {
+  data: function ()
+  {
     return {
       title: 'Exhibition catalog'
     }
   },
-  head() {
+  head()
+  {
     return {
       title: this.title,
       meta: [
@@ -58,7 +59,8 @@ export default {
     }
   },
   // /Head content
-  components: {
+  components:
+  {
     t,
     tt,
     imgOne,

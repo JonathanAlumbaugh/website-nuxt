@@ -17,8 +17,6 @@
     <img-one name="patterns" category="photography" img-number="09"></img-one>
     <img-two name="patterns" category="photography" img-number1="08" img-number2="06"></img-two>
 
-    <!-- TODO: Fix spacing on bottom. -->
-
   </section>
 </template>
 

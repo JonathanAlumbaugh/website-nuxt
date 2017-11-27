@@ -664,9 +664,9 @@ section {
     grid-column: span 4 / 5;
   }
 
-  .nav-item-1 {
+  /* .nav-item-1 {
     z-index: -100;
-  }
+  } */
 
   .img-one {
     grid-column: span 3 / 4;
