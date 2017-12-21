@@ -20,9 +20,6 @@ module.exports = {
     // least something online.
     // GO TO HEAD TAG AND REMOVE THAT SHIT WHEN YOU FIX THIS
     // !-------------------------------------------------------------------------!
-    // { src: '~plugins/vuebar.js', ssr: false }
-    // { src: '~plugins/isotope.js' }
-    // { src: '~plugins/jquery.fancybox.js', ssr: false }
     { src: '~/plugins/vue-sticky.js' },
     { src: '~/plugins/vue-js-modal.js' },
     // !-------------------------------------------------------------------------!
@@ -68,9 +65,6 @@ module.exports = {
     // !-------------------------------------------------------------------------!
     // TODO: Implement SASS
     // TODO: Make normalize a mixin
-    // !-------------------------------------------------------------------------!
-    // '~assets/css/custom.css',
-    // '~assets/css/isotope.css',
     // !-------------------------------------------------------------------------!
     '~assets/css/normalize.css',
     '~assets/sass/main.scss',

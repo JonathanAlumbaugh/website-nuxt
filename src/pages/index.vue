@@ -3,8 +3,8 @@
 
     <!-- TODO: Implement vue-affix here -->
     <!-- Isotope sort -->
-    <isotope-sort class="home-int">I'm Jonathan, a
-      <button class="btn designer" data-filter=".design">graphic designer,</button>
+    <isotope-sort class="home-int">I'm a
+      <button class="btn designer" data-filter=".design">designer,</button>
       <button class="btn photographer" data-filter=".photography">
           photographer,</button>
       <button class="btn photojournalist" data-filter=".photojournalism">
@@ -18,9 +18,11 @@
     <div id="isotope-grid" class='home-body isotope-grid grid'>
       <div class="grid-sizer"></div>
       <isotope-item name="senior project" category="design"></isotope-item>
-      <isotope-item name="textile patterns" category="design"></isotope-item>
+      <isotope-item name="film" category="photography"></isotope-item>
       <isotope-item name="STING vodka branding" category="design"></isotope-item>
       <isotope-item name="exhibition catalog" category="design"></isotope-item>
+      <isotope-item name="VML Hub Branding" category="design"></isotope-item>
+      <isotope-item name="textile patterns" category="design"></isotope-item>
       <isotope-item name="patterns" category="photography"></isotope-item>
       <isotope-item name="human interest" category="photojournalism"></isotope-item>
     </div>
@@ -29,7 +31,6 @@
     <!-- TODO: Add 3D keychain -->
     <!-- TODO: Add film photos -->
     <!--
-    <isotope-item name="VML Hub Branding" category="design"></isotope-item>
       <isotope-item name="Benoit golf tournament" category="design"></isotope-item>
       <isotope-item name="this-website" category="design"></isotope-item>
       <isotope-item name="instagram" category="photography"></isotope-item>
