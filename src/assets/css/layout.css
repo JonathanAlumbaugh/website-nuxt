@@ -53,8 +53,14 @@ nav ul {
   margin-top: 4vh;
 }
 
+.block-space {
+  grid-column: content;
+  background-color: red;
+  display: inherit;
+}
+
 /* !--------------------------!
-             .section
+             section
    !--------------------------! */
 section {
   grid-column: content / col-end;
@@ -78,96 +84,17 @@ section {
   grid-column: col;
 }
 
-.img-two {
-  grid-column: img;
-}
-
+.img-two,
 .img-three {
   grid-column: img;
 }
 
 .blk-lg {
-  grid-column: span 2 col;
+  grid-column: span 2;
 }
 
 .blk-sm {
-  grid-column: span 1 col;
-}
-
-.space-6 {
-  grid-area: space-6;
-  height: 80px;
-}
-
-.space-5 {
-  grid-area: space-5;
-  height: 80px;
-}
-
-.space-4 {
-  grid-area: space-4;
-  height: 80px;
-}
-
-.space-3 {
-  grid-area: space-3;
-  height: 80px;
-}
-
-.space-2 {
-  grid-area: space-2;
-  height: 80px;
-}
-
-.space-1 {
-  grid-area: space-1;
-  height: 80px;
-}
-
-.space {
-  grid-column: 1 / 7;
-  height: 80px;
-}
-
-.spacer-6 {
-  grid-area: spacer-6;
-  height: auto;
-  width: auto;
-}
-
-.spacer-5 {
-  grid-area: spacer-5;
-  height: auto;
-  width: auto;
-}
-
-.spacer-4 {
-  grid-area: spacer-4;
-  height: auto;
-  width: auto;
-}
-
-.spacer-3 {
-  grid-area: spacer-3;
-  height: auto;
-  width: auto;
-}
-
-.spacer-2 {
-  grid-area: spacer-2;
-  height: auto;
-  width: auto;
-}
-
-.spacer-1 {
-  grid-area: spacer-1;
-  height: auto;
-  width: auto;
-}
-
-.home-btn {
-  grid-area: home-btn;
-  text-align: center;
+  grid-column: span 1;
 }
 
 /* !--------------------------!
@@ -228,114 +155,211 @@ section {
 }
 
 /* !--------------------------!
-             #about
-     TODO: Fix this stupidness
-   TODO: Add another breakpoint
+          Page grids
    !--------------------------! */
 
-#about {
+#about,
+#textile-patterns,
+#sting-vodka-branding,
+#exhibition-catalog,
+#patterns,
+#human-interest,
+#wip {
   grid-column: content / col-end;
   display: grid;
   grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
-  grid-template-areas:
-    'abt-int-1   abt-body-1   abt-body-1   abt-body-1   abt-body-1   ......'
-    'abt-int-2   abt-body-2   abt-body-2   abt-body-2   abt-body-2   abt-body-2'
-    'abt-int-3   abt-body-3   abt-body-3   abt-body-3   abt-body-3   abt-body-3'
-    'abt-int-3   abt-body-3   abt-body-3   abt-body-3   abt-body-3   abt-body-3'
-    'abt-int-4   abt-body-4   abt-body-4   abt-body-4   abt-body-4   abt-body-4'
-    'abt-int-5   abt-body-5   abt-body-5   abt-body-5   abt-body-5   abt-body-5'
-    'abt-int-6   abt-body-6   abt-body-6   abt-body-6   abt-body-6   abt-body-6'
-    'abt-int-6   abt-body-7   abt-body-7   abt-body-7   abt-body-7   abt-body-7'
-    'abt-int-8   abt-body-8   abt-body-8   abt-body-8   abt-body-8   abt-body-8';
-  grid-gap: 8rem 10px;
+  grid-template-areas: 'content col col col col img';
+  grid-gap: 3rem 10px;
 }
 
-@media only screen and (max-width: 990px) {
+/* !--------------------------!
+        Responsive classes
+   !--------------------------! */
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  section#about,
+  section#textile-patterns,
+  section#sting-vodka-branding,
+  section#exhibition-catalog,
+  section#patterns,
+  section#human-interest {
+    grid-column: content / col-end;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+    grid-template-areas: 'intro main main img';
+    grid-gap: 3rem 10px;
+  }
+
+  section#about .t,
+  section#textile-patterns .t,
+  section#sting-vodka-branding .t,
+  section#exhibition-catalog .t,
+  section#patterns .t,
+  section#human-interest .t {
+    grid-column: span 2 / 3;
+  }
+
+  section#about .tt,
+  section#textile-patterns .tt,
+  section#sting-vodka-branding .tt,
+  section#exhibition-catalog .tt,
+  section#patterns .tt,
+  section#human-interest .tt,
+  section#senior-project .tt,
+  .img-one {
+    grid-column: span 2 / 4;
+  }
+
+  .img-two,
+  .img-three {
+    grid-column: img;
+  }
+
+  .img-fluid-two {
+    width: 160%;
+  }
+
+  .blk-lg {
+    grid-column: 2 / 3;
+  }
+
+  .blk-sm {
+    grid-column: 2 / 3;
+  }
+
+  .block-space {
+    display: inherit;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
   section#about {
     grid-column: content / col-end;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.5fr 4fr 0.5fr;
+    grid-template-areas: 'intro main img';
+    grid-gap: 3rem 10px;
+  }
+
+  section#about .t {
+    grid-column: 1 / 3;
+  }
+
+  .blk-sm,
+  .blk-lg,
+  section#about .tt {
+    grid-column: main;
+  }
+
+  .block-space {
+    display: none;
+  }
+
+  section#textile-patterns,
+  section#sting-vodka-branding,
+  section#exhibition-catalog,
+  section#patterns,
+  section#human-interest {
+    grid-column: content / col-end;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+    grid-template-areas: 'intro main main img';
+    grid-gap: 3rem 10px;
+  }
+
+  section#textile-patterns .t,
+  section#sting-vodka-branding .t,
+  section#exhibition-catalog .t,
+  section#patterns .t,
+  section#human-interest .t {
+    grid-column: span 3 / 4;
+  }
+
+  section#textile-patterns .tt,
+  section#sting-vodka-branding .tt,
+  section#exhibition-catalog .tt,
+  section#patterns .tt,
+  section#human-interest .tt,
+  section#senior-project .tt,
+  .img-one {
+    grid-column: span 2 / 4;
+  }
+
+  .img-two,
+  .img-three {
+    grid-column: img;
+  }
+
+  .img-fluid-two {
+    width: 160%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section#about {
+    grid-column: content / col-end;
+    display: grid;
+    grid-template-columns: 0.5fr 4fr 0.5fr;
     grid-template-areas: 'main';
     grid-gap: 3rem 10px;
   }
 
-  section#about .abt-int,
-  section#about .abt-body {
-    grid-area: main;
-    grid-row: span 1;
+  .blk-sm,
+  .blk-lg,
+  section#about .t,
+  section#about .tt {
+    grid-column: main;
   }
-}
 
-.abt-int.int-8 {
-  grid-area: abt-int-8;
-}
+  .block-space {
+    display: none;
+  }
 
-.abt-body.body-8 {
-  grid-area: abt-body-8;
-  grid-column: span 1;
-}
+  section#textile-patterns,
+  section#sting-vodka-branding,
+  section#exhibition-catalog,
+  section#patterns,
+  section#human-interest {
+    grid-column: content / col-end;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+    grid-template-areas: 'intro main main img';
+    grid-gap: 3rem 10px;
+  }
 
-.abt-int.int-6 {
-  grid-area: abt-int-7;
-}
+  section#textile-patterns .t,
+  section#sting-vodka-branding .t,
+  section#exhibition-catalog .t,
+  section#patterns .t,
+  section#human-interest .t {
+    grid-column: span 3 / 4;
+  }
 
-.abt-body.body-7 {
-  grid-area: abt-body-7;
-  grid-column: span 1;
-}
+  section#textile-patterns .tt,
+  section#sting-vodka-branding .tt,
+  section#exhibition-catalog .tt,
+  section#patterns .tt,
+  section#human-interest .tt,
+  section#senior-project .tt {
+    grid-column: span 4 / 5;
+  }
 
-.abt-int.int-6 {
-  grid-area: abt-int-6;
-}
+  /* .nav-item-1 {
+    z-index: -100;
+  } */
 
-.abt-body.body-6 {
-  grid-area: abt-body-6;
-  grid-column: span 1;
-}
+  .img-one {
+    grid-column: span 3 / 4;
+  }
 
-.abt-int.int-5 {
-  grid-area: abt-int-5;
-}
+  .img-two,
+  .img-three {
+    grid-column: img;
+  }
 
-.abt-body.body-5 {
-  grid-area: abt-body-5;
-  grid-column: span 1;
-}
-
-.abt-int.int-4 {
-  grid-area: abt-int-4;
-}
-
-.abt-body.body-4 {
-  grid-area: abt-body-4;
-  grid-column: span 2;
-}
-
-.abt-int.int-3 {
-  grid-area: abt-int-3;
-}
-
-.abt-body.body-3 {
-  grid-area: abt-body-3;
-  grid-column: span 2;
-  grid-row: span 1;
-}
-
-.abt-int.int-2 {
-  grid-area: abt-int-2;
-}
-
-.abt-body.body-2 {
-  grid-area: abt-body-2;
-  grid-column: span 2;
-}
-
-.abt-int.int-1 {
-  grid-area: abt-int-1;
-}
-
-.abt-body.body-1 {
-  grid-area: abt-body-1;
+  .img-fluid-two {
+    width: 160%;
+  }
 }
 
 /* !--------------------------!
@@ -470,214 +494,4 @@ section {
 
 .sp-int-1 {
   grid-area: sp-int-1;
-}
-
-/* !--------------------------!
-         #textile-patterns
-   !--------------------------! */
-
-#textile-patterns {
-  grid-column: content / col-end;
-  display: grid;
-  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
-  grid-template-areas: 'content col col col col img';
-  grid-gap: 3rem 10px;
-}
-
-/* !--------------------------!
-       #sting-vodka-branding
-   !--------------------------! */
-
-#sting-vodka-branding {
-  grid-column: content / col-end;
-  display: grid;
-  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
-  grid-template-areas: 'content col col col col img';
-  grid-gap: 3rem 10px;
-}
-
-/* !--------------------------!
-       #exhibition-catalog
-   !--------------------------! */
-
-#exhibition-catalog {
-  grid-column: content / col-end;
-  display: grid;
-  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
-  grid-template-areas: 'content col col col col img';
-  grid-gap: 3rem 10px;
-}
-
-/* !--------------------------!
-           #patterns
-   !--------------------------! */
-
-#patterns {
-  grid-column: content / col-end;
-  display: grid;
-  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
-  grid-template-areas: 'content col col col col img';
-  grid-gap: 3rem 10px;
-}
-
-/* !--------------------------!
-         #human-interest
-   !--------------------------! */
-
-#human-interest {
-  grid-column: content / col-end;
-  display: grid;
-  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
-  grid-template-areas: 'content col col col col img';
-  grid-gap: 3rem 10px;
-}
-
-/* !--------------------------!
-         #wip
-   !--------------------------! */
-
-#wip {
-  grid-column: content / col-end;
-  display: grid;
-  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
-  grid-template-areas: 'content col col col col img';
-  grid-gap: 3rem 10px;
-}
-
-/* !--------------------------!
-       TODO: add breakpoints
-   !--------------------------! */
-
-/* !--------------------------!
-        Responsive classes
-   !--------------------------! */
-
-@media only screen and (min-width: 900px) and (max-width: 1200px) {
-  section#textile-patterns,
-  section#sting-vodka-branding,
-  section#exhibition-catalog,
-  section#patterns,
-  section#human-interest {
-    grid-column: content / col-end;
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
-    grid-template-areas: 'intro main main img';
-    grid-gap: 3rem 10px;
-  }
-
-  section#textile-patterns .t,
-  section#sting-vodka-branding .t,
-  section#exhibition-catalog .t,
-  section#patterns .t,
-  section#human-interest .t {
-    grid-column: span 2 / 3;
-  }
-
-  section#textile-patterns .tt,
-  section#sting-vodka-branding .tt,
-  section#exhibition-catalog .tt,
-  section#patterns .tt,
-  section#human-interest .tt,
-  section#senior-project .tt,
-  .img-one {
-    grid-column: span 2 / 4;
-  }
-
-  .img-two,
-  .img-three {
-    grid-column: img;
-  }
-
-  .img-fluid-two {
-    width: 160%;
-  }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-  section#textile-patterns,
-  section#sting-vodka-branding,
-  section#exhibition-catalog,
-  section#patterns,
-  section#human-interest {
-    grid-column: content / col-end;
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
-    grid-template-areas: 'intro main main img';
-    grid-gap: 3rem 10px;
-  }
-
-  section#textile-patterns .t,
-  section#sting-vodka-branding .t,
-  section#exhibition-catalog .t,
-  section#patterns .t,
-  section#human-interest .t {
-    grid-column: span 3 / 4;
-  }
-
-  section#textile-patterns .tt,
-  section#sting-vodka-branding .tt,
-  section#exhibition-catalog .tt,
-  section#patterns .tt,
-  section#human-interest .tt,
-  section#senior-project .tt,
-  .img-one {
-    grid-column: span 2 / 4;
-  }
-
-  .img-two,
-  .img-three {
-    grid-column: img;
-  }
-
-  .img-fluid-two {
-    width: 160%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  section#textile-patterns,
-  section#sting-vodka-branding,
-  section#exhibition-catalog,
-  section#patterns,
-  section#human-interest {
-    grid-column: content / col-end;
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
-    grid-template-areas: 'intro main main img';
-    grid-gap: 3rem 10px;
-  }
-
-  section#textile-patterns .t,
-  section#sting-vodka-branding .t,
-  section#exhibition-catalog .t,
-  section#patterns .t,
-  section#human-interest .t {
-    grid-column: span 3 / 4;
-  }
-
-  section#textile-patterns .tt,
-  section#sting-vodka-branding .tt,
-  section#exhibition-catalog .tt,
-  section#patterns .tt,
-  section#human-interest .tt,
-  section#senior-project .tt {
-    grid-column: span 4 / 5;
-  }
-
-  /* .nav-item-1 {
-    z-index: -100;
-  } */
-
-  .img-one {
-    grid-column: span 3 / 4;
-  }
-
-  .img-two,
-  .img-three {
-    grid-column: img;
-  }
-
-  .img-fluid-two {
-    width: 160%;
-  }
 }

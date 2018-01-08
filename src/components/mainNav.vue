@@ -27,6 +27,13 @@
             <div class="dialog-content">
               <p>Email me at jonathan.alumbaugh@gmail.com,<br/>
                 or call me at 860 457 8556!</p>
+              <!-- <div class="social">
+                <a href="behance.net/jonathanalumbaugh"><img src="../static/icons/behance.svg"></a>
+                <a href="https://dribbble.com/jonathana"><img src="../static/icons/dribbble.svg"></a>
+                <a href="https://www.facebook.com/jonathan.alumbaugh"><img src="../static/icons/facebook.svg"></a>
+                <a href="https://www.instagram.com/jonathan_alumbaugh/"><img src="../static/icons/instagram.svg"></a>
+                <a href="behance.net/jonathanalumbaugh"><img src="../static/icons/linkedin.svg"></a>
+              </div> -->
             </div>
             <!-- Modal buttons -->
             <div class="dialog-buttons">
@@ -44,15 +51,12 @@
 
 <script>
 import VueSticky from 'vue-sticky'
-export default
-{
+export default {
   name: 'mainNav',
-  directives:
-  {
+  directives: {
     'sticky': VueSticky
   },
-  data()
-  {
+  data() {
     return {
       // !-------------------------------------------------!
       // Set scroll position to nothing to begin with
@@ -60,52 +64,42 @@ export default
       scrollPosition: null,
       // !-------------------------------------------------!
       classPicker: null,
-      stickyConfig:
-      {
+      stickyConfig: {
         zIndex: 100,
         stickyTop: 0
       },
     }
   },
-  methods:
-  {
+  methods: {
     // !-------------------------------------------------!
     // Update scroll position once there's been a change
     // !-------------------------------------------------!
-    updateScroll()
-    {
+    updateScroll() {
       this.scrollPosition = window.scrollY
     },
     // !-------------------------------------------------!
-    show()
-    {
+    show() {
       this.$modal.show( 'contact-modal' );
     },
-    hide()
-    {
+    hide() {
       this.$modal.hide( 'contact-modal' );
     }
   },
   // !-------------------------------------------------!
   // Update scroll position when the page is mounted
   // !-------------------------------------------------!
-  mounted()
-  {
+  mounted() {
     window.addEventListener( 'scroll', this.updateScroll );
   },
   // !-------------------------------------------------!
   // Change the class based on the position in page
   // !-------------------------------------------------!
-  computed:
-  {
-    navHider:
-    {
-      get: function ()
-      {
+  computed: {
+    navHider: {
+      get: function () {
         return this.firstName + ' ' + this.lastName
       },
-      set: function ( newValue )
-      {
+      set: function ( newValue ) {
         var names = newValue.split( ' ' )
         this.firstName = names[ 0 ]
         this.lastName = names[ names.length - 1 ]
@@ -122,8 +116,7 @@ export default
   // !-------------------------------------------------!
   // Destroy listener on page destroy
   // !-------------------------------------------------!
-  destroy()
-  {
+  destroy() {
     window.removeEventListener( 'scroll', this.updateScroll )
   }
   // !-------------------------------------------------!
