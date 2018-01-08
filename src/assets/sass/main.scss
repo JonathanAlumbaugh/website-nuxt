@@ -1,6 +1,5 @@
-
-// @import 'reset';
 @import 'mixins';
+// @import 'reset';
 
 @font-face {
   font-family: 'header-one';
@@ -187,7 +186,7 @@ a {
 }
 
 //////////////////////////
-//       Buttons       //
+//       Navbar         //
 //////////////////////////
 
 button {
@@ -241,6 +240,35 @@ button {
   }
 }
 
+.dialog-content {
+  background-color: $white;
+  padding: 40px;
+
+  div {
+    -webkit-transform: translate(-50%, 0);
+    left: 50%;
+    position: absolute;
+
+    a {
+      &:not(:last-child) {
+        padding-right: 10%;
+      }
+
+      &hover,
+      &focus {
+      }
+    }
+
+    img {
+      width: 32px;
+    }
+  }
+}
+
+//////////////////////////
+//       Buttons       //
+//////////////////////////
+
 .btn {
   border: 1px solid transparent;
   border-color: $light-grey-2;
@@ -292,11 +320,6 @@ button {
     // cursor: hand;
     cursor: pointer;
   }
-}
-
-.dialog-content {
-  background-color: $white;
-  padding: 40px;
 }
 
 .error-contact {
@@ -422,10 +445,6 @@ button {
     .hvrbox-text_mobile {
       display: block;
     }
-  }
-
-  .hvrbox-layer_bottom {
-    display: block;
   }
 
   .hvrbox-layer_top {

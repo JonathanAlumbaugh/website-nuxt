@@ -48,8 +48,8 @@
 
 
     <!-- Extra -->
-    <t class="home-int">and in my spare<br /> time I enjoy</t>
-    <tt class="home-body">Playing with this website. Since successfully implementing a server-side rendered build of Vue.js, I've implemented CSS grids, ditched Bootstrap, and work to refine copy and improve content.</tt>
+    <t class="home-int">I've worked on lots of projects</t>
+    <tt class="home-body">Including web design and development, branding, packaging, signage, textile design, and more. Talk to me about your project, or anything cool.</tt>
 
 
     <!-- Scripts -->
@@ -65,18 +65,15 @@ import isotopeGrid from '~/components/isotopeGrid.vue'
 import isotopeSort from '~/components/isotopeSort.vue'
 import isotopeItem from '~/components/isotopeItem.vue'
 import mainWip from '~/components/mainWip.vue'
-export default
-{
+export default {
   // Head content all up in here
   name: 'home',
-  data: function ()
-  {
+  data: function () {
     return {
-      title: 'Jonathan.com was taken'
+      title: 'Jonathan'
     }
   },
-  head()
-  {
+  head() {
     return {
       title: this.title,
       meta: [
@@ -89,8 +86,7 @@ export default
     }
   },
   // /Head content
-  components:
-  {
+  components: {
     t,
     tt,
     isotopeGrid,
