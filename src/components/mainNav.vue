@@ -27,21 +27,13 @@
             <div class="dialog-content">
               <p>Email me at jonathan.alumbaugh@gmail.com,<br/>
                 or call me at 860 457 8556!</p>
-<<<<<<< HEAD
               <!-- <div class="social">
-=======
-              <div class="social">
->>>>>>> 13afb7cefb9f35ba4b37d3f2572aaa5d6efd09b2
                 <a href="behance.net/jonathanalumbaugh"><img src="../static/icons/behance.svg"></a>
                 <a href="https://dribbble.com/jonathana"><img src="../static/icons/dribbble.svg"></a>
                 <a href="https://www.facebook.com/jonathan.alumbaugh"><img src="../static/icons/facebook.svg"></a>
                 <a href="https://www.instagram.com/jonathan_alumbaugh/"><img src="../static/icons/instagram.svg"></a>
                 <a href="behance.net/jonathanalumbaugh"><img src="../static/icons/linkedin.svg"></a>
-<<<<<<< HEAD
               </div> -->
-=======
-              </div>
->>>>>>> 13afb7cefb9f35ba4b37d3f2572aaa5d6efd09b2
             </div>
             <!-- Modal buttons -->
             <div class="dialog-buttons">
