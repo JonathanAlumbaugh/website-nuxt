@@ -1,12 +1,11 @@
 <template lang="html">
   <footer class="main-footer box-shadow-bottom">
-    <h4>copyright &copy; Jonathan Alumbaugh 2017 / updated Nov 22</h4>
+    <h4>copyright &copy; Jonathan Alumbaugh 2017 / updated Jan 12</h4>
   </footer>
 </template>
 
 <script>
-export default
-{
+export default {
   name: 'mainFooter',
 }
 </script>

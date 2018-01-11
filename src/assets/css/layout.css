@@ -5,19 +5,42 @@
    !--------------------------! */
 .container {
   display: grid;
-  grid-template-columns: 1fr 4.5fr 2fr 2fr 2fr 2fr 2fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr 9fr 1fr;
   grid-template-rows: [head] auto [abt-body] auto [foot] auto;
   grid-template-areas:
-    'pr header ... ... ... ... ... pl'
-    'pr content col col col col col pl'
-    'footer footer footer footer footer footer footer footer';
+    'pr header ... ... pl'
+    'pr content col col pl'
+    'footer footer footer footer footer';
   grid-gap: 8rem 10px;
   grid-auto-rows: minmax(auto, auto);
 }
 
-.main-header {
-  grid-area: header;
+.main-header-position {
+  grid-column: 2/3;
+  grid-row: head;
   z-index: 101;
+}
+
+.main-header {
+  transition: all 0.25s;
+}
+
+.main-header:hover {
+  text-shadow:
+    2px 2px 2px rgba(0, 0, 0, 0.05),
+    4px 4px 2px rgba(0, 0, 0, 0.05),
+    6px 6px 3px rgba(0, 0, 0, 0.05);
+}
+
+.home-hider {
+  opacity: 100%;
+  transition: all 0.25s;
+}
+
+@media only screen and (max-width: 820px) {
+  .home-hider {
+    opacity: 0;
+  }
 }
 
 .main-nav {
@@ -26,6 +49,11 @@
   align-self: center;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 35px 60px -27px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -55,7 +83,6 @@ nav ul {
 
 .block-space {
   grid-column: content;
-  background-color: red;
   display: inherit;
 }
 
@@ -159,6 +186,7 @@ section {
    !--------------------------! */
 
 #about,
+#senior-project,
 #textile-patterns,
 #sting-vodka-branding,
 #exhibition-catalog,
@@ -178,45 +206,70 @@ section {
 
 @media only screen and (min-width: 900px) and (max-width: 1200px) {
   section#about,
+  section#senior-project,
   section#textile-patterns,
   section#sting-vodka-branding,
   section#exhibition-catalog,
   section#patterns,
-  section#human-interest {
+  section#human-interest,
+  section#wip  {
     grid-column: content / col-end;
     display: grid;
     grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
     grid-template-areas: 'intro main main img';
     grid-gap: 3rem 10px;
+    grid-auto-rows: min-content max-content;
   }
 
   section#about .t,
+  section#senior-project .t,
   section#textile-patterns .t,
   section#sting-vodka-branding .t,
   section#exhibition-catalog .t,
   section#patterns .t,
-  section#human-interest .t {
+  section#human-interest .t,
+  section#wip .t {
     grid-column: span 2 / 3;
   }
 
   section#about .tt,
+  section#senior-project .tt,
   section#textile-patterns .tt,
   section#sting-vodka-branding .tt,
   section#exhibition-catalog .tt,
   section#patterns .tt,
   section#human-interest .tt,
-  section#senior-project .tt,
+  section#wip .tt,
   .img-one {
-    grid-column: span 2 / 4;
+    grid-column: main;
+  }
+
+  div.img-one {
+    overflow: hidden;
+    height: auto;
+  }
+
+  .img-fluid-one {
+    height: auto;
+    width: 100%;
+  }
+
+  div.img-two div,
+  div.img-three div {
+    overflow: hidden;
+    height: 20rem;
+    width: 30rem;
   }
 
   .img-two,
   .img-three {
     grid-column: img;
+    overflow: hidden;
   }
 
   .img-fluid-two {
-    width: 160%;
+    width: 100%;
+    overflow: hidden;
   }
 
   .blk-lg {
@@ -360,138 +413,4 @@ section {
   .img-fluid-two {
     width: 160%;
   }
-}
-
-/* !--------------------------!
-         #senior-project
-   !--------------------------! */
-
-#senior-project {
-  grid-column: content / col-end;
-  display: grid;
-  grid-template-columns: 4.5fr 2fr 2fr 2fr 2fr 3fr;
-  grid-template-areas:
-    'sp-int-1   sp-body-1   sp-body-1   sp-body-1   sp-body-1   sp-body-1'
-    'spacer-1   sp-img-1    sp-img-1    sp-img-1    sp-img-1    thmb-1'
-    'spacer-1   sp-img-1    sp-img-1    sp-img-1    sp-img-1    thmb-2'
-    'capt-1     sp-body-2   sp-body-2   sp-body-2   sp-body-2   ......'
-    'spacer-2   sp-img-2    sp-img-2    sp-img-2    sp-img-2    thmb-3'
-    'spacer-2   sp-body-4   sp-body-4   sp-body-4   sp-body-4   ......'
-    'spacer-3   sp-img-3    sp-img-3    sp-img-3    sp-img-3    thmb-4'
-    'spacer-3   sp-img-3    sp-img-3    sp-img-3    sp-img-3    thmb-5'
-    'spacer-3   sp-body-5   sp-body-5   sp-body-5   sp-body-5   ......'
-    'spacer-4   sp-img-4    sp-img-4    sp-img-4    sp-img-4    thmb-6'
-    'spacer-4   sp-body-6   sp-body-6   sp-body-6   sp-body-6   ......';
-  grid-gap: 3rem 10px;
-}
-
-@media only screen and (max-width: 1080px) {
-  section#senior-project {
-    grid-column: content / col-end;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 'main';
-    grid-gap: 3rem 10px;
-  }
-
-  section#senior-project .abt-int,
-  section#senior-project .abt-body {
-    grid-area: main;
-    grid-row: span 1;
-  }
-}
-
-.capt-2 {
-  grid-area: capt-2;
-  align-self: start;
-  justify-self: end;
-}
-
-.capt-1 {
-  grid-area: capt-1;
-  align-self: start;
-  justify-self: end;
-}
-
-.thmb-6 {
-  grid-area: thmb-6;
-  align-self: center;
-}
-
-.thmb-5 {
-  grid-area: thmb-5;
-  align-self: start;
-}
-
-.thmb-4 {
-  grid-area: thmb-4;
-  align-self: end;
-}
-
-.thmb-3 {
-  grid-area: thmb-3;
-  align-self: center;
-}
-
-.thmb-2 {
-  grid-area: thmb-2;
-  align-self: start;
-}
-
-.thmb-1 {
-  grid-area: thmb-1;
-  align-self: end;
-}
-
-.sp-body-6 {
-  grid-area: sp-body-6;
-  grid-column: span 4;
-}
-
-.sp-body-5 {
-  grid-area: sp-body-5;
-  grid-column: span 4;
-}
-
-.sp-body-4 {
-  grid-area: sp-body-4;
-  grid-column: span 4;
-}
-
-.sp-body-2 {
-  grid-area: sp-body-2;
-  grid-column: span 4;
-}
-
-.sp-body-1 {
-  grid-area: sp-body-1;
-  grid-column: span 4;
-}
-
-.sp-img-4 {
-  grid-area: sp-img-4;
-  grid-column: span 4;
-}
-
-.sp-img-3 {
-  grid-area: sp-img-3;
-  grid-column: span 4;
-}
-
-.sp-img-2 {
-  grid-area: sp-img-2;
-  grid-column: span 4;
-}
-
-.sp-img-1 {
-  grid-area: sp-img-1;
-  grid-column: span 4;
-}
-
-.sp-int-2 {
-  grid-area: sp-int-2;
-}
-
-.sp-int-1 {
-  grid-area: sp-int-1;
 }

@@ -1,9 +1,9 @@
 // !-------------------------------------------------------------------------!
-// Idk if this works much less anything else
+// This enables use of webpack plugins
 // !-------------------------------------------------------------------------!
 // const webpack = require('webpack')
 // !-------------------------------------------------------------------------!
-// This is for putting shit in another (i.e. src) folder
+// This enables changing of source directory
 // !-------------------------------------------------------------------------!
 const { resolve } = require('path')
 
@@ -13,6 +13,52 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   srcDir: resolve('./src'),
 
+  // !-------------------------------------------------------------------------!
+  // Use webpack plugins
+  // !-------------------------------------------------------------------------!
+  // build: {
+  // plugins: [
+  //   new webpack.ProvidePlugin({
+  //     '$': 'jquery',
+  //     'jQuery': 'jquery',
+  //     'window.jQuery': 'jquery',
+  //     'window.$': 'jquery'
+  //   })
+  // ]
+  // !-------------------------------------------------------------------------!
+  // loaders: [
+  //   {
+  //     test: /\.vue$/,
+  //     loader: 'vue-loader'
+  //   },
+  //   {
+  //     test: require.resolve('jquery'),
+  //     loader: 'expose?$'
+  //   }
+  // ]
+  // !-------------------------------------------------------------------------!
+  // Vendor is everything that needs to be client side or something like that
+  // Window or Document undefined?
+  // This is due to the server-side rendering. If you need to specify that you
+  // want to import a resource only on the client-side, you need to use the
+  // process.browser variable.
+  // https://nuxtjs.org/faq/window-document-undefined/
+  // !-------------------------------------------------------------------------!
+  // vendor: ['jquery', 'vueisotope', 'isotope-layout', 'vue-js-modal', 'vuebar']
+  // vendor: ['jquery']
+  // },
+
+  env: {
+    NODE_ENV: 'dev'
+  },
+
+  // !-------------------------------------------------------------------------!
+  // The module @nuxtjs/pwa should come after any other modules
+  // !-------------------------------------------------------------------------!
+  modules: [
+    '@nuxtjs/pwa'
+  ],
+
   plugins: [
     // !-------------------------------------------------------------------------!
     // Hack solution: include all the stuff that isn't working as JS where
@@ -20,55 +66,24 @@ module.exports = {
     // least something online.
     // GO TO HEAD TAG AND REMOVE THAT SHIT WHEN YOU FIX THIS
     // !-------------------------------------------------------------------------!
-    { src: '~/plugins/vue-sticky.js' },
-    { src: '~/plugins/vue-js-modal.js' },
-    // !-------------------------------------------------------------------------!
-    // TODO: Someday I'll get VueAffix working.
+    // TODO: Someday, get VueAffix working and ditch vue-sticky
     // !-------------------------------------------------------------------------!
     // { src: '~/plugins/vue-affix.js' },
     // !-------------------------------------------------------------------------!
+    // { src: '~/plugins/jquery', ssr: false },
+    { src: '~/plugins/vue-sticky.js' },
+    { src: '~/plugins/vue-js-modal.js' },
     { src: '~/plugins/ga.js', ssr: false }
   ],
 
-  build: {
-    // !-------------------------------------------------------------------------!
-    // If shit worked this could make jQery work but I have no idea what the
-    // fuck is going on haha.
-    // !-------------------------------------------------------------------------!
-    // vendor: ['jquery'],
-    // plugins: [
-    //   new webpack.ProvidePlugin({
-    //     $: 'jquery',
-    //     jQuery: 'jquery',
-    //     'window.jQuery': 'jquery'
-    //   })
-    // ]
-    // !-------------------------------------------------------------------------!
-    // Vendor is everything that needs to be client side or something like that
-    // Window or Document undefined?
-    // This is due to the server-side rendering. If you need to specify that you
-    // want to import a resource only on the client-side, you need to use the
-    // process.browser variable.
-    // https://nuxtjs.org/faq/window-document-undefined/
-    // !-------------------------------------------------------------------------!
-    // vendor: ['vueisotope', 'isotope-layout', 'vue-js-modal', 'vuebar']
-    // !-------------------------------------------------------------------------!
-    // loaders: [
-    //   {
-    //     test: require.resolve('jquery'),
-    //     loader: 'expose?$'
-    //   }
-    // ],
-  },
-
   css: [
     // !-------------------------------------------------------------------------!
-    // TODO: Implement SASS
     // TODO: Make normalize a mixin
     // !-------------------------------------------------------------------------!
     '~assets/css/normalize.css',
     '~assets/sass/main.scss',
     '~assets/css/layout.css',
+    // 'aos/dist/aos.css',
     '~assets/css/animate.css',
     // !-------------------------------------------------------------------------!
     // TODO: Fix so that this is not included on every page, only where necessary
@@ -77,6 +92,9 @@ module.exports = {
   ],
 
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     title: '',
     meta: [
       {
@@ -98,6 +116,10 @@ module.exports = {
     ],
     link: [
       {
+        rel: 'canonical',
+        href: 'https://.."/'
+      },
+      {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon/favicon.ico'
@@ -115,6 +137,11 @@ module.exports = {
     ]
   },
 
+  manifest: {
+    name: 'Jonathan',
+    lang: 'en'
+  },
+
   loading: {
     // !-------------------------------------------------------------------------!
     // Progress bar options.
@@ -123,33 +150,16 @@ module.exports = {
     height: '2px'
   },
 
+  cache: {
+    max: 1000,
+    maxAge: 900000
+  },
+
   router: {
-    // !-------------------------------------------------------------------------!
-    // Make this smooth scroll?
-    // !-------------------------------------------------------------------------!
+    middleware: ['https'],
     scrollBehavior: function (to, from, savedPosition) {
       return { x: 0, y: 0 }
     }
-  },
-
-  // Run ESLINT on save
-  extend (config, ctx) {
-    // !-------------------------------------------------------------------------!
-    // This shit will never work and I don't really want it to anymore
-    // !-------------------------------------------------------------------------!
-    // config.resolve.alias['masonry'] = 'masonry-layout'
-    // config.resolve.alias['isotope'] = 'isotope-layout'
-    // !-------------------------------------------------------------------------!
-    // This is the terrible linter that runs on save it's so strict.
-    // !-------------------------------------------------------------------------!
-    //  if (ctx.dev && ctx.isClient) {
-    //    config.module.rules.push({
-    //      enforce: 'pre',
-    //      test: /\.(js|vue)$/,
-    //      loader: 'eslint-loader',
-    //      exclude: /(node_modules)/
-    //    })
-    //  }
-    // !-------------------------------------------------------------------------!
   }
+
 }

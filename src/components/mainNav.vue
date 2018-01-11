@@ -7,14 +7,18 @@
           <!-- Add active class to both li and nuxt-link based on which is active -->
           <!-- Home -->
           <!-- TODO: Fix home button so it disappears on small screens > 600px -->
-          <li class="nav-item-1 nav-item">
-            <nuxt-link class="nav-link" exact to="/">Home</nuxt-link>
-          </li>
+          <nuxt-link class="nav-item-1" exact to="/">
+            <li class="nav-item home-hider">
+              <div class="nav-link">Home</div>
+            </li>
+          </nuxt-link>
 
           <!-- About -->
-          <li class="nav-item-2 nav-item">
-            <nuxt-link class="nav-link" to="/about">About</nuxt-link>
-          </li>
+          <nuxt-link class="nav-item-2" to="/about">
+            <li class="nav-item">
+              <div class="nav-link">About</div>
+            </li>
+          </nuxt-link>
 
           <!-- Contact -->
           <li class="nav-item-3 nav-item">

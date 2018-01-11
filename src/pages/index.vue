@@ -10,18 +10,25 @@
       <button class="btn photojournalist" data-filter=".photojournalism">
           photojournalist,</button>
           competitive fencer, and professional referee based in Massachussets
-      <button class="btn" data-filter="*">&#9679;</button>
+      <button id="show-all" class="btn" data-filter="*">&#9679;</button>
     </isotope-sort>
 
+    <!-- Partial attempt to use vueisotope -->
+    <!-- <vue-isotope :list="list" id="root_isotope" class="isoDefault" :options='option'>
+      <div v-for="element in list" :key="element.id">
+        {{element.name}}
+        <br />
+        {{element.id}}
+        <img :src="element.src" alt="Not found">
+      </div>
+    </vue-isotope> -->
 
     <!-- Isotope grid -->
     <div id="isotope-grid" class='home-body isotope-grid grid'>
       <div class="grid-sizer"></div>
       <isotope-item name="senior project" category="design"></isotope-item>
-      <!-- <isotope-item name="film" category="photography"></isotope-item> -->
       <isotope-item name="STING vodka branding" category="design"></isotope-item>
       <isotope-item name="exhibition catalog" category="design"></isotope-item>
-      <!-- <isotope-item name="VML Hub Branding" category="design"></isotope-item> -->
       <isotope-item name="textile patterns" category="design"></isotope-item>
       <isotope-item name="patterns" category="photography"></isotope-item>
       <isotope-item name="human interest" category="photojournalism"></isotope-item>
@@ -31,6 +38,8 @@
     <!-- TODO: Add 3D keychain -->
     <!-- TODO: Add film photos -->
     <!--
+      <isotope-item name="film" category="photography"></isotope-item>
+      <isotope-item name="VML Hub Branding" category="design"></isotope-item>
       <isotope-item name="Benoit golf tournament" category="design"></isotope-item>
       <isotope-item name="this-website" category="design"></isotope-item>
       <isotope-item name="instagram" category="photography"></isotope-item>
@@ -53,8 +62,11 @@
 
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="/js/isotope-init.js"></script>
     <script src="/js/isotope.pkgd.js"></script>
+
+
   </section>
 </template>
 
@@ -83,6 +95,17 @@ export default {
           content: 'Graphic designer. Photographer/photojournalist. Competitive fencer. Professional referee.'
         }
       ]
+      // script: [
+      //   {
+      //     src: '/js/isotope-init.js'
+      //   },
+      //   {
+      //     src: '/js/isotope.pkgd.js'
+      //   },
+      //   {
+      //     src: 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'
+      //   }
+      // ]
     }
   },
   // /Head content

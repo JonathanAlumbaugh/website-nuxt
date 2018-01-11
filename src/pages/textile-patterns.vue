@@ -42,19 +42,15 @@ import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
-import homeBtn from '~/components/homeBtn.vue'
-export default
-{
+export default {
   // Head content all up in here
   name: 'textile-patterns',
-  data: function ()
-  {
+  data: function () {
     return {
       title: 'textile patterns'
     }
   },
-  head()
-  {
+  head() {
     return {
       title: this.title,
       meta: [
@@ -67,14 +63,12 @@ export default
     }
   },
   // /Head content
-  components:
-  {
+  components: {
     t,
     tt,
     imgOne,
     imgTwo,
     imgThree,
-    homeBtn
   }
 }
 </script>

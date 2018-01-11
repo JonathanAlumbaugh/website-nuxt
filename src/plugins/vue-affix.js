@@ -1,4 +1,5 @@
 import Vue from 'vue'
-import VueAffix from 'vue-affix'
+// TODO: Try this again but with /dist/vue-affix on the end
+import VueAffix from 'vue-affix/dist/vue-affix'
 
 Vue.use('vue-affix', VueAffix)

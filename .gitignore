@@ -30,3 +30,4 @@ _config.yml
 sass-lint.yml
 id_rsa
 .stylelintignore
+sw.*
