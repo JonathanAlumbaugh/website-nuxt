@@ -1,7 +1,7 @@
 // !-------------------------------------------------------------------------!
 // This enables use of webpack plugins
 // !-------------------------------------------------------------------------!
-// const webpack = require('webpack')
+const webpack = require('webpack')
 // !-------------------------------------------------------------------------!
 // This enables changing of source directory
 // !-------------------------------------------------------------------------!
@@ -14,17 +14,17 @@ module.exports = {
   srcDir: resolve('./src'),
 
   // !-------------------------------------------------------------------------!
-  // Use webpack plugins
+  // Use webpack plugins (BUT THIS SHIT'S STILL BROKE)
   // !-------------------------------------------------------------------------!
-  // build: {
-  // plugins: [
-  //   new webpack.ProvidePlugin({
-  //     '$': 'jquery',
-  //     'jQuery': 'jquery',
-  //     'window.jQuery': 'jquery',
-  //     'window.$': 'jquery'
-  //   })
-  // ]
+  build: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        '$': 'jquery',
+        'jQuery': 'jquery',
+        'window.jQuery': 'jquery',
+        'window.$': 'jquery'
+      })
+    ]
   // !-------------------------------------------------------------------------!
   // loaders: [
   //   {
@@ -46,7 +46,7 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   // vendor: ['jquery', 'vueisotope', 'isotope-layout', 'vue-js-modal', 'vuebar']
   // vendor: ['jquery']
-  // },
+  },
 
   // !-------------------------------------------------------------------------!
   // Set environment to development for robust uh errors or something
@@ -66,6 +66,7 @@ module.exports = {
     // !-------------------------------------------------------------------------!
     // { src: '~/plugins/vue-affix.js' },
     // !-------------------------------------------------------------------------!
+    // { src: '~/plugins/jquery.js', ssr: false },
     { src: '~/plugins/vue-sticky.js' },
     { src: '~/plugins/vue-js-modal.js' },
     { src: '~/plugins/ga.js', ssr: false }
