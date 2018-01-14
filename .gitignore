@@ -32,3 +32,6 @@ id_rsa
 .stylelintignore
 sw.*
 sshLogin.sh
+.eslint*
+.stylelintrc
+package-lock.json
