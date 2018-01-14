@@ -55,14 +55,6 @@ module.exports = {
     NODE_ENV: 'dev'
   },
 
-  // !-------------------------------------------------------------------------!
-  // The module @nuxtjs/pwa should come after any other modules
-  // !-------------------------------------------------------------------------!
-  modules: [
-    // '@nuxtjs/sitemap',
-    '@nuxtjs/pwa'
-  ],
-
   plugins: [
     // !-------------------------------------------------------------------------!
     // Hack solution: include all the stuff that isn't working as JS where
@@ -113,6 +105,7 @@ module.exports = {
         content: 'default content'
       }
     ],
+
     link: [
       // {
       //   // !-------------------------------------------------------------------------!
@@ -127,6 +120,7 @@ module.exports = {
         href: '/favicon/favicon.ico'
       }
     ],
+
     script: [
       // !-------------------------------------------------------------------------!
       // Super shitty plugin-in fallback method, just using scripts in the head.
@@ -141,7 +135,8 @@ module.exports = {
 
   manifest: {
     name: 'Jonathan',
-    lang: 'en'
+    lang: 'en',
+    theme_color: '#ff0099'
   },
 
   loading: {
@@ -151,6 +146,14 @@ module.exports = {
     color: '#00bfff',
     height: '2px'
   },
+
+  // !-------------------------------------------------------------------------!
+  // The module @nuxtjs/pwa should come after any other modules
+  // !-------------------------------------------------------------------------!
+  modules: [
+    // '@nuxtjs/sitemap',
+    ['@nuxtjs/pwa', { icon: false }]
+  ],
 
   // !-------------------------------------------------------------------------!
   // Cache stuff.

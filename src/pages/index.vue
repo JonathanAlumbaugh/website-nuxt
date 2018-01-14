@@ -3,7 +3,7 @@
 
     <!-- TODO: Implement vue-affix here -->
     <!-- Isotope sort -->
-    <isotope-sort class="home-int">I'm a
+    <isotope-sort>I'm a
       <button class="btn designer" data-filter=".design">designer,</button>
       <button class="btn photographer" data-filter=".photography">
           photographer,</button>
@@ -24,7 +24,7 @@
     </vue-isotope> -->
 
     <!-- Isotope grid -->
-    <div id="isotope-grid" class='home-body isotope-grid grid'>
+    <div id="isotope-grid" class='tt isotope-grid grid'>
       <div class="grid-sizer"></div>
       <isotope-item name="senior project" category="design"></isotope-item>
       <isotope-item name="STING vodka branding" category="design"></isotope-item>
@@ -52,13 +52,13 @@
 
 
      <!-- WIP -->
-    <t class="home-int">right now I'm working on</t>
-    <main-wip class="home-body" name="Simmons Mill Pond signage" category="design"></main-wip>
+    <t>right now I'm working on</t>
+    <main-wip class="tt" name="Simmons Mill Pond signage" category="design"></main-wip>
 
 
     <!-- Extra -->
-    <t class="home-int">I've worked on lots of projects</t>
-    <tt class="home-body">Including web design and development, branding, packaging, signage, textile design, and more. Talk to me about your project, or anything cool.</tt>
+    <t>I've worked on lots of projects</t>
+    <tt>Including web design and development, branding, packaging, signage, textile design, and more. Talk to me about your project, or anything cool.</tt>
 
 
     <!-- Scripts -->

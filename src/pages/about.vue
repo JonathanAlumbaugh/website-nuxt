@@ -11,9 +11,9 @@
 
 
   <!-- Education -->
-  <t>My education spans 5 years and 2 schools</t>
+  <t>My education spanned 5 years and 2 schools</t>
 
-  <div class="box-shadow blk-lg">
+  <div class="box-shadow blk-lg odd small">
     <h3>BFA graphic design</h3>
     <ul class="school">
       <li>UMASS Dartmouth 2017</li>
@@ -25,7 +25,7 @@
     </ul>
   </div>
 
-  <div class="box-shadow blk-lg">
+  <div class="box-shadow blk-lg even small">
     <h3>AA graphic design</h3>
     <ul class="school">
       <li>Quinebaug Valley CC 2014</li>
@@ -43,6 +43,7 @@
   <t>my work experience includes titles like</t>
 
   <blk-lg
+    class="odd"
     category="designer"
     title="In house designer"
     subtitle="Minuteman Press Dartmouth, May 2017-present"
@@ -50,15 +51,15 @@
   </blk-lg>
 
   <blk-lg
+    class="even"
     category="photographer"
     title="Staff photographer"
     subtitle="Horizons Inc, 2014-2016"
     description="Photographed campers, creating a varied database of photos used for promotions, social media, and to capture and preserve the memories made at camp">
   </blk-lg>
 
-  <spacer />
-
   <blk-lg
+    class="odd"
     category="photojournalist"
     title="Freelance photographer"
     subtitle="The Chronicle Newspaper, 2012-2015"
@@ -69,10 +70,11 @@
     category="designer"
     title="Marketing intern"
     subtitle="Quinebaug Valley Community College, Fall 2014"
-    description="Designed posters and other materials for clubs and school events working in concert with the marketing director">
+    description="Designed posters and other materials for clubs and school even smallts working in concert with the marketing director">
   </blk-lg> -->
 
   <blk-lg
+    class="even"
     title="Volunteer"
     subtitle="Windham Area Interfaith Ministry, Jun-Oct 2013"
     description="Volunteered over 200 hours at local organization that supports underprivileged families">
@@ -83,6 +85,7 @@
   <t>I received an award for</t>
 
   <blk-lg
+    class="odd"
     category="photojournalist"
     title="Excellence in journalism"
     subtitle="Society of Professional Journalists, 2014"
@@ -92,47 +95,45 @@
   <!-- Programs -->
   <t>and am a pro with industry standard programs like</t>
 
-  <blk-sm title="Il" description="Adobe Illustrator"/>
+  <blk-sm class="odd small" title="Il" description="Adobe Illustrator"/>
 
-  <blk-sm title="Id" description="Adobe Indesign"/>
+  <blk-sm class="even small" title="Id" description="Adobe Indesign"/>
 
-  <blk-sm title="Lr" description="Adobe Lightroom"/>
+  <blk-sm class="odd small" title="Lr" description="Adobe Lightroom"/>
 
-  <blk-sm title="Ps" description="Adobe Photoshop"/>
+  <blk-sm class="even small" title="Ps" description="Adobe Photoshop"/>
 
 
   <!-- More -->
   <t>plus I can work with</t>
 
-  <blk-sm title="Ae" description="Adobe After Effects"/>
+  <blk-sm class="odd small" title="Ae" description="Adobe After Effects"/>
 
-  <blk-sm title="At" description="Atom Text Editor"/>
+  <blk-sm class="even small" title="At" description="Atom Text Editor"/>
 
-  <blk-sm title="Au" description="Adobe Audition"/>
+  <blk-sm class="odd small" title="Au" description="Adobe Audition"/>
 
-  <blk-sm title="Bs" description="Bootstrap Framework"/>
+  <blk-sm class="even small" title="Bs" description="Bootstrap Framework"/>
 
-  <spacer />
+  <blk-sm class="odd small" title="C4D" description="Cinema 4D"/>
 
-  <blk-sm title="C4D" description="Cinema 4D"/>
+  <blk-sm class="even small" title="CSS" description="Cascading Style Sheets"/>
 
-  <blk-sm title="CSS" description="Cascading Style Sheets"/>
+  <blk-sm class="odd small" title="HTML" description="Hooking up Those Massive Logos"/>
 
-  <blk-sm title="HTML" description="Hooking up Those Massive Logos"/>
-
-  <blk-sm title="Pr" description="Adobe Premiere Pro"/>
+  <blk-sm class="even small" title="Pr" description="Adobe Premiere Pro"/>
 
 
   <!-- Meta -->
   <t>I built this website using</t>
 
-  <blk-sm title="At" description="Atom Text Editor"/>
+  <blk-sm class="odd small" title="At" description="Atom Text Editor"/>
 
-  <blk-sm title="HTML+CSS" description="HyperText Markup Language + Cascading Style Sheets"/>
+  <blk-sm class="even small" title="HTML+CSS" description="HyperText Markup Language + Cascading Style Sheets"/>
 
-  <blk-sm title="Is" description="Isotope.js"/>
+  <blk-sm class="odd small" title="Is" description="Isotope.js"/>
 
-  <blk-sm title="Nuxt.js" description="Vue.js, but SSR!"/>
+  <blk-sm class="even small" title="Nuxt.js" description="Vue.js, but SSR!"/>
 
   </section>
 </template>
@@ -142,7 +143,6 @@ import t from '~/components/textH2.vue'
 import tt from '~/components/textH3.vue'
 import blkLg from '~/components/blockLarge.vue'
 import blkSm from '~/components/blockSmall.vue'
-import spacer from '~/components/spacer.vue'
 export default {
   // Head content all up in here
   name: 'about',
@@ -169,7 +169,6 @@ export default {
     tt,
     blkLg,
     blkSm,
-    spacer
   }
 }
 </script>
