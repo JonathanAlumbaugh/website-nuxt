@@ -33,9 +33,5 @@ id_rsa
 sw.*
 sshLogin.sh
 .eslint*
-<<<<<<< HEAD
 .styleintrc
-=======
-.stylelintrc
->>>>>>> e777483f256b5f2cbbabe6a9c180f45440e91589
 package-lock.json
