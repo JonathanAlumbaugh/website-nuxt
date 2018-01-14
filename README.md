@@ -14,6 +14,8 @@ This repository chronicles the long and arduous process of implementing Vue.js, 
 * Replace vue-stick with VueAffix
 * Include Fancybox CSS only pages where it's necessary
 * Retool home button hiding on small views
+* Implement @nuxtjs/pwa for progressive web app stuff
+* Redirect to HTTPs using middleware or something...
 * Implement jQuery as a plugin?
 * Use only SASS?
 * Use webpack imagemin?
