@@ -48,6 +48,9 @@ module.exports = {
   // vendor: ['jquery']
   // },
 
+  // !-------------------------------------------------------------------------!
+  // Set environment to development for robust uh errors or something
+  // !-------------------------------------------------------------------------!
   env: {
     NODE_ENV: 'dev'
   },
@@ -56,6 +59,7 @@ module.exports = {
   // The module @nuxtjs/pwa should come after any other modules
   // !-------------------------------------------------------------------------!
   modules: [
+    // '@nuxtjs/sitemap',
     '@nuxtjs/pwa'
   ],
 
@@ -70,23 +74,18 @@ module.exports = {
     // !-------------------------------------------------------------------------!
     // { src: '~/plugins/vue-affix.js' },
     // !-------------------------------------------------------------------------!
-    // { src: '~/plugins/jquery', ssr: false },
     { src: '~/plugins/vue-sticky.js' },
     { src: '~/plugins/vue-js-modal.js' },
     { src: '~/plugins/ga.js', ssr: false }
   ],
 
   css: [
-    // !-------------------------------------------------------------------------!
-    // TODO: Make normalize a mixin
-    // !-------------------------------------------------------------------------!
     '~assets/css/normalize.css',
     '~assets/sass/main.scss',
     '~assets/css/layout.css',
-    // 'aos/dist/aos.css',
     '~assets/css/animate.css',
     // !-------------------------------------------------------------------------!
-    // TODO: Fix so that this is not included on every page, only where necessary
+    // TODO: Fix so that fancybox is not included on every page, only where necessary
     // !-------------------------------------------------------------------------!
     '~assets/css/jquery.fancybox.css'
   ],
@@ -115,10 +114,13 @@ module.exports = {
       }
     ],
     link: [
-      {
-        rel: 'canonical',
-        href: 'https://.."/'
-      },
+      // {
+      //   // !-------------------------------------------------------------------------!
+      //   // TODO: Fix so that canonical links to HTTPS
+      //   // !-------------------------------------------------------------------------!
+      //   rel: 'canonical',
+      //   href: 'https://$nuxt.$route.path'
+      // },
       {
         rel: 'icon',
         type: 'image/x-icon',
@@ -150,11 +152,17 @@ module.exports = {
     height: '2px'
   },
 
+  // !-------------------------------------------------------------------------!
+  // Cache stuff.
+  // !-------------------------------------------------------------------------!
   cache: {
     max: 1000,
     maxAge: 900000
   },
 
+  // !-------------------------------------------------------------------------!
+  // HTTPS middleware should reroute all pages to HTTPS
+  // !-------------------------------------------------------------------------!
   router: {
     middleware: ['https'],
     scrollBehavior: function (to, from, savedPosition) {

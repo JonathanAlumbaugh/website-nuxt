@@ -75,6 +75,11 @@ nav ul {
   grid-column: 5/6;
 }
 
+img.img-fluid-one,
+img.img-fluid-two {
+  width: 100%;
+}
+
 .main-footer {
   grid-area: footer;
   text-align: center;
@@ -212,7 +217,7 @@ section {
   section#exhibition-catalog,
   section#patterns,
   section#human-interest,
-  section#wip  {
+  section#wip {
     grid-column: content / col-end;
     display: grid;
     grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
@@ -244,7 +249,9 @@ section {
     grid-column: main;
   }
 
-  div.img-one {
+  /* Idk what to do about all this at the moment. */
+
+  /* div.img-one {
     overflow: hidden;
     height: auto;
   }
@@ -270,7 +277,7 @@ section {
   .img-fluid-two {
     width: 100%;
     overflow: hidden;
-  }
+  } */
 
   .blk-lg {
     grid-column: 2 / 3;

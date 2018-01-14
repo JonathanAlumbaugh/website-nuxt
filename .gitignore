@@ -31,3 +31,4 @@ sass-lint.yml
 id_rsa
 .stylelintignore
 sw.*
+sshLogin.sh
