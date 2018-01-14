@@ -9,7 +9,7 @@ This repository chronicles the long and arduous process of implementing Vue.js, 
 * Made the navbar sticky!
 * Ditched Bootstrap.css for pure CSS grids!
 
-## Things I will do:
+## Things I'll do:
 
 * Replace vue-stick with VueAffix
 * Include Fancybox CSS only pages where it's necessary
