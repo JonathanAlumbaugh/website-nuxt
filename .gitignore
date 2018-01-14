@@ -26,12 +26,8 @@ multimedia
 _.swp
 .git.bfg-report
 _config.yml
-.sass-lint.yml
-sass-lint.yml
 id_rsa
 .stylelintignore
 sw.*
 sshLogin.sh
 .eslint*
-.styleintrc
-package-lock.json
