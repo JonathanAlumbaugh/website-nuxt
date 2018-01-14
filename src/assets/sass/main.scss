@@ -493,20 +493,19 @@ button {
 ////////////////////////////
 //       Isotope        //
 //////////////////////////
-
 .grid-sizer,
 .element-item {
-  width: 31.8%;
+  width: 31%;
 }
 
-@media only screen and (min-width: 1080px) and (max-width: 1325px) {
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
   .grid-sizer,
   .element-item {
-    width: 48%;
+    width: 45%;
   }
 }
 
-@media only screen and (max-width: 1079px) {
+@media only screen and (max-width: 600px) {
   .grid-sizer,
   .element-item {
     width: 98%;
