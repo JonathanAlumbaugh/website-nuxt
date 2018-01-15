@@ -48,7 +48,7 @@
 
     <!-- Extra -->
     <t>I've worked on lots of projects</t>
-    <tt>Including web design and development, branding, packaging, signage, textile design, and more. Talk to me about your project, or anything cool.</tt>
+    <tt>Including web design and development, branding, packaging, signage, textile design, and more. Talk to me about your project, or anything cool. Interested in seeing how I built this website? Check out <a href="https://github.com/JonathanAlumbaugh/website-nuxt"><span>my git repository</span></a>.</tt>
 
 
     <!-- Scripts -->

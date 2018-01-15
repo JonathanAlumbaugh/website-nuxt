@@ -1,4 +1,4 @@
-# Welcome to the repository for jonathanalumbaugh.com
+# Welcome to the repository for **[jonathanalumbaugh.com](https://jonathanalumbaugh.com)**
 
 This repository chronicles the long and arduous process of implementing Vue.js, Nuxt.js, Isotope, CSS grids, SASS, and more on my **[website](https://jonathanalumbaugh.com)**, all while learning how the hell to use git (I still don't know).
 
