@@ -20,6 +20,6 @@ This repository chronicles the long and arduous process of implementing Vue.js, 
 * Use only SASS?
 * Use webpack imagemin?
 
-<!-- Get links on all of the linkable things -->
+<!-- TODO: Get links on all of the linkable things -->
 
 Built with love and **[Nuxt.js](https://github.com/nuxt/nuxt.js)**.

@@ -59,7 +59,7 @@
   </blk-lg>
 
   <blk-lg
-    class="odd"
+    class="odd bump"
     category="photojournalist"
     title="Freelance photographer"
     subtitle="The Chronicle Newspaper, 2012-2015"
@@ -115,7 +115,7 @@
 
   <blk-sm class="even small" title="Bs" description="Bootstrap Framework"/>
 
-  <blk-sm class="odd small" title="C4D" description="Cinema 4D"/>
+  <blk-sm class="odd small bump" title="C4D" description="Cinema 4D"/>
 
   <blk-sm class="even small" title="CSS" description="Cascading Style Sheets"/>
 
@@ -143,15 +143,18 @@ import t from '~/components/textH2.vue'
 import tt from '~/components/textH3.vue'
 import blkLg from '~/components/blockLarge.vue'
 import blkSm from '~/components/blockSmall.vue'
-export default {
+export default
+{
   // Head content all up in here
   name: 'about',
-  data: function () {
+  data: function ()
+  {
     return {
       title: 'About'
     }
   },
-  head() {
+  head()
+  {
     return {
       title: this.title,
       meta: [
@@ -164,7 +167,8 @@ export default {
     }
   },
   // /Head content
-  components: {
+  components:
+  {
     t,
     tt,
     blkLg,

@@ -169,6 +169,16 @@ section {
   grid-gap: 3rem 10px;
 }
 
+.blk-lg.bump {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.blk-sm.bump {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
 /* !--------------------------!
               Footer
    !--------------------------! */
