@@ -14,9 +14,13 @@ dist/
 .sync
 
 # Large Files
+# TODO: Optimize film/, vlm-hub-branding/, and benoit-golf-tournament/
 *.mov
-unused
-multimedia
+unused/
+multimedia/
+film/
+vml-hub-branding/
+benoit-golf-tournament/
 
 # PPK
 *.ppk
