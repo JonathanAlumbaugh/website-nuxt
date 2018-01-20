@@ -127,14 +127,15 @@ caption {
 }
 
 span {
-  background: linear-gradient($mid-grey, $mid-grey) right 1.09em no-repeat;
-  background-size: 96% 1px;
+  background: linear-gradient($primary-magenta, $primary-magenta) left 1.09em no-repeat;
+  background-size: 80% 1px;
   color: $thirty-percent;
   font-size: 2rem;
   text-shadow: 0 0 $dark-grey, 0.08em 0 0 $white, 0 0, -0.08em 0 0 $white;
-  transition: 0.2s ease;
+  transition: all 0.2s ease;
 
-  :hover {
+  &:hover {
+    background: linear-gradient($mid-grey, $mid-grey) left 1.09em no-repeat;
     background-size: 99% 1px;
   }
 }

@@ -11,7 +11,7 @@ This repository chronicles the long and arduous process of implementing Vue.js, 
 
 ## Things I'll do:
 
-* Replace vue-stick with VueAffix
+* Replace vue-sticky with VueAffix
 * Include Fancybox CSS only pages where it's necessary
 * Retool home button hiding on small views
 * Implement @nuxtjs/pwa for progressive web app stuff
@@ -19,5 +19,7 @@ This repository chronicles the long and arduous process of implementing Vue.js, 
 * Implement jQuery as a plugin?
 * Use only SASS?
 * Use webpack imagemin?
+
+<!-- Get links on all of the linkable things -->
 
 Built with love and **[Nuxt.js](https://github.com/nuxt/nuxt.js)**.

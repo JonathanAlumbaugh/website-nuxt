@@ -205,7 +205,7 @@ section {
     display: grid;
     grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
     grid-template-areas: 'intro main main img';
-    grid-gap: 8rem 10px;
+    grid-gap: 5rem 10px;
   }
 
   section#home .t {
