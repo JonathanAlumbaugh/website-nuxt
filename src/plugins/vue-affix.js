@@ -1,6 +1,9 @@
 // TODO: Try this again but with /dist/vue-affix on the end
 
 import Vue from 'vue'
-import VueAffix from 'vue-affix/dist/vue-affix'
+import VueAffix from 'vue-affix'
 
-Vue.use(VueAffix, { componentName: 'affix' })
+// This doesn't seem to do anything
+// export default
+
+Vue.use(VueAffix)

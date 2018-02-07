@@ -64,7 +64,7 @@ module.exports = {
     // !-------------------------------------------------------------------------!
     // TODO: Someday, get VueAffix working and ditch vue-sticky
     // !-------------------------------------------------------------------------!
-    // { src: '~/plugins/vue-affix.js', ssr: false },
+    // { src: 'vue-affix' },
     // !-------------------------------------------------------------------------!
     // { src: '~/plugins/jquery.js', ssr: false },
     { src: '~/plugins/vue-sticky.js' },

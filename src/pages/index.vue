@@ -13,6 +13,7 @@
       <button id="show-all" class="btn" data-filter="*">&#9679;</button>
     </isotope-sort>
 
+
     <!-- Isotope grid -->
     <div id="isotope-grid" class='tt isotope-grid grid'>
       <div class="grid-sizer"></div>
@@ -61,6 +62,7 @@
 </template>
 
 <script>
+// import affix from '../plugins/vue-affix'
 import t from '~/components/textH2.vue'
 import tt from '~/components/textH3.vue'
 import isotopeGrid from '~/components/isotopeGrid.vue'
@@ -100,12 +102,13 @@ export default {
   },
   // /Head content
   components: {
+    // affix,
     t,
     tt,
     isotopeGrid,
     isotopeSort,
     isotopeItem,
     mainWip
-  },
+  }
 }
 </script>

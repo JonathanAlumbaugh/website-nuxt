@@ -2,9 +2,15 @@
   <section id="senior-project">
 
     <!-- 01 -->
-    <t>The capstone graphic design course in my program was self-directed</t>
+    <t>A more personal way to choose a school</t>
 
-    <tt>This oversize brochure was created to introduce prospective students to the graphic design program and people of University of Massachusetts, Dartmouth.</tt>
+    <!-- <c>UMass Dartmouth Brochure<br />
+    University of Massachusetts, Dartmouth, MA<br />
+    Paper<br />
+    24 x 36<br />
+    2017</c> -->
+
+    <tt>This oversized brochure was created to introduce prospective students to the graphic design program through the people of University of Massachusetts, Dartmouth.</tt>
 
 
     <!-- 02 -->
@@ -18,9 +24,9 @@
       Scientific American. Accessed 11/08/17.
     </caption> -->
 
-    <tt>A country's strength of community is inversely related to technological advancement and infrastructure. Citizens of more technologically advanced countries are less likely to feel a sense of or be a part of a community.<br />
+    <tt>Community has been <span v-on:click="isHidden = !isHidden">in decline for decades</span>. Technological advances are as likely to harm a communities as they are to help. For this and other reasons, print was the best choice for this project.<br />
 
-    <br /> I decided to focus on strengthening the sense of community amongst accepted and incoming students by attempting to give them the tools needed to improve on the foundations laid by preceding generations of students.</tt>
+    <br />Choosing a college is difficult. I received a pile of materials from every college I was interested in, and few shared their students' experiences outside of pull quotes or short anectdotes. A student voice is most relatable and authentic to a prospective student.</tt>
 
 
     <!-- 03 -->
@@ -59,6 +65,7 @@
 
   <script>
   import t from '~/components/textH2.vue'
+  import c from '~/components/projectCaption.vue'
   import tt from '~/components/textH3.vue'
   import imgOne from '~/components/projectImgA.vue'
   import imgTwo from '~/components/projectImgB.vue'
@@ -86,6 +93,7 @@
     // /Head content
     components: {
       t,
+      c,
       tt,
       imgOne,
       imgTwo,
