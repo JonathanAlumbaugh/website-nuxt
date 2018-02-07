@@ -4,6 +4,6 @@ import Vue from 'vue'
 import VueAffix from 'vue-affix'
 
 // This doesn't seem to do anything
-// export default
+// export default VueAffix
 
 Vue.use(VueAffix)
