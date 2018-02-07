@@ -9,7 +9,7 @@
           photographer,</button>
       <button class="btn photojournalist" data-filter=".photojournalism">
           photojournalist,</button>
-          competitive fencer, and professional referee based in Massachussets
+          competitive fencer, and professional referee based in Massachusetts
       <button id="show-all" class="btn" data-filter="*">&#9679;</button>
     </isotope-sort>
 
@@ -47,8 +47,8 @@
 
 
     <!-- Extra -->
-    <t>I've worked on lots of projects</t>
-    <tt>Including web design and development, branding, packaging, signage, textile design, and more. Talk to me about your project, or anything cool. Interested in seeing how I built this website? Check out <a href="https://github.com/JonathanAlumbaugh/website-nuxt"><span>my git repository</span></a>.</tt>
+    <t>I love making things</t>
+    <tt>On paper, fabric, wood, the web, and more. Interested in seeing how I built this website? Check out <a href="https://github.com/JonathanAlumbaugh/website-nuxt"><span>my git repository</span></a>.</tt>
 
 
     <!-- Scripts -->

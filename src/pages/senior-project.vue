@@ -4,7 +4,7 @@
     <!-- 01 -->
     <t>The capstone graphic design course in my program was self-directed</t>
 
-    <tt>I created an information package for the UMass Dartmouth graphic design program intended to introduce prospective students to the program, prepare them for the experience, and promote cognizant community engagement.</tt>
+    <tt>This oversize brochure was created to introduce prospective students to the graphic design program and people of University of Massachusetts, Dartmouth.</tt>
 
 
     <!-- 02 -->
