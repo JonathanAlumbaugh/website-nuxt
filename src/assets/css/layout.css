@@ -102,6 +102,7 @@ nav ul {
 #human-interest .tt:nth-of-type(1),
 #patterns .tt:nth-of-type(1),
 #senior-project .tt:nth-of-type(1),
+#sting-vodka-branding .tt:nth-of-type(1),
 #textile-patterns .tt:nth-of-type(1),
 #wip .tt:nth-of-type(1) {
   grid-row-start: 1;
@@ -237,9 +238,10 @@ section {
   #human-interest .tt:nth-of-type(1),
   #patterns .tt:nth-of-type(1),
   #senior-project .tt:nth-of-type(1),
+  #sting-vodka-branding .tt:nth-of-type(1),
   #textile-patterns .tt:nth-of-type(1),
   #wip .tt:nth-of-type(1) {
-    grid-row-start: auto;
+    grid-row-start: 1;
   }
 
   section#home {
@@ -332,9 +334,10 @@ section {
   #human-interest .tt:nth-of-type(1),
   #patterns .tt:nth-of-type(1),
   #senior-project .tt:nth-of-type(1),
+  #sting-vodka-branding .tt:nth-of-type(1),
   #textile-patterns .tt:nth-of-type(1),
   #wip .tt:nth-of-type(1) {
-    grid-row-start: auto;
+    grid-row-start: 1;
   }
 
   .odd.small {
@@ -402,9 +405,10 @@ section {
   #human-interest .tt:nth-of-type(1),
   #patterns .tt:nth-of-type(1),
   #senior-project .tt:nth-of-type(1),
+  #sting-vodka-branding .tt:nth-of-type(1),
   #textile-patterns .tt:nth-of-type(1),
   #wip .tt:nth-of-type(1) {
-    grid-row-start: auto;
+    grid-row-start: 1;
   }
 
   section#about .blk-lg.odd.small {
