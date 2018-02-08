@@ -1,8 +1,5 @@
 <template lang="html">
   <transition appear name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-    <div class="container">
-      <main-header/>
-      <main-nav/>
       <section>
 
         <t v-if="error.statusCode === 404">I was fiddling around and</t>
@@ -13,8 +10,6 @@
         <tt v-else>this error normally only shows if you're me and I'm working on the site right now.</tt>
 
       </section>
-      <main-footer/>
-    </div>
   </transition>
 </template>
 
@@ -24,18 +19,14 @@ import mainNav from '~/components/mainNav.vue'
 import mainFooter from '~/components/mainFooter.vue'
 import t from '~/components/textH2.vue'
 import tt from '~/components/textH3.vue'
-export default
-{
+export default {
   props: [ 'error' ],
-  methods:
-  {
-    show()
-    {
+  methods: {
+    show() {
       this.$modal.show( 'contact-modal' );
     }
   },
-  components:
-  {
+  components: {
     mainHeader,
     mainNav,
     mainFooter,
