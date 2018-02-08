@@ -39,7 +39,13 @@ nav ul {
 .main-header-position {
   grid-column: 2/3;
   grid-row: head;
-  z-index: 101;
+  z-index: 102;
+}
+
+.ghost-header-position {
+  grid-column: 2/3;
+  grid-row: head;
+  color: rgba(0, 0, 0, 0.1);
 }
 
 .main-header {
