@@ -2,31 +2,37 @@
   <section id="sting-vodka-branding">
 
     <!-- 01 -->
-    <t>Package design + fake alcohol label = fun</t>
+    <t>Fake alcohol brand + packaging design = fun</t>
 
-    <tt>I created a vodka brand called STING, developed a logo, and designed the package for the product. The objective was to create a product which incorporated bugs and/or bug byproducts to ship inventory for the fictional company Insecta.</tt>
+    <c name="Brand &amp; package"
+      location="University of Massachusetts, Dartmouth, MA"
+      material="Paper"
+      dimension="3 x 3 x 10.25&quot;"
+      date="2016"></c>
+
+    <tt>Tasked with creating a product which incorporated bugs and/or bug byproducts, I created a fake vodka label to ship inventory for the fictional company &ldquo;Insecta.&rdquo;</tt>
 
 
     <!-- 02 -->
     <img-one name="sting vodka branding" category="design" img-number="01"></img-one>
 
-    <tt>The vodka would include a scorpion at the bottom of the bottle, a la mezcal. The core value of the brand was decided upon: cleanliness, in taste and in design. The brand promised to deliver a refined, yet aggressive drinking experience, in a package that would appeal to college-age consumers.</tt>
+    <tt>The vodka hypothetically included a scorpion at the bottom of the bottle, a la mezcal. The core value of the brand was cleanness. The brand promised a refined, yet bold drinking experience, in a package that would appeal to college-age consumers.</tt>
 
 
     <!-- 03 -->
     <img-one name="sting vodka branding" category="design" img-number="02"></img-one>
     <img-two name="sting vodka branding" category="design" img-number1="03" img-number2="04"></img-two>
 
-    <tt>Instead of designing a bottle, a box was chosen because it recalled higher-end liquors, such as Patron's XO Cafe line, which contains a bottle, boxed and wrapped in tissue paper.</tt>
+    <tt>Boxing the product recalled the quality of other &ldquo;high-end&rdquo; brands, such as Patron&rsquo;s XO Cafe line.</tt>
 
 
     <!-- 04 -->
     <img-one name="sting vodka branding" category="design" img-number="05"></img-one>
     <img-two name="sting vodka branding" category="design" img-number1="08" img-number2="09"></img-two>
 
-    <tt>The packaging was cut and assembled by hand. The interior of the package was also printed with the pattern of the associated fruit flavor, in this case, lemon. Dielines were printed on the inside of the package to ensure accurate cutting and scoring.<br />
+    <tt>The packaging was cut and assembled by hand. The interior of the package was also printed with a pattern associated to the flavor.<br />
 
-    <br />It was so successful in its appeal to the college demographic that the original package was stolen just before it was turned in. The package was made again to turn in and is now kept under close watch.</tt>
+    <br />It was so successful in its appeal to the college demographic that the original package was stolen just before it was turned in. I remade the package and now keep it someplace safe.</tt>
 
 
     <!-- 06 -->
@@ -37,43 +43,39 @@
 
 <script>
 import t from '~/components/textH2.vue'
+import c from '~/components/projectCaption.vue'
 import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
-import homeBtn from '~/components/homeBtn.vue'
-export default
-{
+export default {
   // Head content all up in here
   name: 'sting-vodka-branding',
-  data: function ()
-  {
+  data: function () {
     return {
       title: 'STING vodka branding'
     }
   },
-  head()
-  {
+  head() {
     return {
       title: this.title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Jonathan created a vodka brand called STING and developed a logo and packaging for the product'
+          content: 'A fake vodka brand called STING, complete with logo and packaging'
         }
       ]
     }
   },
   // /Head content
-  components:
-  {
+  components: {
     t,
+    c,
     tt,
     imgOne,
     imgTwo,
-    imgThree,
-    homeBtn
+    imgThree
   }
 }
 </script>

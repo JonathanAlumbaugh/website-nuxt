@@ -2,7 +2,13 @@
   <section id="wip">
 
     <!-- WIP -->
-    <t>right now I'm working on</t>
+    <t>Right now I'm working on</t>
+
+    <c name="Simmons Mill Pond Signage"
+      location="Simmons Mill Pond, Little Compton, RI"
+      material="Wood"
+      dimension="18x45&quot;"
+      date="2017-18"></c>
 
     <tt>Signage for Simmons Mill Pond Wildlife Management Area in Little Compton, RI. The management area is kept up by volunteers who neighbor it. On a visit to the trails, a conversation with some volunteers revealed that visitors often become confused, so I volunteered to create trailmaps.</tt>
 
@@ -18,48 +24,42 @@
     <img-one name="simmons mill pond signage" category="design" img-number="03"></img-one>
     <img-two name="simmons mill pond signage" category="design" img-number1="08" img-number2="09"></img-two>
 
-    <tt>Using carved wood, locally procured to match the type of wood found at Simmons Mill Pond, fits conceptually and aesthetically. The carved trails will be hand-painted to increase readability and make delineating trails easier.<br />
+    <tt>Carving locally procured wood fits into the environment conceptually and aesthetically. The carved trails will be painted to increase readability and make delineating trails easier.<br />
 
-    <br />The signage is currently being prototyped. It is CNC carved using a ShopBot. The design is limited to a minimum of 1/8th inch wide cuts by the smallest bit available for the ShopBot. Using a 60&deg; v-bit, this limitation can be skirted, but the surface of the wood must be even.<br />
-
-    <br />The wood was so far has been uneven and had to be planed. Some finer elements were lost despite creating a relatively smooth, but not flat surface with the planer. Better quality wood will be procured for the next prototype.<br />
-
-    <br />All materials have been paid for by Jonathan in the interest of bettering the trail experience.</tt>
+    <br />The signs were CNC carved using a ShopBot. The design is limited to a minimum of 1/8th inch wide cuts. All materials are my donation for the betterment of the area.</tt>
 
 
     <!-- 03 -->
     <img-one name="simmons mill pond signage" category="design" img-number="01"></img-one>
 
-    <tt>Early sketches/Google map view of the area.</tt>
+    <tt>Google map view of the area.</tt>
 
 
     <!-- 04 -->
     <img-one name="simmons mill pond signage" category="design" img-number="11"></img-one>
 
-    <tt>Currently the fourth draft of the sign, the first to be painted, is about to be completed and submitted for review.</tt>
+    <tt>The fourth draft of the sign. Currently undergoing finishing/painting.</tt>
 
   </section>
 </template>
 
 <script>
 import t from '~/components/textH2.vue'
+import c from '~/components/projectCaption.vue'
 import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
-export default
-{
+export default {
   // Head content all up in here
   name: 'wip',
-  data: function ()
-  {
+  data: function () {
     return {
       title: 'Work in progress'
     }
   },
-  head()
-  {
+  head() {
     return {
       title: this.title,
       meta: [
@@ -72,9 +72,9 @@ export default
     }
   },
   // /Head content
-  components:
-  {
+  components: {
     t,
+    c,
     tt,
     imgOne,
     imgTwo,

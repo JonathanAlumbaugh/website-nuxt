@@ -4,15 +4,13 @@
     <!-- 01 -->
     <t>A more personal way to choose a school</t>
 
-    <!-- <c>UMass Dartmouth Brochure<br />
-    University of Massachusetts, Dartmouth, MA<br />
-    Paper<br />
-    24 x 36<br />
-    2017</c> -->
+    <c name="UMass Dartmouth Brochure"
+      location="University of Massachusetts, Dartmouth, MA"
+      material="Paper"
+      dimension="25 x 36&quot;"
+      date="2017"></c>
 
-    <tt>This oversized brochure was created to introduce prospective students to the graphic design program through the people of University of Massachusetts, Dartmouth.<br />
-
-    <br />I interviewed a dozen students, selected six interviews, and created editorial spreads for each. The tactile and personal nature of print made paper the best choice for this project.</tt>
+    <tt>This oversized brochure was created to introduce prospective students to the graphic design program through the people of University of Massachusetts, Dartmouth.</tt>
 
 
     <!-- 02 -->
@@ -34,6 +32,8 @@
     <!-- <span v-on:click="isHidden = !isHidden"></span> -->
 
     <tt>Choosing a college is difficult. I received a pile of materials from every college I was interested in, and few shared their students&rsquo; experiences outside of pull quotes. Why aren&rsquo;t student voices the focus of promotional materials? A strong community and good work are honest testaments to a program&rsquo;s success.<br />
+
+    <br />I interviewed a dozen students, selected six interviews, and created editorial spreads for each. The tactile and personal nature of print made paper the best choice for this project.<br />
 
     <br />In this series of brochures, the members of the UMass Dartmouth graphic design major emphasize the strong sense of community in the UMD program. Focusing on six senior students, it seeks to identify with potential incoming students who seek to join the community.</tt>
 
@@ -65,6 +65,7 @@
 
 <script>
 import t from '~/components/textH2.vue'
+import c from '~/components/projectCaption.vue'
 import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
@@ -74,8 +75,7 @@ export default {
   name: 'senior-project',
   data: function () {
     return {
-      title: 'Senior project',
-      isHidden: true
+      title: 'Senior project'
     }
   },
   head() {
@@ -86,13 +86,14 @@ export default {
           hid: 'description',
           name: 'description',
           content: 'An information package for the UMass Dartmouth graphic design program'
-      }
-    ]
+        }
+      ]
     }
   },
   // /Head content
   components: {
     t,
+    c,
     tt,
     imgOne,
     imgTwo,

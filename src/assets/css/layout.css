@@ -79,12 +79,28 @@ nav ul {
 /* !--------------------------!
         section elements
    !--------------------------! */
-.t,
-.c {
+.t {
   grid-column: intro;
 }
 
-.tt,
+.c {
+  grid-column: intro;
+  grid-row: span 2;
+}
+
+.tt {
+  grid-column: main;
+}
+
+#exhibition-catalog .tt:nth-of-type(1),
+#human-interest .tt:nth-of-type(1),
+#patterns .tt:nth-of-type(1),
+#senior-project .tt:nth-of-type(1),
+#textile-patterns .tt:nth-of-type(1),
+#wip .tt:nth-of-type(1) {
+  grid-row-start: 1;
+}
+
 .isotope-grid,
 .main-wip {
   grid-column: main;
@@ -211,6 +227,15 @@ section {
     grid-column: main;
   }
 
+  #exhibition-catalog .tt:nth-of-type(1),
+  #human-interest .tt:nth-of-type(1),
+  #patterns .tt:nth-of-type(1),
+  #senior-project .tt:nth-of-type(1),
+  #textile-patterns .tt:nth-of-type(1),
+  #wip .tt:nth-of-type(1) {
+    grid-row-start: auto;
+  }
+
   section#home {
     grid-column: content / col-end;
     display: grid;
@@ -254,7 +279,8 @@ section {
     overflow: hidden;
   } */
 
-  .odd {
+  .odd,
+  .odd.bump {
     grid-column-start: 2;
     grid-column-end: 3;
   }
@@ -296,6 +322,15 @@ section {
     grid-column: span 2 / 4;
   }
 
+  #exhibition-catalog .tt:nth-of-type(1),
+  #human-interest .tt:nth-of-type(1),
+  #patterns .tt:nth-of-type(1),
+  #senior-project .tt:nth-of-type(1),
+  #textile-patterns .tt:nth-of-type(1),
+  #wip .tt:nth-of-type(1) {
+    grid-row-start: auto;
+  }
+
   .odd.small {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -327,6 +362,11 @@ section {
     grid-gap: 3rem 10px;
   }
 
+  section .c {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
   section .t,
   section#home .t,
   section#about .t {
@@ -334,13 +374,31 @@ section {
     grid-column-end: 4;
   }
 
-  section .tt,
+  section .tt {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  section .tt:nth-of-type(1) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
   section#home .tt,
   #home.isotope-grid,
   section#about .tt,
   section#about .blk-lg {
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 4;
+  }
+
+  #exhibition-catalog .tt:nth-of-type(1),
+  #human-interest .tt:nth-of-type(1),
+  #patterns .tt:nth-of-type(1),
+  #senior-project .tt:nth-of-type(1),
+  #textile-patterns .tt:nth-of-type(1),
+  #wip .tt:nth-of-type(1) {
+    grid-row-start: auto;
   }
 
   section#about .blk-lg.odd.small {

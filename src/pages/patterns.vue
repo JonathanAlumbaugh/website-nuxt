@@ -2,9 +2,15 @@
   <section id="patterns">
 
     <!-- 01 -->
-    <t>sometimes I look so close that I find</t>
+    <t>Always on the lookout for patterns</t>
 
-    <tt>Patterns, in water drops, glass blocks, and ink blots. Part of being a designer is collecting, deconstructing, and recombining individual bits into something new, fun, interesting, informative. Patterns are one of the things I collect.</tt>
+    <c name="Photography"
+      location="Various locations"
+      material="Digital"
+      dimension="Various sizes"
+      date="2014-18"></c>
+
+    <tt>Patterns, in water drops, glass blocks, and ink blots. Part of being a designer is collecting, deconstructing, and recombining into something new. Patterns are one of the things I collect.</tt>
 
 
     <!-- 02 -->
@@ -22,38 +28,36 @@
 
 <script>
 import t from '~/components/textH2.vue'
+import c from '~/components/projectCaption.vue'
 import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
-export default
-{
+export default {
   // Head content all up in here
   name: 'patterns',
-  data: function ()
-  {
+  data: function () {
     return {
       title: 'Patterns'
     }
   },
-  head()
-  {
+  head() {
     return {
       title: this.title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Jonathan takes pictures of patterns, in water drops, glass blocks, and ink blots'
+          content: 'Patterns, found in water drops, glass blocks, and ink blots'
         }
       ]
     }
   },
   // /Head content
-  components:
-  {
+  components: {
     t,
+    c,
     tt,
     imgOne,
     imgTwo,

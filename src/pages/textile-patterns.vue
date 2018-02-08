@@ -2,8 +2,15 @@
   <section id="textile-patterns">
 
     <!-- 01 -->
-    <t>One semester a bunch of graphic designers made textiles</t>
-    <tt>These are some of mine. We developed the patterns, mixed inks, dyed fabrics, and printed everything by hand.</tt>
+    <t>Making patterns is more fun than finding them</t>
+
+    <c name="Patterns"
+      location="University of Massachusetts, Dartmouth, MA"
+      material="Fabric"
+      dimension="3x3–3x9ft"
+      date="2017"></c>
+
+    <tt>These are some of mine. In class, we developed the patterns, dyed fabrics, exposed screens, mixed inks, and printed everything by hand.</tt>
 
 
     <!-- 02 -->
@@ -38,6 +45,7 @@
 
 <script>
 import t from '~/components/textH2.vue'
+import c from '~/components/projectCaption.vue'
 import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
@@ -57,7 +65,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Jonathan developed and printed graphic patterns for textiles'
+          content: 'Graphic patterns, developed for and printed on textiles'
         }
       ]
     }
@@ -65,6 +73,7 @@ export default {
   // /Head content
   components: {
     t,
+    c,
     tt,
     imgOne,
     imgTwo,

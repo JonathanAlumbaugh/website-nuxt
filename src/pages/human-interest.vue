@@ -2,22 +2,28 @@
   <section id="human-interest">
 
     <!-- 01 -->
-    <t>For five years I was a photojournalist</t>
+    <t>For four years I photojournaled</t>
 
-    <tt>Working for the Chronicle newspaper. From front page to back page and printed in color and black and white, these photos reached subscribers weekly for years.</tt>
+    <c name="Photography"
+      location="the Chronicle, Willimantic, CT"
+      material="Newsprint"
+      dimension="Various sizes"
+      date="2012-16"></c>
+
+    <tt>From front page to back page and printed in color and black and white, these photos reached subscribers weekly for years.</tt>
 
 
     <!-- 02 -->
     <img-one name="human interest" category="photojournalism" img-number="05"></img-one>
 
-    <tt>Firefighters drill to fight a fire from a leak in a propane tank line. The firefighters approached the leak slowly while widening their spray, and finally, one would reach into the flames and turn off the propane at the source.</tt>
+    <tt>Firefighters fight a propane fire during a drill. The firefighters approach the leak slowly while widening the spray, and finally, would reach into the flames and turn off the propane at the source.</tt>
 
 
     <!-- 03 -->
     <img-one name="human interest" category="photojournalism" img-number="42"></img-one>
     <img-two name="human interest" category="photojournalism" img-number1="40" img-number2="41"></img-two>
 
-    <tt>Jenny and Mike play ice hockey at Mansfield Hollow, drawn out by the reprieve in weather.</tt>
+    <tt>Jenny and Mike play ice hockey at Mansfield Hollow, drawn out by a reprieve in the weather.</tt>
 
 
     <!-- 04 -->
@@ -46,43 +52,39 @@
 
 <script>
 import t from '~/components/textH2.vue'
+import c from '~/components/projectCaption.vue'
 import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
-import homeBtn from '~/components/homeBtn.vue'
-export default
-{
+export default {
   // Head content all up in here
   name: 'human-interest',
-  data: function ()
-  {
+  data: function () {
     return {
       title: 'Human interest'
     }
   },
-  head()
-  {
+  head() {
     return {
       title: this.title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Jonathan took hundreds of human interest photos for the Chronicle newspaper'
+          content: 'Human interest photos taken for the Chronicle newspaper'
         }
       ]
     }
   },
   // /Head content
-  components:
-  {
+  components: {
     t,
+    c,
     tt,
     imgOne,
     imgTwo,
-    imgThree,
-    homeBtn
+    imgThree
   }
 }
 </script>

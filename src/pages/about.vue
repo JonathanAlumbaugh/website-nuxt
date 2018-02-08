@@ -40,7 +40,7 @@
 
 
   <!-- Experience -->
-  <t>my work experience includes titles like</t>
+  <t>My work experience includes titles like</t>
 
   <blk-lg
     class="odd"
@@ -93,7 +93,7 @@
 
 
   <!-- Programs -->
-  <t>and am a pro with industry standard programs like</t>
+  <t>And I'm a pro with industry standard programs like</t>
 
   <blk-sm class="odd small" title="Il" description="Adobe Illustrator"/>
 
@@ -105,7 +105,7 @@
 
 
   <!-- More -->
-  <t>plus I can work with</t>
+  <t>Plus I can work with</t>
 
   <blk-sm class="odd small" title="Ae" description="Adobe After Effects"/>
 
@@ -143,18 +143,15 @@ import t from '~/components/textH2.vue'
 import tt from '~/components/textH3.vue'
 import blkLg from '~/components/blockLarge.vue'
 import blkSm from '~/components/blockSmall.vue'
-export default
-{
+export default {
   // Head content all up in here
   name: 'about',
-  data: function ()
-  {
+  data: function () {
     return {
       title: 'About'
     }
   },
-  head()
-  {
+  head() {
     return {
       title: this.title,
       meta: [
@@ -167,8 +164,7 @@ export default
     }
   },
   // /Head content
-  components:
-  {
+  components: {
     t,
     tt,
     blkLg,
