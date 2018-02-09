@@ -2,8 +2,8 @@
   <transition appear name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
     <!-- Not sure about this...  -->
     <div class="container">
-    <main-header/>
-    <main-nav/>
+    <!-- <main-header/>
+    <main-nav/> -->
     <!-- ...through this. -->
       <section>
 
@@ -15,15 +15,15 @@
         <tt v-else>this error normally only shows if you're me and I'm working on the site right now.</tt>
 
       </section>
-      <main-footer/>
+      <!-- <main-footer/> -->
     </div>
   </transition>
 </template>
 
 <script>
-import mainHeader from '~/components/mainHeader.vue'
-import mainNav from '~/components/mainNav.vue'
-import mainFooter from '~/components/mainFooter.vue'
+// import mainHeader from '~/components/mainHeader.vue'
+// import mainNav from '~/components/mainNav.vue'
+// import mainFooter from '~/components/mainFooter.vue'
 import t from '~/components/textH2.vue'
 import tt from '~/components/textH3.vue'
 export default {
