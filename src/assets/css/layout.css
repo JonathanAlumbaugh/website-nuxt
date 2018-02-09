@@ -241,7 +241,7 @@ section {
   #sting-vodka-branding .tt:nth-of-type(1),
   #textile-patterns .tt:nth-of-type(1),
   #wip .tt:nth-of-type(1) {
-    grid-row-start: 1;
+    grid-row-start: 2;
   }
 
   section#home {
@@ -337,7 +337,7 @@ section {
   #sting-vodka-branding .tt:nth-of-type(1),
   #textile-patterns .tt:nth-of-type(1),
   #wip .tt:nth-of-type(1) {
-    grid-row-start: 1;
+    grid-row-start: 2;
   }
 
   .odd.small {
@@ -408,7 +408,7 @@ section {
   #sting-vodka-branding .tt:nth-of-type(1),
   #textile-patterns .tt:nth-of-type(1),
   #wip .tt:nth-of-type(1) {
-    grid-row-start: 1;
+    grid-row-start: 2;
   }
 
   section#about .blk-lg.odd.small {
