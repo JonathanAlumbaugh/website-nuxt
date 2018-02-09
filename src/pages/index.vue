@@ -49,7 +49,7 @@
 
     <!-- Extra -->
     <t>I love making things</t>
-    <tt>On paper, fabric, wood, the web, and more. Interested in seeing how I built this website? Check out <a href="https://github.com/JonathanAlumbaugh/website-nuxt"><span>my git repository</span></a>.</tt>
+    <tt>With paper, fabric, wood, plastic, the web, 3D printers, CNC routers, laser cutters, and more. Interested in seeing how I built this website? Check out <a href="https://github.com/JonathanAlumbaugh/website-nuxt"><span>my git repository</span></a>.</tt>
 
 
     <!-- Scripts -->
