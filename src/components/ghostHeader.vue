@@ -1,6 +1,6 @@
 <template lang="html">
   <transition appear name="custom-classes-transition" enter-active-class="animated-long fadeIn" leave-active-class="animated fadeOut">
-    <nuxt-link v-sticky="stickyConfig" class="ghost-header-position" exact to="/">
+    <nuxt-link v-sticky="stickyConfig" class="ghost-header-position" to="/">
       <h1 class="main-header">
         Jonathan<br />
         Alumbaugh
