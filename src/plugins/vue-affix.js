@@ -1,4 +1,4 @@
-// TODO: Try this again but with /dist/vue-affix on the end
+// TODO: Try vue-affix again...
 
 import Vue from 'vue'
 import VueAffix from 'vue-affix'

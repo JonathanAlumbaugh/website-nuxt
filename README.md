@@ -20,6 +20,6 @@ This repository chronicles the long and arduous process of implementing Vue.js, 
 * Use only SASS?
 * Use webpack imagemin?
 
-<!-- TODO: Get links on all of the linkable things -->
+<!-- TODO: link vue-sticky, VueAffix, Fancybox, @nuxtjs/pwa, and webpack imagemin -->
 
 Built with love and **[Nuxt.js](https://github.com/nuxt/nuxt.js)**.

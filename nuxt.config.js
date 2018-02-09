@@ -108,13 +108,6 @@ module.exports = {
     ],
 
     link: [
-      // {
-      //   // !-------------------------------------------------------------------------!
-      //   // TODO: Fix so that canonical links to HTTPS
-      //   // !-------------------------------------------------------------------------!
-      //   rel: 'canonical',
-      //   href: 'https://$nuxt.$route.path'
-      // },
       {
         rel: 'icon',
         type: 'image/x-icon',
