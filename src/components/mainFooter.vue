@@ -1,6 +1,6 @@
 <template lang="html">
   <footer class="main-footer box-shadow-bottom">
-    <h4>copyright &copy; Jonathan Alumbaugh 2018 / updated Feb 7</h4>
+    <h4>copyright &copy; Jonathan Alumbaugh 2018 / updated Feb 8</h4>
   </footer>
 </template>
 
