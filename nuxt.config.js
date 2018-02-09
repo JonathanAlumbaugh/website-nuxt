@@ -52,7 +52,7 @@ module.exports = {
   // Set environment to development for robust uh errors or something
   // !-------------------------------------------------------------------------!
   env: {
-    NODE_ENV: 'dev'
+    NODE_ENV: 'production'
   },
 
   plugins: [
