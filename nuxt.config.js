@@ -145,7 +145,7 @@ module.exports = {
   // The module @nuxtjs/pwa should come after any other modules
   // !-------------------------------------------------------------------------!
   modules: [
-    // '@nuxtjs/sitemap',
+    '@nuxtjs/sitemap',
     ['@nuxtjs/pwa', { icon: false }]
   ],
 
