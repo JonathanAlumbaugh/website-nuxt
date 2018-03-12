@@ -17,6 +17,13 @@ module.exports = {
   // Use webpack plugins (BUT THIS SHIT'S STILL BROKE)
   // !-------------------------------------------------------------------------!
   build: {
+    // !-------------------------------------------------------------------------!
+    // Disable Uglify
+    // !-------------------------------------------------------------------------!
+    extend (config) {
+      config.plugins = config.plugins.filter((plugin) => plugin.constructor.name !== 'UglifyJsPlugin')
+    },
+
     plugins: [
       new webpack.ProvidePlugin({
         '$': 'jquery',
@@ -46,13 +53,6 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   // vendor: ['jquery', 'vueisotope', 'isotope-layout', 'vue-js-modal', 'vuebar']
   // vendor: ['jquery']
-  },
-
-  // !-------------------------------------------------------------------------!
-  // Set environment to development for robust uh errors or something
-  // !-------------------------------------------------------------------------!
-  env: {
-    NODE_ENV: 'production'
   },
 
   plugins: [
@@ -165,10 +165,6 @@ module.exports = {
     scrollBehavior: function (to, from, savedPosition) {
       return { x: 0, y: 0 }
     }
-  },
-
-  extend (config) {
-    config.plugins = config.plugins.filter((plugin) => plugin.constructor.name !== 'UglifyJsPlugin')
   }
 
 }
