@@ -161,7 +161,7 @@ module.exports = {
   // HTTPS middleware should reroute all pages to HTTPS
   // !-------------------------------------------------------------------------!
   router: {
-    // middleware: ['https'],
+    middleware: ['https'],
     scrollBehavior: function (to, from, savedPosition) {
       return { x: 0, y: 0 }
     }
