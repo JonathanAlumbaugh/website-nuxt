@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="element-item" :class="category" :data-category="category">
-    <div class="hvrbox">
+    <div class="hvrbox" :class="category">
       <img :src="imgPath" :alt="name" class="img-autoheight hvrbox-layer_bottom">
       <nuxt-link :to="href">
         <div class="hvrbox-layer_top">
