@@ -45,13 +45,21 @@
   <blk-lg
     class="odd"
     category="designer"
+    title="Graphic designer"
+    subtitle="M.S. Walker, Feb 2018-present"
+    description="Rounded out an excellent team with my web, photo, and editorial layout experience">
+  </blk-lg>
+
+  <blk-lg
+    class="even"
+    category="designer"
     title="In house designer"
     subtitle="Minuteman Press Dartmouth, May 2017-present"
     description="Took over design and print prep work enabling staff to go on more in-person sales &amp; customer service calls">
   </blk-lg>
 
   <blk-lg
-    class="even"
+    class="odd bump"
     category="photographer"
     title="Staff photographer"
     subtitle="Horizons Inc, 2014-2016"
@@ -59,7 +67,7 @@
   </blk-lg>
 
   <blk-lg
-    class="odd bump"
+    class="even"
     category="photojournalist"
     title="Freelance photographer"
     subtitle="The Chronicle Newspaper, 2012-2015"
@@ -74,7 +82,7 @@
   </blk-lg> -->
 
   <blk-lg
-    class="even"
+    class="odd bump"
     title="Volunteer"
     subtitle="Windham Area Interfaith Ministry, Jun-Oct 2013"
     description="Volunteered over 200 hours at local organization that supports underprivileged families">
