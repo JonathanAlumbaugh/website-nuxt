@@ -2,12 +2,12 @@
   <div class="img-two">
     <div class="box-shadow">
       <a data-fancybox="gallery" :href="imgPath1">
-        <img :src="imgPath1" :alt="altText1" class="img-fluid-two hvrbox-layer_bottom grayscale">
+        <img :src="imgPath1" :alt="altText1" class="img-fluid-two hvrbox-layer-bottom grayscale">
       </a>
     </div>
     <div class="box-shadow">
       <a data-fancybox="gallery" :href="imgPath2">
-        <img :src="imgPath2" :alt="altText2" class="img-fluid-two hvrbox-layer_bottom grayscale">
+        <img :src="imgPath2" :alt="altText2" class="img-fluid-two hvrbox-layer-bottom grayscale">
       </a>
     </div>
   </div>

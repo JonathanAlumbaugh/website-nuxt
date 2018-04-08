@@ -2,17 +2,17 @@
   <div class="img-three">
     <div class="box-shadow">
       <a data-fancybox="gallery" :href="imgPath1">
-        <img :src="imgPath1" :alt="altText1" class="img-fluid-three hvrbox-layer_bottom grayscale">
+        <img :src="imgPath1" :alt="altText1" class="img-fluid-three hvrbox-layer-bottom grayscale">
       </a>
     </div>
     <div class="box-shadow">
       <a data-fancybox="gallery" :href="imgPath2">
-        <img :src="imgPath2" :alt="altText2" class="img-fluid-three hvrbox-layer_bottom grayscale">
+        <img :src="imgPath2" :alt="altText2" class="img-fluid-three hvrbox-layer-bottom grayscale">
       </a>
     </div>
     <div class="box-shadow">
       <a data-fancybox="gallery" :href="imgPath3">
-        <img :src="imgPath3" :alt="altText3" class="img-fluid-three hvrbox-layer_bottom grayscale">
+        <img :src="imgPath3" :alt="altText3" class="img-fluid-three hvrbox-layer-bottom grayscale">
       </a>
     </div>
   </div>

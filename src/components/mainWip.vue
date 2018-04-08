@@ -1,8 +1,8 @@
 <template lang="html">
     <nuxt-link to="wip" class="main-wip box-shadow">
       <div class="hvrbox wip">
-        <img :src="imgPath" :alt="name" class="img-fluid hvrbox-layer_bottom grayscale">
-        <div class="hvrbox-layer_top">
+        <img :src="imgPath" :alt="name" class="img-fluid hvrbox-layer-bottom grayscale">
+        <div class="hvrbox-layer-top">
           <div class="hvrbox-text">
             <h5>{{ name }}</h5>
             <h4>{{ category }}</h4>

@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="box-shadow img-one">
     <a data-fancybox="gallery" :href="imgPath">
-      <img :src="imgPath" :alt="altText" class="img-fluid-one hvrbox-layer_bottom grayscale">
+      <img :src="imgPath" :alt="altText" class="img-fluid-one hvrbox-layer-bottom grayscale">
     </a>
   </div>
 </template>

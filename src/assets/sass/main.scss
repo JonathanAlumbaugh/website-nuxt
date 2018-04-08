@@ -142,7 +142,7 @@ span {
   color: $thirty-percent;
   font-size: 2rem;
   text-shadow: 0 0 $dark-grey, 0.08em 0 0 $white, 0 0, -0.08em 0 0 $white;
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
 
   &:hover {
     background: linear-gradient($mid-grey, $mid-grey) left 1.09em no-repeat;
@@ -249,8 +249,18 @@ a {
   overflow: hidden;
   position: relative;
 
-  .hvrbox-layer_bottom {
+  .hvrbox-layer-bottom {
     display: block;
+  }
+
+  .hvrbox-text-mobile {
+    border-top: 1px solid rgb(179, 179, 179);
+    display: none;
+    font-size: 1.5rem;
+
+    // for old browsers
+    margin-top: 5px;
+    padding-top: 2px;
   }
 
   &.design {
@@ -306,12 +316,12 @@ a {
   }
 
   &.active {
-    .hvrbox-text_mobile {
+    .hvrbox-text-mobile {
       display: block;
     }
   }
 
-  .hvrbox-layer_top {
+  .hvrbox-layer-top {
     // -moz-transition: 0.4s ease-in-out 0s;
     // -ms-transition: 0.4s ease-in-out 0s;
     -o-transition: 0.4s ease-in-out 0s;
@@ -343,20 +353,10 @@ a {
     top: 50%;
     transform: translate(-50%, -50%);
   }
-
-  .hvrbox-text_mobile {
-    border-top: 1px solid rgb(179, 179, 179);
-    display: none;
-    font-size: 1.5rem;
-
-    // for old browsers
-    margin-top: 5px;
-    padding-top: 2px;
-  }
 }
 
-.hvrbox.active .hvrbox-layer_top,
-.hvrbox:hover .hvrbox-layer_top {
+.hvrbox.active .hvrbox-layer-top,
+.hvrbox:hover .hvrbox-layer-top {
   opacity: 1;
 }
 
@@ -432,10 +432,6 @@ button {
       // &hover,
       // &focus {
       // }
-    }
-
-    img {
-      width: 32px;
     }
   }
 }
