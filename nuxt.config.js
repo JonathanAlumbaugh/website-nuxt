@@ -2,6 +2,7 @@
 // This enables use of webpack plugins
 // !-------------------------------------------------------------------------!
 const webpack = require('webpack')
+
 // !-------------------------------------------------------------------------!
 // This enables changing of source directory
 // !-------------------------------------------------------------------------!
@@ -26,25 +27,6 @@ module.exports = {
       )
     },
 
-    plugins: [
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-        'window.$': 'jquery',
-      }),
-    ],
-    // !-------------------------------------------------------------------------!
-    // loaders: [
-    //   {
-    //     test: /\.vue$/,
-    //     loader: 'vue-loader'
-    //   },
-    //   {
-    //     test: require.resolve('jquery'),
-    //     loader: 'expose?$'
-    //   }
-    // ]
     // !-------------------------------------------------------------------------!
     // Vendor is everything that needs to be client side or something like that
     // Window or Document undefined?
