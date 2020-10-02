@@ -31,7 +31,8 @@
     "vue-sticky": "^3.3.4",
     "vue-sticky-directive": "0.0.10",
     "vue-template-compiler": "^2.6.12",
-    "vueisotope": "^3.1.2"
+    "vueisotope": "^3.1.2",
+    "webpack": "^4.44.2"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -49,7 +50,6 @@
     "imagemin-webpack": "^5.1.1",
     "sass-loader": "^10.0.2",
     "vue-loader": "^15.9.3",
-    "webpack": "^4.44.2",
     "webpack-load-plugins": "^0.1.2"
   }
 }
