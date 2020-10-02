@@ -153,7 +153,7 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://jonathanalumbaugh.com',
+    // hostname: 'https://jonathanalumbaugh.com',
     generate: false, // Enable when using nuxt generate
   },
 
