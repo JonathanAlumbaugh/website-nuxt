@@ -1,8 +1,7 @@
 <template lang="html">
     <!-- Add :class="navHider" below for that sweet collapsing nav goodness -->
     <!-- <div :class="navHider"> -->
-      <nav v-sticky="stickyConfig" class="main-nav">
-        <ul>
+  <nav class="main-nav">
 
           <!-- Add active class to both li and nuxt-link based on which is active -->
           <!-- Home -->
@@ -54,12 +53,9 @@
 </template>
 
 <script>
-import VueSticky from 'vue-sticky'
 export default {
   name: 'mainNav',
-  directives: {
-    'sticky': VueSticky
-  },
+
   data() {
     return {
       // !-------------------------------------------------!

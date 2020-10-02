@@ -1,6 +1,10 @@
 <template lang="html">
-  <transition appear name="custom-classes-transition" enter-active-class="animated-long fadeIn" leave-active-class="animated fadeOut">
-    <nuxt-link v-sticky="stickyConfig" class="ghost-header-position" to="/">
+  <transition
+    appear
+    name="custom-classes-transition"
+    enter-active-class="animated-long fadeIn"
+    leave-active-class="animated fadeOut"
+  >
       <h1 class="main-header">
         Jonathan<br />
         Alumbaugh
@@ -10,12 +14,9 @@
 </template>
 
 <script>
-import VueSticky from 'vue-sticky'
 export default {
   name: 'ghostHeader',
-  directives: {
-    'sticky': VueSticky
-  },
+
   data() {
     return {
       // !-------------------------------------------------!
