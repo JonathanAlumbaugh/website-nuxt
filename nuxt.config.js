@@ -20,39 +20,41 @@ module.exports = {
     // !-------------------------------------------------------------------------!
     // Disable Uglify
     // !-------------------------------------------------------------------------!
-    extend (config) {
-      config.plugins = config.plugins.filter((plugin) => plugin.constructor.name !== 'UglifyJsPlugin')
+    extend(config) {
+      config.plugins = config.plugins.filter(
+        (plugin) => plugin.constructor.name !== 'UglifyJsPlugin',
+      )
     },
 
     plugins: [
       new webpack.ProvidePlugin({
-        '$': 'jquery',
-        'jQuery': 'jquery',
+        $: 'jquery',
+        jQuery: 'jquery',
         'window.jQuery': 'jquery',
-        'window.$': 'jquery'
-      })
-    ]
-  // !-------------------------------------------------------------------------!
-  // loaders: [
-  //   {
-  //     test: /\.vue$/,
-  //     loader: 'vue-loader'
-  //   },
-  //   {
-  //     test: require.resolve('jquery'),
-  //     loader: 'expose?$'
-  //   }
-  // ]
-  // !-------------------------------------------------------------------------!
-  // Vendor is everything that needs to be client side or something like that
-  // Window or Document undefined?
-  // This is due to the server-side rendering. If you need to specify that you
-  // want to import a resource only on the client-side, you need to use the
-  // process.browser variable.
-  // https://nuxtjs.org/faq/window-document-undefined/
-  // !-------------------------------------------------------------------------!
-  // vendor: ['jquery', 'vueisotope', 'isotope-layout', 'vue-js-modal', 'vuebar']
-  // vendor: ['jquery']
+        'window.$': 'jquery',
+      }),
+    ],
+    // !-------------------------------------------------------------------------!
+    // loaders: [
+    //   {
+    //     test: /\.vue$/,
+    //     loader: 'vue-loader'
+    //   },
+    //   {
+    //     test: require.resolve('jquery'),
+    //     loader: 'expose?$'
+    //   }
+    // ]
+    // !-------------------------------------------------------------------------!
+    // Vendor is everything that needs to be client side or something like that
+    // Window or Document undefined?
+    // This is due to the server-side rendering. If you need to specify that you
+    // want to import a resource only on the client-side, you need to use the
+    // process.browser variable.
+    // https://nuxtjs.org/faq/window-document-undefined/
+    // !-------------------------------------------------------------------------!
+    // vendor: ['jquery', 'vueisotope', 'isotope-layout', 'vue-js-modal', 'vuebar']
+    // vendor: ['jquery']
   },
 
   plugins: [
@@ -67,9 +69,9 @@ module.exports = {
     // { src: 'vue-affix' },
     // !-------------------------------------------------------------------------!
     // { src: '~/plugins/jquery.js', ssr: false },
-    { src: '~/plugins/vue-sticky.js' },
+    // { src: '~/plugins/vue-sticky.js' },
     { src: '~/plugins/vue-js-modal.js' },
-    { src: '~/plugins/ga.js', ssr: false }
+    { src: '~/plugins/ga.js', ssr: false },
   ],
 
   css: [
@@ -80,39 +82,39 @@ module.exports = {
     // !-------------------------------------------------------------------------!
     // TODO: Fix so that fancybox is not included on every page, only where necessary
     // !-------------------------------------------------------------------------!
-    '~assets/css/jquery.fancybox.css'
+    '~assets/css/jquery.fancybox.css',
   ],
 
   head: {
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     title: '',
     meta: [
       {
-        charset: 'utf-8'
+        hid: 'default HID description',
+        name: 'default description',
+        content: 'default content',
+      },
+      {
+        charset: 'utf-8',
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+        content: 'width=device-width, initial-scale=1, shrink-to-fit=no',
       },
       {
         name: 'author',
-        content: 'Jonathan Alumbaugh'
+        content: 'Jonathan Alumbaugh',
       },
-      {
-        hid: 'default HID description',
-        name: 'default description',
-        content: 'default content'
-      }
     ],
 
     link: [
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon/favicon.ico'
-      }
+        href: '/favicon/favicon.ico',
+      },
     ],
 
     script: [
@@ -123,14 +125,14 @@ module.exports = {
       // automatic built-in page transitions.
       // !-------------------------------------------------------------------------!
       { src: '/js/jquery.js' },
-      { src: '/js/jquery.fancybox.js' }
-    ]
+      { src: '/js/jquery.fancybox.js' },
+    ],
   },
 
   manifest: {
     name: 'Jonathan',
     lang: 'en',
-    theme_color: '#ff0099'
+    theme_color: '#ff0099',
   },
 
   loading: {
@@ -138,16 +140,13 @@ module.exports = {
     // Progress bar options.
     // !-------------------------------------------------------------------------!
     color: '#00bfff',
-    height: '2px'
+    height: '2px',
   },
 
   // !-------------------------------------------------------------------------!
   // The module @nuxtjs/pwa should come after any other modules
   // !-------------------------------------------------------------------------!
-  modules: [
-    '@nuxtjs/sitemap',
-    ['@nuxtjs/pwa', { icon: false }]
-  ],
+  modules: ['@nuxtjs/sitemap', ['@nuxtjs/pwa', { icon: false }]],
 
   // !-------------------------------------------------------------------------!
   // Sitemap options for @nuxtjs/sitemap
@@ -155,7 +154,7 @@ module.exports = {
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://jonathanalumbaugh.com',
-    generate: false // Enable when using nuxt generate
+    generate: false, // Enable when using nuxt generate
   },
 
   // !-------------------------------------------------------------------------!
@@ -163,7 +162,7 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   cache: {
     max: 1000,
-    maxAge: 900000
+    maxAge: 900000,
   },
 
   // !-------------------------------------------------------------------------!
@@ -173,7 +172,6 @@ module.exports = {
     // middleware: ['https'],
     scrollBehavior: function (to, from, savedPosition) {
       return { x: 0, y: 0 }
-    }
-  }
-
+    },
+  },
 }

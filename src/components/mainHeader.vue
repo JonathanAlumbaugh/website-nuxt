@@ -1,7 +1,8 @@
 <template lang="html">
   <nuxt-link class="main-header-position" exact to="/">
     <h1 class="main-header">
-      Jonathan<br />
+      Jonathan
+      <br />
       Alumbaugh
     </h1>
   </nuxt-link>
@@ -9,6 +10,6 @@
 
 <script>
 export default {
-  name: 'mainHeader'
+  name: 'mainHeader',
 }
 </script>

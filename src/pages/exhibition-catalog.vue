@@ -1,36 +1,72 @@
 <template lang="html">
   <section id="exhibition-catalog">
-
     <!-- 01 -->
     <t>Exhibition catalogs supplement the info in an exhibit</t>
 
-    <c name="Making Her Mark Catalog"
+    <c
+      name="Making Her Mark Catalog"
       location="University of Massachusetts, Dartmouth, MA"
       material="Paper"
-      dimension="9 x 11&quot;"
-      date="2017"></c>
+      dimension='9 x 11"'
+      date="2017"
+    ></c>
 
-    <tt>This catalog supplemented the information in an exhibition titled &ldquo;Making Her Mark.&rdquo; I created this exhibition catalog with <a href="http://meaghankoneill.com/"><span>Meaghan O&rsquo;Neil</span></a> and <a href="https://www.amandacward.com/"><span>Amanda Ward</span></a>. The catalog contained 11 essays.</tt>
-
+    <tt>
+      This catalog supplemented the information in an exhibition titled
+      &ldquo;Making Her Mark.&rdquo; I created this exhibition catalog with
+      <a href="http://meaghankoneill.com/"><span>Meaghan O&rsquo;Neil</span></a>
+      and
+      <a href="https://www.amandacward.com/"><span>Amanda Ward</span></a>
+      . The catalog contained 11 essays.
+    </tt>
 
     <!-- 02 -->
-    <img-one name="exhibition catalog" category="design" img-number="01"></img-one>
-    <img-two name="exhibition catalog" category="design" img-number1="10" img-number2="04"></img-two>
+    <img-one
+      name="exhibition catalog"
+      category="design"
+      img-number="01"
+    ></img-one>
+    <img-two
+      name="exhibition catalog"
+      category="design"
+      img-number1="10"
+      img-number2="04"
+    ></img-two>
 
-    <tt>Due to exhibition budget, the catalog was 28 pages. Three basic layouts accomodate essays of different lengths.</tt>
-
+    <tt>
+      Due to exhibition budget, the catalog was 28 pages. Three basic layouts
+      accomodate essays of different lengths.
+    </tt>
 
     <!-- 03 -->
-    <img-one name="exhibition catalog" category="design" img-number="09"></img-one>
-    <img-two name="exhibition catalog" category="design" img-number1="14" img-number2="13"></img-two>
+    <img-one
+      name="exhibition catalog"
+      category="design"
+      img-number="09"
+    ></img-one>
+    <img-two
+      name="exhibition catalog"
+      category="design"
+      img-number1="14"
+      img-number2="13"
+    ></img-two>
 
-    <tt>The table of contents was designed to give context to artists&rsquo; lives using well known historical events</tt>
+    <tt>
+      The table of contents was designed to give context to artists&rsquo; lives
+      using well known historical events
+    </tt>
 
     <!-- 05 -->
-    <img-one name="exhibition catalog" category="design" img-number="07"></img-one>
+    <img-one
+      name="exhibition catalog"
+      category="design"
+      img-number="07"
+    ></img-one>
 
-    <tt>If you are interested in the PDF, or in looking at the printed catalog, please hit the contact button and give me call or send me an email.</tt>
-
+    <tt>
+      If you are interested in the PDF, or in looking at the printed catalog,
+      please hit the contact button and give me call or send me an email.
+    </tt>
   </section>
 </template>
 
@@ -47,7 +83,7 @@ export default {
   name: 'exhibition-catalog',
   data: function () {
     return {
-      title: 'Exhibition catalog'
+      title: 'Exhibition catalog',
     }
   },
   head() {
@@ -57,9 +93,9 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'An exhibition catalog for the Making Her Mark exhibition'
-        }
-      ]
+          content: 'An exhibition catalog for the Making Her Mark exhibition',
+        },
+      ],
     }
   },
   // /Head content
@@ -70,7 +106,7 @@ export default {
     imgOne,
     imgTwo,
     imgThree,
-    homeBtn
-  }
+    homeBtn,
+  },
 }
 </script>

@@ -11,17 +11,17 @@ export default {
   name: 'blockLarge',
   props: {
     category: {
-      required: false
+      required: false,
     },
     title: {
-      required: true
+      required: true,
     },
     subtitle: {
-      required: true
+      required: true,
     },
     description: {
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>

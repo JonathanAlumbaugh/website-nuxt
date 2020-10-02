@@ -1,5 +1,10 @@
 <template lang="html">
-  <transition appear name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+  <transition
+    appear
+    name="custom-classes-transition"
+    enter-active-class="animated fadeIn"
+    leave-active-class="animated fadeOut"
+  >
     <caption v-show="!isHidden">
       <slot></slot>
     </caption>
@@ -11,8 +16,8 @@ export default {
   name: 'projectCitation',
   data: function () {
     return {
-      isHidden: ''
+      isHidden: '',
     }
-  }
+  },
 }
 </script>

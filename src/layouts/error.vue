@@ -1,19 +1,30 @@
 <template lang="html">
-  <transition appear name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+  <transition
+    appear
+    name="custom-classes-transition"
+    enter-active-class="animated fadeIn"
+    leave-active-class="animated fadeOut"
+  >
     <!-- Not sure about this...  -->
     <div class="container">
-    <!-- <main-header/>
+      <!-- <main-header/>
     <main-nav/> -->
-    <!-- ...through this. -->
+      <!-- ...through this. -->
       <section>
-
         <t v-if="error.statusCode === 404">I was fiddling around and</t>
 
-        <tt v-if="error.statusCode === 404">I must have broken something here.<br />
-        Would you <a @click="show"><span class="error-contact">drop me a line</span></a> and let me know?</tt>
+        <tt v-if="error.statusCode === 404">
+          I must have broken something here.
+          <br />
+          Would you
+          <a @click="show"><span class="error-contact">drop me a line</span></a>
+          and let me know?
+        </tt>
 
-        <tt v-else>this error normally only shows if you're me and I'm working on the site right now.</tt>
-
+        <tt v-else>
+          this error normally only shows if you're me and I'm working on the
+          site right now.
+        </tt>
       </section>
       <!-- <main-footer/> -->
     </div>
@@ -27,18 +38,18 @@
 import t from '~/components/textH2.vue'
 import tt from '~/components/textH3.vue'
 export default {
-  props: [ 'error' ],
+  props: ['error'],
   methods: {
     show() {
-      this.$modal.show( 'contact-modal' );
-    }
+      this.$modal.show('contact-modal')
+    },
   },
   components: {
     // mainHeader,
     // mainNav,
     // mainFooter,
     t,
-    tt
-  }
+    tt,
+  },
 }
 </script>

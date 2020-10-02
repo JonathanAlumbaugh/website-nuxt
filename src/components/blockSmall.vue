@@ -10,11 +10,11 @@ export default {
   name: 'blockSmall',
   props: {
     title: {
-      required: true
+      required: true,
     },
     description: {
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>

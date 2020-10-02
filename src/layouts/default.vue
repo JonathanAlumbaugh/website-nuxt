@@ -1,11 +1,16 @@
 <template lang="html">
-  <transition appear name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+  <transition
+    appear
+    name="custom-classes-transition"
+    enter-active-class="animated fadeIn"
+    leave-active-class="animated fadeOut"
+  >
     <div class="container">
-      <main-header/>
-      <ghost-header/>
-      <main-nav/>
-      <nuxt/>
-      <main-footer/>
+      <main-header />
+      <ghost-header />
+      <main-nav />
+      <nuxt />
+      <main-footer />
     </div>
   </transition>
 </template>
@@ -21,6 +26,6 @@ export default {
     ghostHeader,
     mainNav,
     mainFooter,
-  }
+  },
 }
 </script>

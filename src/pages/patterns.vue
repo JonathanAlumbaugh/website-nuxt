@@ -1,28 +1,46 @@
 <template lang="html">
   <section id="patterns">
-
     <!-- 01 -->
     <t>Always on the lookout for patterns</t>
 
-    <c name="Photography"
+    <c
+      name="Photography"
       location="Various locations"
       material="Digital"
       dimension="Various sizes"
-      date="2014-18"></c>
+      date="2014-18"
+    ></c>
 
-    <tt>Patterns, in water drops, glass blocks, and ink blots. Part of being a designer is collecting, deconstructing, and recombining into something new. Patterns are one of the things I collect.</tt>
-
+    <tt>
+      Patterns, in water drops, glass blocks, and ink blots. Part of being a
+      designer is collecting, deconstructing, and recombining into something
+      new. Patterns are one of the things I collect.
+    </tt>
 
     <!-- 02 -->
     <img-one name="patterns" category="photography" img-number="01"></img-one>
-    <img-two name="patterns" category="photography" img-number1="02" img-number2="03-hq"></img-two>
+    <img-two
+      name="patterns"
+      category="photography"
+      img-number1="02"
+      img-number2="03-hq"
+    ></img-two>
 
     <img-one name="patterns" category="photography" img-number="05"></img-one>
-    <img-two name="patterns" category="photography" img-number1="04" img-number2="07"></img-two>
+    <img-two
+      name="patterns"
+      category="photography"
+      img-number1="04"
+      img-number2="07"
+    ></img-two>
 
     <img-one name="patterns" category="photography" img-number="09"></img-one>
-    <img-two name="patterns" category="photography" img-number1="08" img-number2="06"></img-two>
-
+    <img-two
+      name="patterns"
+      category="photography"
+      img-number1="08"
+      img-number2="06"
+    ></img-two>
   </section>
 </template>
 
@@ -39,7 +57,7 @@ export default {
   name: 'patterns',
   data: function () {
     return {
-      title: 'Patterns'
+      title: 'Patterns',
     }
   },
   head() {
@@ -49,9 +67,10 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Patterns, found in water drops, glass blocks, and ink blots'
-        }
-      ]
+          content:
+            'Patterns, found in water drops, glass blocks, and ink blots',
+        },
+      ],
     }
   },
   // /Head content
@@ -62,7 +81,7 @@ export default {
     imgOne,
     imgTwo,
     imgThree,
-    homeBtn
-  }
+    homeBtn,
+  },
 }
 </script>

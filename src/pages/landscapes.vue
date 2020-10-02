@@ -19,7 +19,7 @@ export default {
     imgOne,
     imgTwo,
     imgThree,
-    homeBtn
-  }
+    homeBtn,
+  },
 }
 </script>

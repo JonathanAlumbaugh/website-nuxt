@@ -1,25 +1,28 @@
 <template lang="html">
-  <transition appear name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+  <transition
+    appear
+    name="custom-classes-transition"
+    enter-active-class="animated fadeIn"
+    leave-active-class="animated fadeOut"
+  >
     <div class="container">
-      <main-header/>
-      <main-nav/>
-      <nuxt/>
-      <main-footer/>
+      <main-header />
+      <main-nav />
+      <nuxt />
+      <main-footer />
     </div>
   </transition>
 </template>
 
 <script>
 import mainHeader from '~/components/mainHeader.vue'
-import mainNav from '~/components/projectNav.vue'
+import mainNav from '../components/projectNav'
 import mainFooter from '~/components/mainFooter.vue'
-export default
-{
-  components:
-  {
+export default {
+  components: {
     mainHeader,
-    projectNav,
+    mainNav,
     mainFooter,
-  }
+  },
 }
 </script>

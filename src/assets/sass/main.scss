@@ -5,8 +5,7 @@
   font-family: 'header-one';
   font-style: normal;
   font-weight: 900;
-  src:
-    url('../fonts/archivo-bold-webfont.woff2') format('woff2'),
+  src: url('../fonts/archivo-bold-webfont.woff2') format('woff2'),
     url('../fonts/archivo-bold-webfont.woff') format('woff');
 }
 
@@ -14,8 +13,7 @@
   font-family: 'header-two';
   font-style: normal;
   font-weight: 300;
-  src:
-    url('../fonts/sourcesanspro-light-webfont.woff2') format('woff2'),
+  src: url('../fonts/sourcesanspro-light-webfont.woff2') format('woff2'),
     url('../fonts/sourcesanspro-light-webfont.woff') format('woff');
 }
 
@@ -23,8 +21,7 @@
   font-family: 'body-one';
   font-style: normal;
   font-weight: 400;
-  src:
-    url('../fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+  src: url('../fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
     url('../fonts/sourcesanspro-regular-webfont.woff') format('woff');
 }
 
@@ -137,7 +134,8 @@ caption {
 }
 
 span {
-  background: linear-gradient($primary-magenta, $primary-magenta) left 1.09em no-repeat;
+  background: linear-gradient($primary-magenta, $primary-magenta) left 1.09em
+    no-repeat;
   background-size: 80% 1px;
   color: $thirty-percent;
   font-size: 2rem;
@@ -297,7 +295,7 @@ a {
   }
 
   img {
-    filter: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale');
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
     // Firefox 3.5+
     filter: gray;
     // IE6-9
@@ -501,8 +499,17 @@ button {
 .active {
   background: $light-white;
   background: -moz-linear-gradient(left, $light-white 0%, $zero-percent 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, $light-white), color-stop(100%, $zero-percent));
-  background: -webkit-linear-gradient(left, $light-white 0%, $zero-percent 100%);
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, $light-white),
+    color-stop(100%, $zero-percent)
+  );
+  background: -webkit-linear-gradient(
+    left,
+    $light-white 0%,
+    $zero-percent 100%
+  );
   background: -o-linear-gradient(left, $light-white 0%, $zero-percent 100%);
   background: -ms-linear-gradient(left, $light-white 0%, $zero-percent 100%);
   background: linear-gradient(to right, $light-white 0%, $zero-percent 100%);

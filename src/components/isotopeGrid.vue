@@ -1,6 +1,6 @@
 <template lang="html">
-  <div id='vue-grid-items' class='isotope-grid grid'>
-    <div class='grid-sizer'></div>
+  <div id="vue-grid-items" class="isotope-grid grid">
+    <div class="grid-sizer"></div>
     <slot></slot>
     <!-- <isotope-item v-for="item in items">{{ name.category }}</isotope-item> -->
   </div>
@@ -8,13 +8,11 @@
 
 <script>
 import isotopeItem from '~/components/isotopeItem.vue'
-export default
-{
+export default {
   name: 'isotopeGrid',
-  components:
-  {
-    isotopeItem
-  }
+  components: {
+    isotopeItem,
+  },
 
   // Ideally, everything in index.vue will eventually
   // propogate this list which will then feed into

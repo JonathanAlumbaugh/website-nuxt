@@ -1,28 +1,35 @@
 <template lang="html">
   <section id="home">
-
     <!-- TODO: Implement vue-affix here lol -->
     <!-- Isotope sort -->
-    <isotope-sort>I'm a
+    <isotope-sort>
+      I'm a
       <button class="btn designer" data-filter=".design">designer,</button>
       <button class="btn photographer" data-filter=".photography">
-          photographer,</button>
+        photographer,
+      </button>
       <button class="btn photojournalist" data-filter=".photojournalism">
-          photojournalist,</button>
-          competitive fencer, and professional referee based in Massachusetts
+        photojournalist,
+      </button>
+      competitive fencer, and professional referee based in Massachusetts
       <button id="show-all" class="btn" data-filter="*">&#9679;</button>
     </isotope-sort>
 
-
     <!-- Isotope grid -->
-    <div id="isotope-grid" class='tt isotope-grid grid'>
+    <div id="isotope-grid" class="tt isotope-grid grid">
       <div class="grid-sizer"></div>
       <isotope-item name="senior project" category="design"></isotope-item>
-      <isotope-item name="STING vodka branding" category="design"></isotope-item>
+      <isotope-item
+        name="STING vodka branding"
+        category="design"
+      ></isotope-item>
       <isotope-item name="exhibition catalog" category="design"></isotope-item>
       <isotope-item name="textile patterns" category="design"></isotope-item>
       <isotope-item name="patterns" category="photography"></isotope-item>
-      <isotope-item name="human interest" category="photojournalism"></isotope-item>
+      <isotope-item
+        name="human interest"
+        category="photojournalism"
+      ></isotope-item>
     </div>
 
     <!-- TODO: Add VML Hub Branding -->
@@ -41,23 +48,30 @@
       <isotope-item name="more photojournalism" category="photojournalism"></isotope-item>
      -->
 
-
-     <!-- WIP -->
+    <!-- WIP -->
     <t>right now I'm working on</t>
-    <main-wip class="tt" name="Simmons Mill Pond signage" category="design"></main-wip>
-
+    <main-wip
+      class="tt"
+      name="Simmons Mill Pond signage"
+      category="design"
+    ></main-wip>
 
     <!-- Extra -->
     <t>I love making things</t>
-    <tt>With paper, fabric, wood, plastic, the web, 3D printers, CNC routers, laser cutters, and more. Interested in seeing how I built this website? Check out <a href="https://github.com/JonathanAlumbaugh/website-nuxt"><span>my git repository</span></a>.</tt>
-
+    <tt>
+      With paper, fabric, wood, plastic, the web, 3D printers, CNC routers,
+      laser cutters, and more. Interested in seeing how I built this website?
+      Check out
+      <a href="https://github.com/JonathanAlumbaugh/website-nuxt">
+        <span>my git repository</span>
+      </a>
+      .
+    </tt>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="/js/isotope-init.js"></script>
     <script src="/js/isotope.pkgd.js"></script>
-
-
   </section>
 </template>
 
@@ -74,7 +88,7 @@ export default {
   name: 'home',
   data: function () {
     return {
-      title: 'Jonathan'
+      title: 'Jonathan',
     }
   },
   head() {
@@ -84,9 +98,10 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Graphic designer. Photographer/photojournalist. Competitive fencer. Professional referee.'
-        }
-      ]
+          content:
+            'Graphic designer. Photographer/photojournalist. Competitive fencer. Professional referee.',
+        },
+      ],
       // script: [
       //   {
       //     src: '/js/isotope-init.js'
@@ -108,7 +123,7 @@ export default {
     isotopeGrid,
     isotopeSort,
     isotopeItem,
-    mainWip
-  }
+    mainWip,
+  },
 }
 </script>

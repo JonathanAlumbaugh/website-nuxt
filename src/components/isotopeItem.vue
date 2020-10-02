@@ -1,7 +1,11 @@
 <template lang="html">
   <div class="element-item" :class="category" :data-category="category">
     <div class="hvrbox" :class="category">
-      <img :src="imgPath" :alt="name" class="img-autoheight hvrbox-layer-bottom">
+      <img
+        :src="imgPath"
+        :alt="name"
+        class="img-autoheight hvrbox-layer-bottom"
+      />
       <nuxt-link :to="href">
         <div class="hvrbox-layer-top">
           <div class="hvrbox-text">
@@ -19,22 +23,29 @@ export default {
   name: 'isotopeItem',
   props: {
     name: {
-      required: true
+      required: true,
     },
     category: {
-      required: true
-    }
+      required: true,
+    },
   },
 
   computed: {
     imgPath: function () {
       return (
-        '../img/' + this.category + '/' + this.name.toLowerCase().replace( / /g, '-' ) + '/' + this.name.toLowerCase().replace( / /g, '-' ) + '-cover' + '.jpg'
+        '../img/' +
+        this.category +
+        '/' +
+        this.name.toLowerCase().replace(/ /g, '-') +
+        '/' +
+        this.name.toLowerCase().replace(/ /g, '-') +
+        '-cover' +
+        '.jpg'
       )
     },
     href: function () {
-      return this.name.toLowerCase().replace( / /g, '-' )
-    }
-  }
+      return this.name.toLowerCase().replace(/ /g, '-')
+    },
+  },
 }
 </script>

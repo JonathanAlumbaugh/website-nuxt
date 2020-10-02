@@ -7,17 +7,17 @@
 <script>
 export default {
   name: 'mainLoading',
-  data: () => ( {
-    loading: false
-  } ),
+  data: () => ({
+    loading: false,
+  }),
   methods: {
     start() {
       this.loading = true
     },
     finish() {
       this.loading = false
-    }
-  }
+    },
+  },
 }
 </script>
 

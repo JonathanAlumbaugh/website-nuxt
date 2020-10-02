@@ -1,14 +1,18 @@
 <template lang="html">
   <!-- <transition appear name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut"> -->
-    <caption class="c">
-      {{ namex }}
-      <hr>
-      <br />{{ locationx }}
-      <hr>
-      <br />{{ materialx }}
-      <br />{{ dimensionx }}
-      <br />{{ datex }} &nbsp;
-    </caption>
+  <caption class="c">
+    {{ namex }}
+    <hr />
+    <br />
+    {{ locationx }}
+    <hr />
+    <br />
+    {{ materialx }}
+    <br />
+    {{ dimensionx }}
+    <br />
+    {{ datex }} &nbsp;
+  </caption>
   <!-- </transition> -->
 </template>
 
@@ -18,53 +22,43 @@ export default {
   name: 'projectCaption',
   props: {
     name: {
-      type: String
+      type: String,
     },
     location: {
-      type: String
+      type: String,
     },
     material: {
-      type: String
+      type: String,
     },
     dimension: {
-      type: String
+      type: String,
     },
     date: {
-      type: String
-    }
+      type: String,
+    },
   },
 
   computed: {
     namex: function () {
-      return (
-        this.name
-      )
+      return this.name
     },
 
     locationx: function () {
-      return (
-        this.location
-      )
+      return this.location
     },
 
     materialx: function () {
-      return (
-        this.material
-      )
+      return this.material
     },
 
     dimensionx: function () {
-      return (
-        this.dimension
-      )
+      return this.dimension
     },
 
     datex: function () {
-      return (
-        this.date
-      )
+      return this.date
       // replace( / x/g, " |" ) )
-    }
-  }
+    },
+  },
 }
 </script>

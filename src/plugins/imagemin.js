@@ -7,24 +7,24 @@ export default {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
           {
-            loader: 'file-loader' // Or `url-loader`.
+            loader: 'file-loader', // Or `url-loader`.
           },
           {
             loader: imageminLoader,
             options: {
-              plugins
-            }
-          }
-        ]
-      }
-    ]
+              plugins,
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     // Make sure that the plugin is after any plugins that add images.
     new ImageminWebpackPlugin({
       imageminOptions: {
-        plugins
-      }
-    })
-  ]
+        plugins,
+      },
+    }),
+  ],
 }

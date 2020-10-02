@@ -1,7 +1,5 @@
 <template lang="html">
-  <section>
-
-  </section>
+  <section></section>
 </template>
 
 <script>
@@ -11,19 +9,16 @@ import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 import homeBtn from '~/components/homeBtn.vue'
-export default
-{
-  components:
-  {
+export default {
+  components: {
     t,
     tt,
     imgOne,
     imgTwo,
     imgThree,
-    homeBtn
-  }
+    homeBtn,
+  },
 }
 </script>
 
-<style lang="css">
-</style>
+<style lang="css"></style>

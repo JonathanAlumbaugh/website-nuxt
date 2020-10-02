@@ -5,8 +5,10 @@
     enter-active-class="animated-long fadeIn"
     leave-active-class="animated fadeOut"
   >
+    <nuxt-link class="ghost-header-position" to="/">
       <h1 class="main-header">
-        Jonathan<br />
+        Jonathan
+        <br />
         Alumbaugh
       </h1>
     </nuxt-link>
@@ -27,7 +29,7 @@ export default {
       classPicker: null,
       stickyConfig: {
         zIndex: 101,
-        stickyTop: 0
+        stickyTop: 0,
       },
     }
   },
@@ -37,20 +39,20 @@ export default {
     // !-------------------------------------------------!
     updateScroll() {
       this.scrollPosition = window.scrollY
-    }
+    },
     // !-------------------------------------------------!
   },
   // !-------------------------------------------------!
   // Update scroll position when the page is mounted
   // !-------------------------------------------------!
   mounted() {
-    window.addEventListener( 'scroll', this.updateScroll );
+    window.addEventListener('scroll', this.updateScroll)
   },
   // !-------------------------------------------------!
   // Destroy listener on page destroy
   // !-------------------------------------------------!
   destroy() {
-    window.removeEventListener( 'scroll', this.updateScroll )
-  }
+    window.removeEventListener('scroll', this.updateScroll)
+  },
 }
 </script>
