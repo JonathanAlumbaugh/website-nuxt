@@ -1,8 +1,9 @@
 import Vue from 'vue'
-import VModal from 'vue-js-modal/dist/ssr.index'
+import VModal from 'vue-js-modal/dist/ssr.nocss'
+
+import 'vue-js-modal/dist/styles.css'
 
 Vue.use(VModal)
-
 /*
 By default plugin will use "modal" name for the component.
 If you need to change it, you can do so by providing "componentName" param.
