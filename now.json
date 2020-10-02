@@ -5,7 +5,13 @@
       "src": "nuxt.config.js",
       "use": "@nuxtjs/now-builder",
       "config": {
-        "serverFiles": ["src/static/**/!(img)", "package.json"]
+        "serverFiles": [
+          "src/static/*.*",
+          "src/static/favicon/**",
+          "src/static/js/**",
+          "src/static/sitemaps/**",
+          "package.json"
+        ]
       }
     }
   ],
