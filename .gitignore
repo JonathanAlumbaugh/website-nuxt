@@ -10,8 +10,9 @@ npm-debug.log
 # Nuxt generate
 dist/
 
-# Resilio Sync
+# Misc
 .sync
+/misc
 
 # Large Files
 # TODO: Optimize film/, vml-hub-branding/, and benoit-golf-tournament/
