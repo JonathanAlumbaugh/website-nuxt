@@ -78,8 +78,24 @@ const GET_PROJECTS = gql`
           _meta {
             uid
           }
+          featured
           title
+          category {
+            ... on Tag {
+              title
+              agent_noun
+              accent
+            }
+          }
           cover
+          tags {
+            tag {
+              ... on Tag {
+                title
+                accent
+              }
+            }
+          }
         }
       }
     }
