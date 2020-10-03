@@ -1,11 +1,7 @@
 <template lang="html">
   <div class="element-item" :class="category" :data-category="category">
     <div class="hvrbox" :class="category">
-      <img
-        :src="imgPath"
-        :alt="name"
-        class="img-autoheight hvrbox-layer-bottom"
-      />
+      <img :src="img" :alt="name" class="img-autoheight hvrbox-layer-bottom" />
       <nuxt-link :to="href">
         <div class="hvrbox-layer-top">
           <div class="hvrbox-text">
@@ -25,24 +21,27 @@ export default {
     name: {
       required: true,
     },
+    img: {
+      require: true,
+    },
     category: {
       required: true,
     },
   },
 
   computed: {
-    imgPath: function () {
-      return (
-        '../img/' +
-        this.category +
-        '/' +
-        this.name.toLowerCase().replace(/ /g, '-') +
-        '/' +
-        this.name.toLowerCase().replace(/ /g, '-') +
-        '-cover' +
-        '.jpg'
-      )
-    },
+    // imgPath: function () {
+    //   return (
+    //     '../img/' +
+    //     this.category +
+    //     '/' +
+    //     this.name.toLowerCase().replace(/ /g, '-') +
+    //     '/' +
+    //     this.name.toLowerCase().replace(/ /g, '-') +
+    //     '-cover' +
+    //     '.jpg'
+    //   )
+    // },
     href: function () {
       return this.name.toLowerCase().replace(/ /g, '-')
     },

@@ -18,35 +18,17 @@
     <!-- Isotope grid -->
     <div id="isotope-grid" class="tt isotope-grid grid">
       <div class="grid-sizer"></div>
-      <isotope-item name="senior project" category="design"></isotope-item>
-      <isotope-item
-        name="STING vodka branding"
-        category="design"
-      ></isotope-item>
-      <isotope-item name="exhibition catalog" category="design"></isotope-item>
-      <isotope-item name="textile patterns" category="design"></isotope-item>
-      <isotope-item name="patterns" category="photography"></isotope-item>
-      <isotope-item
-        name="human interest"
-        category="photojournalism"
-      ></isotope-item>
-    </div>
 
-    <!-- TODO: Add VML Hub Branding -->
-    <!-- TODO: Add 3D keychain -->
-    <!-- TODO: Add film photos -->
-    <!--
-      <isotope-item name="film" category="photography"></isotope-item>
-      <isotope-item name="VML Hub Branding" category="design"></isotope-item>
-      <isotope-item name="Benoit golf tournament" category="design"></isotope-item>
-      <isotope-item name="this-website" category="design"></isotope-item>
-      <isotope-item name="instagram" category="photography"></isotope-item>
-      <isotope-item name="mental-health-branding" category="design"></isotope-item>
-      <isotope-item name="3d-keychain" category="multimedia"></isotope-item>
-      <isotope-item name="multimedia fun" category="multimedia"></isotope-item>
-      <isotope-item name="film" category="photography"></isotope-item>
-      <isotope-item name="more photojournalism" category="photojournalism"></isotope-item>
-     -->
+      <template v-if="projects.data.length && !projects.loading">
+        <isotope-item
+          v-for="project in projects.data"
+          :key="project._meta.uid"
+          :name="project.title[0].text"
+          :img="project.cover.url"
+          category="design"
+        ></isotope-item>
+      </template>
+    </div>
 
     <!-- WIP -->
     <t>right now I'm working on</t>
@@ -76,21 +58,72 @@
 </template>
 
 <script>
-// import affix from '../plugins/vue-affix'
+import { PrismicLink } from 'apollo-link-prismic'
+import { InMemoryCache } from 'apollo-cache-inmemory'
+import ApolloClient from 'apollo-client'
+import gql from 'graphql-tag'
+
+const client = new ApolloClient({
+  link: PrismicLink({
+    uri: 'https://jonathanalumbaugh.prismic.io/graphql',
+  }),
+  cache: new InMemoryCache(),
+})
+
+const GET_PROJECTS = gql`
+  {
+    allProjects {
+      edges {
+        node {
+          _meta {
+            uid
+          }
+          title
+          cover
+        }
+      }
+    }
+  }
+`
+
 import t from '~/components/textH2.vue'
 import tt from '~/components/textH3.vue'
 import isotopeGrid from '~/components/isotopeGrid.vue'
 import isotopeSort from '~/components/isotopeSort.vue'
 import isotopeItem from '~/components/isotopeItem.vue'
 import mainWip from '~/components/mainWip.vue'
+
 export default {
   // Head content all up in here
   name: 'home',
-  data: function () {
+
+  data() {
     return {
       title: 'Jonathan',
+      projects: [],
     }
   },
+
+  async asyncData() {
+    try {
+      let { loading, data, error } = await client.query({ query: GET_PROJECTS })
+
+      data = data.allProjects.edges.map((el) => {
+        return el.node
+      })
+
+      return { projects: { loading, data, error } }
+    } catch (e) {
+      console.log(e)
+    }
+  },
+
+  // apollo: {
+  //   allProjects: {
+  //     query: GET_PROJECTS,
+  //   },
+  // },
+
   head() {
     return {
       title: this.title,
