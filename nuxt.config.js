@@ -21,7 +21,8 @@ module.exports = {
     // !-------------------------------------------------------------------------!
     // Disable Uglify
     // !-------------------------------------------------------------------------!
-    extend(config) {
+      config.node = { fs: 'empty' }
+
       config.plugins = config.plugins.filter(
         (plugin) => plugin.constructor.name !== 'UglifyJsPlugin',
       )
