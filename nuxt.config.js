@@ -21,6 +21,10 @@ module.exports = {
     // !-------------------------------------------------------------------------!
     // Disable Uglify
     // !-------------------------------------------------------------------------!
+    extend(config, { isDev, isClient }) {
+      // node: {
+      //   fs: 'empty'
+      // }
       config.node = { fs: 'empty' }
 
       config.plugins = config.plugins.filter(
@@ -131,7 +135,7 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   modules: [
     '@nuxtjs/sitemap',
-    '@nuxtjs/apollow',
+    '@nuxtjs/apollo',
     ['@nuxtjs/pwa', { icon: false }],
   ],
 
@@ -147,7 +151,7 @@ module.exports = {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndPoint: '',
+        httpEndpoint: 'https://jonathanalumbaugh.prismic.io/graphql',
       },
     },
   },
