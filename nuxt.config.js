@@ -128,7 +128,11 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   // The module @nuxtjs/pwa should come after any other modules
   // !-------------------------------------------------------------------------!
-  modules: ['@nuxtjs/sitemap', ['@nuxtjs/pwa', { icon: false }]],
+  modules: [
+    '@nuxtjs/sitemap',
+    '@nuxtjs/apollow',
+    ['@nuxtjs/pwa', { icon: false }],
+  ],
 
   // !-------------------------------------------------------------------------!
   // Sitemap options for @nuxtjs/sitemap
@@ -137,6 +141,14 @@ module.exports = {
     path: '/sitemap.xml',
     // hostname: 'https://jonathanalumbaugh.com',
     generate: false, // Enable when using nuxt generate
+  },
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndPoint: '',
+      },
+    },
   },
 
   // !-------------------------------------------------------------------------!

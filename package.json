@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/apollo": "^4.0.1-rc.3",
     "@nuxtjs/now-builder": "^0.17.3",
     "@nuxtjs/pwa": "^3.0.2",
     "@nuxtjs/sitemap": "^2.4.0",
@@ -29,6 +30,7 @@
     "vue-client-only": "^2.0.0",
     "vue-js-modal": "^2.0.0-rc.6",
     "vue-no-ssr": "^1.1.1",
+    "vue-server-renderer": "^2.6.12",
     "vue-sticky": "^3.3.4",
     "vue-sticky-directive": "0.0.10",
     "vue-template-compiler": "^2.6.12",
