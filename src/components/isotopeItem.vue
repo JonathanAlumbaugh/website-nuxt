@@ -2,7 +2,7 @@
   <div class="element-item" :class="category" :data-category="category">
     <div class="hvrbox" :class="category">
       <img :src="img" :alt="name" class="img-autoheight hvrbox-layer-bottom" />
-      <nuxt-link :to="href">
+      <nuxt-link :to="{ path: uid }">
         <div class="hvrbox-layer-top">
           <div class="hvrbox-text">
             <h5>{{ name }}</h5>
@@ -22,6 +22,9 @@ export default {
       required: true,
     },
     img: {
+      require: true,
+    },
+    uid: {
       require: true,
     },
     category: {
