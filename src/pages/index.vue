@@ -19,13 +19,14 @@
     <div id="isotope-grid" class="tt isotope-grid grid">
       <div class="grid-sizer"></div>
 
-      <template v-if="projects.data.length && !projects.loading">
+      <template v-if="projects.data.length > 0 && !projects.loading">
         <isotope-item
           v-for="project in projects.data"
           :key="project._meta.uid"
           :name="project.title[0].text"
           :img="project.cover.url"
-          category="design"
+          :uid="project._meta.uid"
+          :category="project.category.title[0].text"
         ></isotope-item>
       </template>
     </div>
@@ -122,13 +123,17 @@ export default {
 
   async asyncData() {
     try {
-      let { loading, data, error } = await client.query({ query: GET_PROJECTS })
-
-      data = data.allProjects.edges.map((el) => {
-        return el.node
+      let { data, loading, error } = await client.query({
+        query: GET_PROJECTS,
       })
 
-      return { projects: { loading, data, error } }
+      const dataCopy = data.allProjects.edges.map((el) => el.node)
+      const featured = dataCopy.filter((el) => el.featured)
+      data = dataCopy.filter((el) => !el.featured)
+
+      console.log(data)
+
+      return { projects: { data, featured, loading, error } }
     } catch (e) {
       console.log(e)
     }
