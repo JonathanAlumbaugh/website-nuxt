@@ -1360,6 +1360,16 @@
     resolve-from "^5.0.0"
     semver "6.3.0"
 
+"@nuxtjs/prismic@^1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/prismic/-/prismic-1.2.4.tgz#5378654e25d031a378677ea9c55012497f4dc70f"
+  integrity sha512-NHQc2Tz0nqnrdYLcS9t+kiXHwRf7y5C5OUZwNZnJQBPrwAqya6xVj/68mgNEnu+YhB28q458UluL+sTVmH1iDQ==
+  dependencies:
+    "@prismicio/vue" "^2.0.7"
+    consola "^2.15.0"
+    prismic-dom "^2.2.3"
+    prismic-javascript "^3.0.2"
+
 "@nuxtjs/pwa@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-3.0.2.tgz#ff7ea391a7e5bbbfc0b92c5856f90dd1c0a0c43d"
@@ -1547,6 +1557,21 @@
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@oclif/screen/-/screen-1.0.4.tgz#b740f68609dfae8aa71c3a6cab15d816407ba493"
   integrity sha512-60CHpq+eqnTxLZQ4PGHYNwUX572hgpMHGPtTWMjdTMsAvlm69lZV/4ly6O3sAYkomo4NggGcomrDpBe34rxUqw==
+
+"@prismicio/helpers@^1.0.4":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@prismicio/helpers/-/helpers-1.0.5.tgz#2be60a1b44e6c33d7918fa74fe67648dc8af0c15"
+  integrity sha512-TPpuAFHNxlCTrEihHnRKcq6zc0oZV0sfz5/iHoSpl5vorwPbwZWiF88JGeflNdefW4A69b5A3x3mfptKPdpoxg==
+
+"@prismicio/richtext@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/richtext/-/richtext-1.1.0.tgz#c8769c3d953ae42854a2aba951e3b2121682b8c7"
+  integrity sha512-925JuFiZiIkwu9jmlR9O/U8xCSZk/Y6BQDXKpavoVsKo+n90ml1hGdtWkglIupX+ITQO1ZINyDgUgiY1oG9dsA==
+
+"@prismicio/vue@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@prismicio/vue/-/vue-2.0.7.tgz#053d601fe6675fcd9dc16c8c1875a1889fa46d9d"
+  integrity sha512-CGz1tLNO94FX5fryiGNfi8wib0zEy84wqhkT+y+UVtCXtrHh2Ep2XHsVQytmOa8GFvs8s2gIyArNGaQ5Ea1gnA==
 
 "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
   version "1.1.2"
@@ -4199,7 +4224,7 @@ cross-fetch@^2.2.0:
     node-fetch "2.1.2"
     whatwg-fetch "2.0.4"
 
-cross-fetch@^3.0.4:
+cross-fetch@^3.0.4, cross-fetch@^3.0.5:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.6.tgz#3a4040bc8941e653e0e9cf17f29ebcd177d3365c"
   integrity sha512-KBPUbqgFjzWlVcURG+Svp9TlhA5uliYtiNx/0r8nv0pdypeQCRJ9IaSIc3q/x3q8t3F75cHuwxVql1HFGHCNJQ==
@@ -5043,7 +5068,7 @@ escalade@^3.1.0:
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.0.tgz#e8e2d7c7a8b76f6ee64c2181d6b8151441602d4e"
   integrity sha512-mAk+hPSO8fLDkhV7V0dXazH5pDc6MrjBTPyD3VeKzxnVFjH1MIxbCdqGZB9O8+EwWakZs3ZCbDS4IpRt79V1ig==
 
-escape-html@~1.0.3:
+escape-html@1.0.3, escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
@@ -9624,6 +9649,15 @@ pretty-time@^1.1.0:
   resolved "https://registry.yarnpkg.com/pretty-time/-/pretty-time-1.1.0.tgz#ffb7429afabb8535c346a34e41873adf3d74dd0e"
   integrity sha512-28iF6xPQrP8Oa6uxE6a1biz+lWeTOAPKggvjB8HAs6nVMKZwf5bG++632Dx614hIWgUPkgivRfG+a8uAXGTIbA==
 
+prismic-dom@^2.2.3:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/prismic-dom/-/prismic-dom-2.2.4.tgz#8bcf7775127b2d30b52ee191fcfc898230517bd4"
+  integrity sha512-NLOfOSp7XVpdhWBd92RSiOZ75QISsSTQPTQN1AqcILtg1/zumqpwYKvz41tl+FeWJYfKPTHanvukhWkanfTngA==
+  dependencies:
+    "@prismicio/helpers" "^1.0.4"
+    "@prismicio/richtext" "^1.1.0"
+    escape-html "1.0.3"
+
 prismic-javascript@^1.5.0:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/prismic-javascript/-/prismic-javascript-1.5.1.tgz#0f9da4e58a094ca0fb0b68e2e458e1a6c33a52ce"
@@ -9631,6 +9665,18 @@ prismic-javascript@^1.5.0:
   dependencies:
     cross-fetch "^2.2.0"
     promise-polyfill "8.0.0"
+
+prismic-javascript@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/prismic-javascript/-/prismic-javascript-3.0.2.tgz#a6dcc98014a2bbcc6232954d9295b56cde453390"
+  integrity sha512-9RpituEVE/eZAlj+vUVy61z2IQJdL0zRYuy+IHdiUA7/37zoiCE/Z0AbI0zAWyi5UDXizgQ2TuQTLkOm62KGwA==
+  dependencies:
+    cross-fetch "^3.0.5"
+
+prismic-vue@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/prismic-vue/-/prismic-vue-2.0.1.tgz#c1c7af5df9fd06505b10e3a1e7d41ba06493985a"
+  integrity sha512-/bj8VUByc1NlEArl66U1OmyJJFefqatRUQ6m0MbPmfTwBfkuAw2tbCgtzhb96UCEKhRJzGkICJ3UPhyH+kMc2g==
 
 private@^0.1.8:
   version "0.1.8"
