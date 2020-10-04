@@ -78,11 +78,5 @@ export default {
     // FullWidthImage,
     // ImageHighlight,
   },
-
-  methods: {
-    log(message) {
-      console.log(message)
-    },
-  },
 }
 </script>

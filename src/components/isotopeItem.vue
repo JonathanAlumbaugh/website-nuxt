@@ -31,23 +31,5 @@ export default {
       required: true,
     },
   },
-
-  computed: {
-    // imgPath: function () {
-    //   return (
-    //     '../img/' +
-    //     this.category +
-    //     '/' +
-    //     this.name.toLowerCase().replace(/ /g, '-') +
-    //     '/' +
-    //     this.name.toLowerCase().replace(/ /g, '-') +
-    //     '-cover' +
-    //     '.jpg'
-    //   )
-    // },
-    href: function () {
-      return this.name.toLowerCase().replace(/ /g, '-')
-    },
-  },
 }
 </script>
