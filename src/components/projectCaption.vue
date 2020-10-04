@@ -1,18 +1,16 @@
 <template lang="html">
   <!-- <transition appear name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut"> -->
-  <caption class="c">
-    {{ namex }}
+  <section class="caption c">
+    {{ name }}
     <hr />
-    <br />
-    {{ locationx }}
+    {{ location }}
     <hr />
+    {{ material }}
     <br />
-    {{ materialx }}
+    {{ dimension }}
     <br />
-    {{ dimensionx }}
-    <br />
-    {{ datex }} &nbsp;
-  </caption>
+    {{ date }}
+  </section>
   <!-- </transition> -->
 </template>
 
@@ -20,6 +18,7 @@
 export default {
   // TODO: This can't be right, so fix this.
   name: 'projectCaption',
+
   props: {
     name: {
       type: String,
@@ -35,29 +34,6 @@ export default {
     },
     date: {
       type: String,
-    },
-  },
-
-  computed: {
-    namex: function () {
-      return this.name
-    },
-
-    locationx: function () {
-      return this.location
-    },
-
-    materialx: function () {
-      return this.material
-    },
-
-    dimensionx: function () {
-      return this.dimension
-    },
-
-    datex: function () {
-      return this.date
-      // replace( / x/g, " |" ) )
     },
   },
 }

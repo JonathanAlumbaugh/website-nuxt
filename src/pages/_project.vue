@@ -3,11 +3,11 @@
     <t v-if="tagline.length">{{ $prismic.asText(tagline) }}</t>
 
     <c
-      name="UMass Dartmouth Brochure"
-      location="University of Massachusetts, Dartmouth, MA"
-      material="Paper"
-      dimension='25 x 36"'
-      date="2017"
+      :name="text(project_title)"
+      :location="text(location)"
+      :material="text(material.data.title)"
+      :dimension="text(dimensions)"
+      :date="date.match(/\d+/)[0]"
     ></c>
 
     <tt v-if="intro.length">{{ $prismic.asText(intro) }}</tt>
@@ -47,6 +47,12 @@ export default {
         },
       ],
     }
+  },
+
+  methods: {
+    text(prismicVar) {
+      return this.$prismic.asText(prismicVar)
+    },
   },
 
   components: {
