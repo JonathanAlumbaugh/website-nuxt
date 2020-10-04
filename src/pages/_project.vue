@@ -14,15 +14,6 @@
     <tt>{{ $prismic.asText(intro) }}</tt>
 
     <slices-block :slices="body" />
-
-    <!-- 02 -->
-    <!-- <img-one name="senior project" category="design" img-number="04" />
-    <img-two
-      name="senior project"
-      category="design"
-      img-number1="01"
-      img-number2="02"
-    /> -->
   </section>
 </template>
 
@@ -31,9 +22,6 @@ import t from '~/components/textH2.vue'
 import c from '~/components/projectCaption.vue'
 import slicesBlock from '~/components/slicesBlock.vue'
 import tt from '~/components/textH3.vue'
-import imgOne from '~/components/projectImgA.vue'
-import imgTwo from '~/components/projectImgB.vue'
-import imgThree from '~/components/projectImgC.vue'
 export default {
   // Head content all up in here
   name: 'project',
@@ -71,9 +59,6 @@ export default {
     c,
     slicesBlock,
     tt,
-    imgOne,
-    imgTwo,
-    imgThree,
   },
 }
 </script>
