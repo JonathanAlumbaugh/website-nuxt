@@ -32,12 +32,17 @@
     </div>
 
     <!-- WIP -->
-    <t>right now I'm working on</t>
-    <main-wip
-      class="tt"
-      name="Simmons Mill Pond signage"
-      category="design"
-    ></main-wip>
+    <t v-if="projects.featured.length">right now I'm working on</t>
+    <fragment v-if="projects.featured.length && !projects.loading">
+      <main-wip
+        v-for="project in projects.featured"
+        :key="project._meta.uid"
+        :img="project.cover.url"
+        :name="project.title[0].text"
+        :category="project.category.title[0].text"
+        class="tt"
+      ></main-wip>
+    </fragment>
 
     <!-- Extra -->
     <t>I love making things</t>
@@ -71,6 +76,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
+import { Fragment } from 'vue-fragment'
 import t from '~/components/textH2.vue'
 import tt from '~/components/textH3.vue'
 import isotopeGrid from '~/components/isotopeGrid.vue'
@@ -185,6 +191,7 @@ export default {
   // /Head content
   components: {
     // affix,
+    Fragment,
     t,
     tt,
     isotopeGrid,
