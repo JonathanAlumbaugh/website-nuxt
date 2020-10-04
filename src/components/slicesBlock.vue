@@ -4,9 +4,7 @@
     <template v-for="(slice, index) in slices">
       <!-- Text slice component -->
       <template v-if="slice.slice_type === 'text'">
-        <text-slice :key="'slice-' + index">
-          {{ $prismic.asText(slice.primary.text) }}
-        </text-slice>
+        <text-slice :key="'slice-' + index" :slice="slice"></text-slice>
       </template>
 
       <!-- Image Gallery slice component -->
