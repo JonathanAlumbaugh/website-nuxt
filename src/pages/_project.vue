@@ -1,6 +1,6 @@
 <template lang="html">
   <section :id="$route.params.project">
-    <t v-if="tagline.length">{{ $prismic.asText(tagline) }}</t>
+    <t v-if="tagline.length">{{ text(tagline) }}</t>
 
     <c
       :name="text(project_title)"
@@ -10,7 +10,7 @@
       :date="date.match(/\d+/)[0]"
     ></c>
 
-    <tt v-if="intro.length">{{ $prismic.asText(intro) }}</tt>
+    <tt v-if="intro">{{ text(intro) }}</tt>
 
     <slices-block :slices="body" />
   </section>
