@@ -11,6 +11,8 @@
       date="2017"
     ></c>
 
+    <tt>{{ $prismic.asText(intro) }}</tt>
+
     <slices-block :slices="body" />
 
     <!-- 02 -->
