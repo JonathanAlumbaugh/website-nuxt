@@ -131,9 +131,20 @@ export default {
       const featured = dataCopy.filter((el) => el.featured)
       data = dataCopy.filter((el) => !el.featured)
 
-      console.log(data)
-
       return { projects: { data, featured, loading, error } }
+
+      // Here we query blog home content using $prismic which
+      // has the api endpoint data from the nuxt.config.js
+      // const homepageContent = (await $prismic.api.getSingle('blog_home')).data
+
+      // Query to get posts content, here we also change the 'predicates' query
+      // const data = await $prismic.api.query(
+      //   $prismic.predicates.at('document.type', 'project'),
+      //   $prismic.predicates.at('project.featured', false),
+      // )
+
+      // // Returns data to be used in template
+      // return { projects: { data, error } }
     } catch (e) {
       console.log(e)
     }
