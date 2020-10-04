@@ -29,7 +29,9 @@ export default {
       const document = (await $prismic.api.getByUID('project', params.project))
         .data
 
-      return { ...document }
+      const material = await $prismic.api.getByUID('tag', document.material.uid)
+
+      return { ...document, material }
     } catch (e) {
       error({ statusCode: 404, message: 'Page not found' })
     }
