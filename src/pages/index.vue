@@ -71,38 +71,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
-const GET_PROJECTS = gql`
-  {
-    allProjects {
-      edges {
-        node {
-          _meta {
-            uid
-          }
-          featured
-          title
-          category {
-            ... on Tag {
-              title
-              agent_noun
-              accent
-            }
-          }
-          cover
-          tags {
-            tag {
-              ... on Tag {
-                title
-                accent
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
 import t from '~/components/textH2.vue'
 import tt from '~/components/textH3.vue'
 import isotopeGrid from '~/components/isotopeGrid.vue'
@@ -121,7 +89,41 @@ export default {
     }
   },
 
-  async asyncData() {
+  async asyncData({ $prismic, error }) {
+    const GET_PROJECTS = gql`
+      {
+        allProjects {
+          edges {
+            node {
+              _meta {
+                uid
+              }
+              featured
+              title
+              category {
+                ... on Tag {
+                  title
+                  agent_noun
+                  accent
+                }
+              }
+              cover
+              tags {
+                tag {
+                  ... on Tag {
+                    title
+                    accent
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+
+    console.log({ $prismic })
+
     try {
       let { data, loading, error } = await client.query({
         query: GET_PROJECTS,
