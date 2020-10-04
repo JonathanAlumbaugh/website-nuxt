@@ -51,7 +51,7 @@ export default {
 
   head() {
     return {
-      title: this.title,
+      title: this.title[0].text,
       meta: [
         {
           hid: 'description',
