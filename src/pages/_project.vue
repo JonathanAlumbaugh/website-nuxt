@@ -1,6 +1,5 @@
 <template lang="html">
   <section :id="$route.params.project">
-    <!-- 01 -->
     <t v-if="tagline.length">{{ $prismic.asText(tagline) }}</t>
 
     <c
@@ -23,18 +22,15 @@ import c from '~/components/projectCaption.vue'
 import slicesBlock from '~/components/slicesBlock.vue'
 import tt from '~/components/textH3.vue'
 export default {
-  // Head content all up in here
   name: 'project',
 
   async asyncData({ $prismic, params, error }) {
     try {
-      // Query to get post content
       const document = (await $prismic.api.getByUID('project', params.project))
         .data
 
       return { ...document }
     } catch (e) {
-      // Returns error page
       error({ statusCode: 404, message: 'Page not found' })
     }
   },
@@ -53,7 +49,6 @@ export default {
     }
   },
 
-  // /Head content
   components: {
     t,
     c,
