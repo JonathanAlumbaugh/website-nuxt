@@ -1,5 +1,5 @@
 <template lang="html">
-  <section :id="$route.params.project">
+  <section :id="$route.params.uid">
     <t v-if="tagline.length">{{ text(tagline) }}</t>
 
     <c
@@ -25,9 +25,10 @@ export default {
   name: 'project',
 
   async asyncData({ $prismic, params, error }) {
+    console.log(params)
+
     try {
-      const document = (await $prismic.api.getByUID('project', params.project))
-        .data
+      const document = (await $prismic.api.getByUID('project', params.uid)).data
 
       const material = await $prismic.api.getByUID('tag', document.material.uid)
 

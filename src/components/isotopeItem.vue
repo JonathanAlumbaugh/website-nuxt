@@ -6,7 +6,7 @@
   >
     <div class="hvrbox" :class="category">
       <img :src="img" :alt="name" class="img-autoheight hvrbox-layer-bottom" />
-      <nuxt-link :to="{ path: uid, params: uid }">
+      <nuxt-link :to="{ path: uid, params: { project: uid } }">
         <div class="hvrbox-layer-top">
           <div class="hvrbox-text">
             <h5>{{ name }}</h5>
