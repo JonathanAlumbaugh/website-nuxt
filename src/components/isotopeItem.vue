@@ -1,5 +1,9 @@
 <template lang="html">
-  <div class="element-item" :class="category" :data-category="category">
+  <div
+    class="element-item"
+    :class="category.toLowerCase()"
+    :data-category="category.toLowerCase()"
+  >
     <div class="hvrbox" :class="category">
       <img :src="img" :alt="name" class="img-autoheight hvrbox-layer-bottom" />
       <nuxt-link :to="{ path: uid, params: uid }">
