@@ -1,7 +1,7 @@
 <template lang="html">
   <section :id="$route.params.project">
     <!-- 01 -->
-    <t>{{ $prismic.asText(tagline) }}</t>
+    <t v-if="tagline.length">{{ $prismic.asText(tagline) }}</t>
 
     <c
       name="UMass Dartmouth Brochure"
@@ -11,7 +11,7 @@
       date="2017"
     ></c>
 
-    <tt>{{ $prismic.asText(intro) }}</tt>
+    <tt v-if="intro.length">{{ $prismic.asText(intro) }}</tt>
 
     <slices-block :slices="body" />
   </section>
