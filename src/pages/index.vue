@@ -19,7 +19,7 @@
     <div id="isotope-grid" class="tt isotope-grid grid">
       <div class="grid-sizer"></div>
 
-      <template v-if="projects.data.length > 0 && !projects.loading">
+      <template v-if="!projects.loading && !projects.error">
         <isotope-item
           v-for="project in projects.data"
           :key="project._meta.uid"
