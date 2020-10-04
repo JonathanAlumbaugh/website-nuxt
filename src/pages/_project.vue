@@ -1,7 +1,7 @@
 <template lang="html">
-  <section :id="slug">
+  <section :id="$route.params.project">
     <!-- 01 -->
-    <t>title</t>
+    <t>{{ $prismic.asText(tagline) }}</t>
 
     <c
       name="UMass Dartmouth Brochure"
@@ -11,72 +11,41 @@
       date="2017"
     ></c>
 
-    <tt>
-      tt
-    </tt>
+    <slices-block :slices="body" />
 
     <!-- 02 -->
-    <img-one name="senior project" category="design" img-number="04" />
+    <!-- <img-one name="senior project" category="design" img-number="04" />
     <img-two
       name="senior project"
       category="design"
       img-number1="01"
       img-number2="02"
-    />
-
-    <tt>
-      tt ele
-    </tt>
-
-    <!-- 03 -->
-    <img-one name="senior project" category="design" img-number="20" />
-    <img-one name="senior project" category="design" img-number="11" />
-
-    <tt>
-      asdf
-    </tt>
-
-    <!-- 04 -->
-    <img-one name="senior project" category="design" img-number="33" />
-    <img-two
-      name="senior project"
-      category="design"
-      img-number1="08"
-      img-number2="34"
-    />
-
-    <tt>
-      asdf
-    </tt>
-
-    <!-- 05 -->
-    <img-one name="senior project" category="design" img-number="27" />
-    <img-two
-      name="senior project"
-      category="design"
-      img-number1="12"
-      img-number2="14"
-    />
-
-    <tt>
-      asdfsdf
-    </tt>
+    /> -->
   </section>
 </template>
 
 <script>
 import t from '~/components/textH2.vue'
 import c from '~/components/projectCaption.vue'
+import slicesBlock from '~/components/slicesBlock.vue'
 import tt from '~/components/textH3.vue'
 import imgOne from '~/components/projectImgA.vue'
 import imgTwo from '~/components/projectImgB.vue'
 import imgThree from '~/components/projectImgC.vue'
 export default {
   // Head content all up in here
-  name: 'senior-project',
-  data: function () {
+  name: 'project',
     return {
-      title: 'Senior project',
+  async asyncData({ $prismic, params, error }) {
+    try {
+      // Query to get post content
+      const document = (await $prismic.api.getByUID('project', params.project))
+        .data
+
+      return { ...document }
+    } catch (e) {
+      // Returns error page
+      error({ statusCode: 404, message: 'Page not found' })
     }
   },
   head() {
@@ -96,6 +65,7 @@ export default {
   components: {
     t,
     c,
+    slicesBlock,
     tt,
     imgOne,
     imgTwo,
