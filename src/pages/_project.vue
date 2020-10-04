@@ -36,8 +36,6 @@ export default {
   // Head content all up in here
   name: 'project',
 
-  data() {
-    return {
   async asyncData({ $prismic, params, error }) {
     try {
       // Query to get post content
