@@ -128,8 +128,6 @@ export default {
       }
     `
 
-    console.log({ $prismic })
-
     try {
       let { data, loading, error } = await client.query({
         query: GET_PROJECTS,
