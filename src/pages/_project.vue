@@ -35,6 +35,8 @@ import imgThree from '~/components/projectImgC.vue'
 export default {
   // Head content all up in here
   name: 'project',
+
+  data() {
     return {
   async asyncData({ $prismic, params, error }) {
     try {
@@ -48,6 +50,7 @@ export default {
       error({ statusCode: 404, message: 'Page not found' })
     }
   },
+
   head() {
     return {
       title: this.title,
@@ -61,6 +64,7 @@ export default {
       ],
     }
   },
+
   // /Head content
   components: {
     t,
