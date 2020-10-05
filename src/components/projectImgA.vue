@@ -22,8 +22,8 @@ export default {
 
   computed: {
     img() {
-      if (this.slice && this.slice.gallery_image)
-        return this.slice.gallery_image
+      if (this.slice && this.slice.items)
+        return this.slice.items[0].gallery_image
       else return { url: null }
     },
   },

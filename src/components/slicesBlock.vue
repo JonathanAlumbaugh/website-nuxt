@@ -18,10 +18,7 @@
         </template>
 
         <template v-else-if="slice.items.length === 3">
-          <image-gallery-1
-            :slice="slice.items[0]"
-            :key="'slice-' + index + 2"
-          />
+          <image-gallery-1 :slice="slice" :key="'slice-' + index + 2" />
 
           <image-gallery-2
             :slice="slice.items.slice(1)"
