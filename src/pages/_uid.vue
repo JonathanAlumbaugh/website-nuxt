@@ -49,7 +49,7 @@ export default {
 
   head() {
     return {
-      title: this.title[0].text,
+      title: this.text(this.title) || 'Project',
       meta: [
         {
           hid: 'description',
