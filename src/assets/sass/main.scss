@@ -109,13 +109,15 @@ p {
   margin-top: 0;
 }
 
-caption {
+.caption {
+  display: flex;
+  flex-direction: column;
   color: $sixty-percent;
   font-family: $font-family-caption;
   font-size: 1.4rem;
   justify-self: right;
   letter-spacing: 0.09rem;
-  line-height: 1.9rem;
+  line-height: 2rem;
   margin-right: 3rem;
   margin-top: 5px;
   text-align: right;
@@ -124,7 +126,6 @@ caption {
 
   hr {
     margin-right: 0;
-    margin-top: 25px;
     width: 40px;
   }
 
