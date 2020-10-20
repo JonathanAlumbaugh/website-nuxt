@@ -56,11 +56,6 @@
       </a>
       .
     </tt>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script src="/js/isotope-init.js"></script>
-    <script src="/js/isotope.pkgd.js"></script>
   </section>
 </template>
 
@@ -174,17 +169,17 @@ export default {
             'Graphic designer. Photographer/photojournalist. Competitive fencer. Professional referee.',
         },
       ],
-      // script: [
-      //   {
-      //     src: '/js/isotope-init.js'
-      //   },
-      //   {
-      //     src: '/js/isotope.pkgd.js'
-      //   },
-      //   {
-      //     src: 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'
-      //   }
-      // ]
+      script: [
+        {
+          src: '/js/isotope.pkgd.js',
+        },
+        {
+          src: '/js/isotope-init.js',
+        },
+        {
+          src: 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js',
+        },
+      ],
     }
   },
   // /Head content
