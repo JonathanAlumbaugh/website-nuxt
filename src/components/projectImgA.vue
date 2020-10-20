@@ -25,8 +25,12 @@ export default {
 
   computed: {
     img() {
-      if (this.slice && this.slice.items)
+      // Handles slicesBlock implementation
+      if (this.slice && this.slice.items && this.slice.items[0])
         return this.slice.items[0].gallery_image
+
+      // Handles featuredImg implementation
+      if (this.slice && this.slice.url) return this.slice
       else return { url: null }
     },
   },
