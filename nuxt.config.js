@@ -140,6 +140,14 @@ module.exports = {
     ['@nuxtjs/pwa', { icon: false }],
   ],
 
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://jonathanalumbaugh.prismic.io/graphql',
+      },
+    },
+  },
+
   prismic: {
     endpoint: 'https://jonathanalumbaugh.cdn.prismic.io/api/v2',
     // linkResolver: '@/plugins/link-resolver',
@@ -153,14 +161,6 @@ module.exports = {
     path: '/sitemap.xml',
     // hostname: 'https://jonathanalumbaugh.com',
     generate: false, // Enable when using nuxt generate
-  },
-
-  apollo: {
-    clientConfigs: {
-      default: {
-        httpEndpoint: 'https://jonathanalumbaugh.prismic.io/graphql',
-      },
-    },
   },
 
   // !-------------------------------------------------------------------------!
