@@ -40,6 +40,7 @@
         :img="project.cover.url"
         :name="project.title[0].text"
         :category="project.category.title[0].text"
+        :uid="project._meta.uid"
         class="tt"
       ></main-wip>
     </fragment>

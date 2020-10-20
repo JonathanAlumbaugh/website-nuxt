@@ -1,5 +1,8 @@
 <template lang="html">
-  <nuxt-link to="wip" class="main-wip box-shadow">
+  <nuxt-link
+    :to="{ path: uid, params: { project: uid } }"
+    class="main-wip box-shadow"
+  >
     <div class="hvrbox wip">
       <img
         :src="img"
@@ -19,10 +22,12 @@
 <script>
 export default {
   name: 'mainWip',
+
   props: {
     img: { required: true },
     name: { required: true },
     category: { required: true },
+    uid: { required: true },
   },
 }
 </script>
