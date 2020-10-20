@@ -4,7 +4,7 @@
     <template v-for="(slice, index) in slices">
       <!-- Text slice component -->
       <template v-if="slice.slice_type === 'text'">
-        <text-slice :key="'slice-' + index" :slice="slice"></text-slice>
+        <text-slice :key="'slice-' + index" :slice="slice" />
       </template>
 
       <!-- Image Gallery slice component -->
@@ -13,17 +13,18 @@
           <image-gallery-1 :slice="slice" :key="'slice-' + index" />
         </template>
 
-        <template v-else-if="slice.items.length === 2">
-          <image-gallery-2 :slice="slice" :key="'slice-' + index" />
-        </template>
-
         <template v-else-if="slice.items.length === 3">
-          <image-gallery-1 :slice="slice" :key="'slice-' + index + 2" />
+          <div class="img-gallery__wrapper" :key="`slice-${index}`">
+            <image-gallery-1
+              :slice="slice"
+              :key="'slice-' + index + '-gallery-single'"
+            />
 
-          <image-gallery-2
-            :slice="slice.items.slice(1)"
-            :key="'slice-' + index + 3"
-          />
+            <image-gallery-2
+              :slice="slice.items.slice(1)"
+              :key="'slice-' + index + '-gallery-double'"
+            />
+          </div>
         </template>
       </template>
 
@@ -77,3 +78,35 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.img-gallery__wrapper {
+  grid-column: 2 / 5;
+  display: grid;
+  grid-template-columns: 2fr 2fr 0.5fr;
+  grid-template-areas: 'main main img';
+
+  @media only screen and (max-width: 900px) {
+    grid-column: 1 / 5;
+
+    .img-1 {
+      grid-area: 'main';
+    }
+
+    .img-2 {
+      display: flex;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    grid-column: 2 / 5;
+    grid-template-areas:
+      'main main'
+      'img img';
+  }
+
+  @media only screen and (min-width: 901px) {
+    grid-column: 2 / 7;
+  }
+}
+</style>
