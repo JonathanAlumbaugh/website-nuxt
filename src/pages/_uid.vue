@@ -69,6 +69,7 @@ export default {
 
   components: {
     t,
+    featuredImg,
     c,
     slicesBlock,
     tt,
