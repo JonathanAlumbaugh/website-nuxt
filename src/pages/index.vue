@@ -32,8 +32,8 @@
     </div>
 
     <!-- WIP -->
-    <t v-if="projects.featured.length">right now I'm working on</t>
-    <fragment v-if="projects.featured.length && !projects.loading">
+    <t v-if="projects.featured">right now I'm working on</t>
+    <fragment v-if="projects.featured && !projects.loading">
       <main-wip
         v-for="project in projects.featured"
         :key="project._meta.uid"
