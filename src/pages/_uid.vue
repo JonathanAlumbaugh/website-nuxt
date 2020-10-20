@@ -1,6 +1,6 @@
 <template lang="html">
   <section :id="$route.params.uid">
-    <t v-if="tagline.length">{{ text(tagline) }}</t>
+    <t v-if="tagline">{{ text(tagline) }}</t>
 
     <featured-img v-if="cover.url" :slice="cover" />
 
