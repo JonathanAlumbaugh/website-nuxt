@@ -1,6 +1,9 @@
 <template lang="html">
   <div class="box-shadow img-1">
-    <a data-fancybox="gallery" :href="img.url">
+    <a
+      data-fancybox="gallery"
+      :href="img.url.replace('auto=compress,format', 'auto=format')"
+    >
       <img
         :src="img.url"
         :alt="img.alt"
