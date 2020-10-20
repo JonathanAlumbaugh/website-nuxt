@@ -7,9 +7,9 @@
     <c
       :name="text(project_title)"
       :location="text(location)"
-      :material="text(material.data.title)"
+      :material="material"
       :dimension="text(dimensions)"
-      :date="date.match(/\d+/)[0]"
+      :date="date"
     ></c>
 
     <tt v-if="intro">{{ text(intro) }}</tt>
