@@ -1,15 +1,19 @@
 <template lang="html">
   <!-- <transition appear name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut"> -->
   <section class="caption c">
-    {{ name }}
-    <hr />
-    {{ location }}
-    <hr />
-    {{ material }}
+    {{ name || $props.name.default }}
+    <hr v-if="name" />
+    {{ location || $props.location.default }}
+    <hr v-if="location" />
+    {{
+      material.type
+        ? $prismic.asText(material.data.title)
+        : $props.material.default
+    }}
     <br />
-    {{ dimension }}
+    {{ dimension || $props.dimension.default }}
     <br />
-    {{ date }}
+    {{ date ? date.match(/\d+/)[0] : '' }}
   </section>
   <!-- </transition> -->
 </template>
@@ -22,18 +26,26 @@ export default {
   props: {
     name: {
       type: String,
+      default: '',
     },
+
     location: {
       type: String,
+      default: 'Earth (for now)',
     },
+
     material: {
-      type: String,
+      default: 'Unknown',
     },
+
     dimension: {
       type: String,
+      default: '',
     },
+
     date: {
       type: String,
+      default: '',
     },
   },
 }
