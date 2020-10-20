@@ -28,16 +28,22 @@ export default {
   name: 'project',
 
   async asyncData({ $prismic, params, error }) {
-    console.log(params)
-
     try {
       const document = (await $prismic.api.getByUID('project', params.uid)).data
+      let material = {}
 
-      const material = await $prismic.api.getByUID('tag', document.material.uid)
+      if (
+        document &&
+        document.material.type === 'tag' &&
+        !document.material.isBroken
+      ) {
+        material = await $prismic.api.getByUID('tag', document.material.uid)
+        document.material = material
+      }
 
-      return { ...document, material }
+      return { ...document }
     } catch (e) {
-      error({ statusCode: 404, message: 'Page not found' })
+      error({ statusCode: e.statusCode, message: e.message })
     }
   },
 
