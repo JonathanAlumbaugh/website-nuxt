@@ -2,6 +2,8 @@
   <section :id="$route.params.uid">
     <t v-if="tagline.length">{{ text(tagline) }}</t>
 
+    <featured-img v-if="cover.url" :slice="cover" />
+
     <c
       :name="text(project_title)"
       :location="text(location)"
@@ -18,6 +20,7 @@
 
 <script>
 import t from '~/components/textH2.vue'
+import featuredImg from '~/components/projectImgA.vue'
 import c from '~/components/projectCaption.vue'
 import slicesBlock from '~/components/slicesBlock.vue'
 import tt from '~/components/textH3.vue'
