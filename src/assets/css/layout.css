@@ -319,7 +319,7 @@ section {
   }
 
   section .tt,
-  .img-1,
+  /* .img-1, */
   section#home .tt,
   #home.isotope-grid,
   section#about .tt,
@@ -346,11 +346,6 @@ section {
   .even.small {
     grid-column-start: 3;
     grid-column-end: 4;
-  }
-
-  .img-2,
-  .img-3 {
-    grid-column: img;
   }
 
   .img-fluid-2 {
