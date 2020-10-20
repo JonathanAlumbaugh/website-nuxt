@@ -1,8 +1,12 @@
 <template lang="html">
-  <div class="element-item" :class="category" :data-category="category">
+  <div
+    class="element-item"
+    :class="category.toLowerCase()"
+    :data-category="category.toLowerCase()"
+  >
     <div class="hvrbox" :class="category">
       <img :src="img" :alt="name" class="img-autoheight hvrbox-layer-bottom" />
-      <nuxt-link :to="href">
+      <nuxt-link :to="{ path: uid, params: { project: uid } }">
         <div class="hvrbox-layer-top">
           <div class="hvrbox-text">
             <h5>{{ name }}</h5>
@@ -17,6 +21,7 @@
 <script>
 export default {
   name: 'isotopeItem',
+
   props: {
     name: {
       required: true,
@@ -24,26 +29,11 @@ export default {
     img: {
       require: true,
     },
+    uid: {
+      require: true,
+    },
     category: {
       required: true,
-    },
-  },
-
-  computed: {
-    // imgPath: function () {
-    //   return (
-    //     '../img/' +
-    //     this.category +
-    //     '/' +
-    //     this.name.toLowerCase().replace(/ /g, '-') +
-    //     '/' +
-    //     this.name.toLowerCase().replace(/ /g, '-') +
-    //     '-cover' +
-    //     '.jpg'
-    //   )
-    // },
-    href: function () {
-      return this.name.toLowerCase().replace(/ /g, '-')
     },
   },
 }

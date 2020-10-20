@@ -1,10 +1,13 @@
 <template lang="html">
-  <div class="box-shadow img-one">
-    <a data-fancybox="gallery" :href="imgPath">
+  <div class="box-shadow img-1">
+    <a
+      data-fancybox="gallery"
+      :href="img.url.replace('auto=compress,format', 'auto=format')"
+    >
       <img
-        :src="imgPath"
-        :alt="altText"
-        class="img-fluid-one hvrbox-layer-bottom grayscale"
+        :src="img.url"
+        :alt="img.alt"
+        class="img-fluid-1 hvrbox-layer-bottom grayscale"
       />
     </a>
   </div>
@@ -13,34 +16,22 @@
 <script>
 export default {
   name: 'projectImgA',
+
   props: {
-    name: {
-      required: true,
-    },
-    category: {
-      required: true,
-    },
-    imgNumber: {
+    slice: {
       required: true,
     },
   },
 
   computed: {
-    altText: function () {
-      return this.name + ' in ' + this.category + ', image ' + this.imgNumber
-    },
+    img() {
+      // Handles slicesBlock implementation
+      if (this.slice && this.slice.items && this.slice.items[0])
+        return this.slice.items[0].gallery_image
 
-    imgPath: function () {
-      return (
-        'img/' +
-        this.category +
-        '/' +
-        this.name.toLowerCase().replace(/ /g, '-') +
-        '/' +
-        this.name.toLowerCase().replace(/ /g, '-') +
-        this.imgNumber +
-        '.jpg'
-      )
+      // Handles featuredImg implementation
+      if (this.slice && this.slice.url) return this.slice
+      else return { url: null }
     },
   },
 }

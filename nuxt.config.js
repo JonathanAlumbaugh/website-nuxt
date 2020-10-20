@@ -134,10 +134,17 @@ module.exports = {
   // The module @nuxtjs/pwa should come after any other modules
   // !-------------------------------------------------------------------------!
   modules: [
-    '@nuxtjs/sitemap',
     '@nuxtjs/apollo',
+    '@nuxtjs/prismic',
+    '@nuxtjs/sitemap',
     ['@nuxtjs/pwa', { icon: false }],
   ],
+
+  prismic: {
+    endpoint: 'https://jonathanalumbaugh.cdn.prismic.io/api/v2',
+    // linkResolver: '@/plugins/link-resolver',
+    // htmlSerializer: '@/plugins/html-serializer',
+  },
 
   // !-------------------------------------------------------------------------!
   // Sitemap options for @nuxtjs/sitemap

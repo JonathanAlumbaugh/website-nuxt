@@ -1,20 +1,20 @@
 <template lang="html">
-  <div class="img-two">
+  <div class="img-2">
     <div class="box-shadow">
-      <a data-fancybox="gallery" :href="imgPath1">
+      <a data-fancybox="gallery" :href="img1.url">
         <img
-          :src="imgPath1"
-          :alt="altText1"
-          class="img-fluid-two hvrbox-layer-bottom grayscale"
+          :src="img1.url"
+          :alt="img1.alt"
+          class="img-fluid-2 hvrbox-layer-bottom grayscale"
         />
       </a>
     </div>
     <div class="box-shadow">
-      <a data-fancybox="gallery" :href="imgPath2">
+      <a data-fancybox="gallery" :href="img2.url">
         <img
-          :src="imgPath2"
-          :alt="altText2"
-          class="img-fluid-two hvrbox-layer-bottom grayscale"
+          :src="img2.url"
+          :alt="img2.alt"
+          class="img-fluid-2 hvrbox-layer-bottom grayscale"
         />
       </a>
     </div>
@@ -24,54 +24,24 @@
 <script>
 export default {
   name: 'projectImgB',
+
   props: {
-    name: {
-      required: true,
-    },
-    category: {
-      required: true,
-    },
-    imgNumber1: {
-      required: true,
-    },
-    imgNumber2: {
+    slice: {
       required: true,
     },
   },
 
   computed: {
-    altText1: function () {
-      return this.name + ' in ' + this.category + ', image ' + this.imgNumber1
+    img1() {
+      if (this.slice[0] && this.slice[0].gallery_image)
+        return this.slice[0].gallery_image
+      else return { url: null }
     },
 
-    altText2: function () {
-      return this.name + ' in ' + this.category + ', image ' + this.imgNumber2
-    },
-
-    imgPath1: function () {
-      return (
-        'img/' +
-        this.category +
-        '/' +
-        this.name.toLowerCase().replace(/ /g, '-') +
-        '/' +
-        this.name.toLowerCase().replace(/ /g, '-') +
-        this.imgNumber1 +
-        '.jpg'
-      )
-    },
-
-    imgPath2: function () {
-      return (
-        'img/' +
-        this.category +
-        '/' +
-        this.name.toLowerCase().replace(/ /g, '-') +
-        '/' +
-        this.name.toLowerCase().replace(/ /g, '-') +
-        this.imgNumber2 +
-        '.jpg'
-      )
+    img2() {
+      if (this.slice[1] && this.slice[1].gallery_image)
+        return this.slice[1].gallery_image
+      else return { url: null }
     },
   },
 }

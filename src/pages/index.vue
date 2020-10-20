@@ -19,24 +19,31 @@
     <div id="isotope-grid" class="tt isotope-grid grid">
       <div class="grid-sizer"></div>
 
-      <template v-if="projects.data.length && !projects.loading">
+      <template v-if="!projects.loading && !projects.error">
         <isotope-item
           v-for="project in projects.data"
           :key="project._meta.uid"
           :name="project.title[0].text"
           :img="project.cover.url"
-          category="design"
+          :uid="project._meta.uid"
+          :category="project.category.title[0].text"
         ></isotope-item>
       </template>
     </div>
 
     <!-- WIP -->
-    <t>right now I'm working on</t>
-    <main-wip
-      class="tt"
-      name="Simmons Mill Pond signage"
-      category="design"
-    ></main-wip>
+    <t v-if="projects.featured">right now I'm working on</t>
+    <fragment v-if="projects.featured && !projects.loading">
+      <main-wip
+        v-for="project in projects.featured"
+        :key="project._meta.uid"
+        :img="project.cover.url"
+        :name="project.title[0].text"
+        :category="project.category.title[0].text"
+        :uid="project._meta.uid"
+        class="tt"
+      ></main-wip>
+    </fragment>
 
     <!-- Extra -->
     <t>I love making things</t>
@@ -70,22 +77,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
-const GET_PROJECTS = gql`
-  {
-    allProjects {
-      edges {
-        node {
-          _meta {
-            uid
-          }
-          title
-          cover
-        }
-      }
-    }
-  }
-`
-
+import { Fragment } from 'vue-fragment'
 import t from '~/components/textH2.vue'
 import tt from '~/components/textH3.vue'
 import isotopeGrid from '~/components/isotopeGrid.vue'
@@ -104,15 +96,62 @@ export default {
     }
   },
 
-  async asyncData() {
-    try {
-      let { loading, data, error } = await client.query({ query: GET_PROJECTS })
+  async asyncData({ $prismic, error }) {
+    const GET_PROJECTS = gql`
+      {
+        allProjects {
+          edges {
+            node {
+              _meta {
+                uid
+              }
+              featured
+              title
+              category {
+                ... on Tag {
+                  title
+                  agent_noun
+                  accent
+                }
+              }
+              cover
+              tags {
+                tag {
+                  ... on Tag {
+                    title
+                    accent
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `
 
-      data = data.allProjects.edges.map((el) => {
-        return el.node
+    try {
+      let { data, loading, error } = await client.query({
+        query: GET_PROJECTS,
       })
 
-      return { projects: { loading, data, error } }
+      const dataCopy = data.allProjects.edges.map((el) => el.node)
+      const featured = dataCopy.filter((el) => el.featured)
+      data = dataCopy.filter((el) => !el.featured)
+
+      return { projects: { data, featured, loading, error } }
+
+      // Here we query blog home content using $prismic which
+      // has the api endpoint data from the nuxt.config.js
+      // const homepageContent = (await $prismic.api.getSingle('blog_home')).data
+
+      // Query to get posts content, here we also change the 'predicates' query
+      // const data = await $prismic.api.query(
+      //   $prismic.predicates.at('document.type', 'project'),
+      //   $prismic.predicates.at('project.featured', false),
+      // )
+
+      // // Returns data to be used in template
+      // return { projects: { data, error } }
     } catch (e) {
       console.log(e)
     }
@@ -151,6 +190,7 @@ export default {
   // /Head content
   components: {
     // affix,
+    Fragment,
     t,
     tt,
     isotopeGrid,
