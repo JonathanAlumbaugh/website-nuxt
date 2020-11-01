@@ -2,8 +2,6 @@
   <section :id="$route.params.uid">
     <t v-if="tagline">{{ text(tagline) }}</t>
 
-    <featured-img v-if="cover.url" :slice="cover" />
-
     <c
       :name="text(project_title)"
       :location="text(location)"
