@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="img-2">
+  <div class="img-2" v-if="img1 && img2">
     <div class="box-shadow">
       <a data-fancybox="gallery" :href="img1.url">
         <img

@@ -3,6 +3,7 @@
     <a
       data-fancybox="gallery"
       :href="img.url.replace('auto=compress,format', 'auto=format')"
+      v-if="img.url"
     >
       <img
         :src="img.url"
@@ -31,7 +32,7 @@ export default {
 
       // Handles featuredImg implementation
       if (this.slice && this.slice.url) return this.slice
-      else return { url: null }
+      else return { img: null }
     },
   },
 }
