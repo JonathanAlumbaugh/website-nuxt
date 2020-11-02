@@ -1,8 +1,11 @@
 <template lang="html">
-  <nuxt-link to="wip" class="main-wip box-shadow">
+  <nuxt-link
+    :to="{ path: uid, params: { project: uid } }"
+    class="main-wip box-shadow"
+  >
     <div class="hvrbox wip">
       <img
-        :src="imgPath"
+        :src="img"
         :alt="name"
         class="img-fluid hvrbox-layer-bottom grayscale"
       />
@@ -19,28 +22,12 @@
 <script>
 export default {
   name: 'mainWip',
-  props: {
-    name: {
-      required: true,
-    },
-    category: {
-      required: true,
-    },
-  },
 
-  computed: {
-    imgPath: function () {
-      return (
-        'img/' +
-        this.category +
-        '/' +
-        this.name.toLowerCase().replace(/ /g, '-') +
-        '/' +
-        this.name.toLowerCase().replace(/ /g, '-') +
-        '-cover' +
-        '.jpg'
-      )
-    },
+  props: {
+    img: { required: true },
+    name: { required: true },
+    category: { required: true },
+    uid: { required: true },
   },
 }
 </script>

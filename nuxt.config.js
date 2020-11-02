@@ -21,7 +21,12 @@ module.exports = {
     // !-------------------------------------------------------------------------!
     // Disable Uglify
     // !-------------------------------------------------------------------------!
-    extend(config) {
+    extend(config, { isDev, isClient }) {
+      // node: {
+      //   fs: 'empty'
+      // }
+      config.node = { fs: 'empty' }
+
       config.plugins = config.plugins.filter(
         (plugin) => plugin.constructor.name !== 'UglifyJsPlugin',
       )
@@ -128,7 +133,26 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   // The module @nuxtjs/pwa should come after any other modules
   // !-------------------------------------------------------------------------!
-  modules: ['@nuxtjs/sitemap', ['@nuxtjs/pwa', { icon: false }]],
+  modules: [
+    '@nuxtjs/apollo',
+    '@nuxtjs/prismic',
+    '@nuxtjs/sitemap',
+    ['@nuxtjs/pwa', { icon: false }],
+  ],
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://jonathanalumbaugh.prismic.io/graphql',
+      },
+    },
+  },
+
+  prismic: {
+    endpoint: 'https://jonathanalumbaugh.cdn.prismic.io/api/v2',
+    // linkResolver: '@/plugins/link-resolver',
+    // htmlSerializer: '@/plugins/html-serializer',
+  },
 
   // !-------------------------------------------------------------------------!
   // Sitemap options for @nuxtjs/sitemap

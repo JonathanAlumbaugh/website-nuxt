@@ -111,12 +111,12 @@ nav ul {
   grid-column: main;
 }
 
-.img-one {
+.img-1 {
   grid-column: main;
 }
 
-.img-two,
-.img-three {
+.img-2,
+.img-3 {
   grid-column: img;
 }
 
@@ -142,8 +142,8 @@ nav ul {
 /* !--------------------------!
            Misc
    !--------------------------! */
-img.img-fluid-one,
-img.img-fluid-two {
+img.img-fluid-1,
+img.img-fluid-2 {
   width: 100%;
 }
 
@@ -228,7 +228,7 @@ section {
   }
 
   section .tt,
-  .img-one {
+  .img-1 {
     grid-column: main;
   }
 
@@ -257,30 +257,30 @@ section {
 
   /* Idk what to do about all this at the moment. */
 
-  /* div.img-one {
+  /* div.img-1 {
     overflow: hidden;
     height: auto;
   }
 
-  .img-fluid-one {
+  .img-fluid-1 {
     height: auto;
     width: 100%;
   }
 
-  div.img-two div,
-  div.img-three div {
+  div.img-2 div,
+  div.img-3 div {
     overflow: hidden;
     height: 20rem;
     width: 30rem;
   }
 
-  .img-two,
-  .img-three {
+  .img-2,
+  .img-3 {
     grid-column: img;
     overflow: hidden;
   }
 
-  .img-fluid-two {
+  .img-fluid-2 {
     width: 100%;
     overflow: hidden;
   } */
@@ -319,7 +319,7 @@ section {
   }
 
   section .tt,
-  .img-one,
+  /* .img-1, */
   section#home .tt,
   #home.isotope-grid,
   section#about .tt,
@@ -348,12 +348,7 @@ section {
     grid-column-end: 4;
   }
 
-  .img-two,
-  .img-three {
-    grid-column: img;
-  }
-
-  .img-fluid-two {
+  .img-fluid-2 {
     width: 160%;
   }
 }
@@ -433,18 +428,18 @@ section {
     z-index: -100;
   } */
 
-  .img-one {
+  .img-1 {
     grid-column-start: 1;
     grid-column-end: 4;
   }
 
-  .img-two,
-  .img-three {
+  .img-2,
+  .img-3 {
     grid-column-start: 1;
     grid-column-end: 4;
   }
 
-  .img-fluid-two {
+  .img-fluid-2 {
     width: 160%;
   }
 }
