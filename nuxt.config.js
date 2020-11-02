@@ -57,8 +57,8 @@ module.exports = {
     // !-------------------------------------------------------------------------!
     // { src: '~/plugins/jquery.js', ssr: false },
     // { src: '~/plugins/vue-sticky.js' },
+    // { src: '~/plugins/ga.js', ssr: false },
     { src: '~/plugins/vue-js-modal.js' },
-    { src: '~/plugins/ga.js', ssr: false },
   ],
 
   css: [
@@ -113,6 +113,11 @@ module.exports = {
       // !-------------------------------------------------------------------------!
       { src: '/js/jquery.js' },
       { src: '/js/jquery.fancybox.js' },
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-S3NHKKCBW9',
+        async: true,
+      },
+      { src: '/js/ga4.js' },
     ],
   },
 
