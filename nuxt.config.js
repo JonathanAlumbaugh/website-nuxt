@@ -118,6 +118,12 @@ module.exports = {
         async: true,
       },
       { src: '/js/ga4.js' },
+      {
+        src:
+          'https://static.cdn.prismic.io/prismic.js?new=true&repo=jonathanalumbaugh',
+        async: true,
+        defer: true,
+      },
     ],
   },
 
