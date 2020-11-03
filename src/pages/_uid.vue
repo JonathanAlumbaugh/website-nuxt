@@ -7,7 +7,7 @@
       :location="text(location)"
       :material="material"
       :dimension="text(dimensions)"
-      :date="date"
+      :date="created"
     ></c>
 
     <tt v-if="intro">{{ text(intro) }}</tt>
