@@ -10,8 +10,6 @@
       :date="created"
     ></c>
 
-    <tt v-if="intro">{{ text(intro) }}</tt>
-
     <slices-block :slices="body" />
   </section>
 </template>
@@ -21,7 +19,6 @@ import t from '~/components/textH2.vue'
 import featuredImg from '~/components/projectImgA.vue'
 import c from '~/components/projectCaption.vue'
 import slicesBlock from '~/components/slicesBlock.vue'
-import tt from '~/components/textH3.vue'
 export default {
   name: 'project',
 
@@ -70,7 +67,6 @@ export default {
     featuredImg,
     c,
     slicesBlock,
-    tt,
   },
 }
 </script>

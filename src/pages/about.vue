@@ -162,7 +162,7 @@
 
 <script>
 import t from '~/components/textH2.vue'
-import tt from '~/components/textH3.vue'
+import tt from '~/components/tt.vue'
 import blkLg from '~/components/blockLarge.vue'
 import blkSm from '~/components/blockSmall.vue'
 export default {

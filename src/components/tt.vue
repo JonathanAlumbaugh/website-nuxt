@@ -1,26 +1,19 @@
 <template lang="html">
   <!-- <transition appear name="custom-classes-transition" enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft"> -->
-  <div
-    :class="`tt box-shadow`"
-    v-html="$prismic.asHtml(slice.primary.text)"
-  ></div>
+  <p class="tt box-shadow">
+    <slot></slot>
+  </p>
   <!-- </transition> -->
 </template>
 
 <script>
-import { Fragment } from 'vue-fragment'
-
 export default {
-  name: 'textH3',
+  name: 'tt',
 
   props: {
     slice: {
       required: false,
     },
-  },
-
-  components: {
-    Fragment,
   },
 }
 </script>
