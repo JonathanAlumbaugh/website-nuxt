@@ -90,9 +90,17 @@ export default {
       this.scrollPosition = window.scrollY
     },
     // !-------------------------------------------------!
-    show() {
-      this.$modal.show('contact-modal')
+    async show() {
+      try {
+        const token = await this.$recaptcha.execute('contact')
+
+        if (token) this.$modal.show('contact-modal')
+        else throw new Error('looks like you might not be a human :(')
+      } catch (e) {
+        console.log('Error:', e)
+      }
     },
+
     hide() {
       this.$modal.hide('contact-modal')
     },
@@ -100,8 +108,14 @@ export default {
   // !-------------------------------------------------!
   // Update scroll position when the page is mounted
   // !-------------------------------------------------!
-  mounted() {
+  async mounted() {
     window.addEventListener('scroll', this.updateScroll)
+
+    try {
+      await this.$recaptcha.init()
+    } catch (e) {
+      console.log('Error:', e)
+    }
   },
   // !-------------------------------------------------!
   // Change the class based on the position in page
