@@ -147,6 +147,7 @@ module.exports = {
   modules: [
     '@nuxtjs/apollo',
     '@nuxtjs/prismic',
+    '@nuxtjs/recaptcha',
     '@nuxtjs/sitemap',
     ['@nuxtjs/pwa', { icon: false }],
   ],
@@ -163,6 +164,12 @@ module.exports = {
     endpoint: 'https://jonathanalumbaugh.cdn.prismic.io/api/v2',
     // linkResolver: '@/plugins/link-resolver',
     // htmlSerializer: '@/plugins/html-serializer',
+  },
+
+  recaptcha: {
+    hideBadge: true, // Hide badge element (v3 & v2 via size=invisible)
+    siteKey: '6LcvAOAZAAAAAN_eV5nZ2Jm927-HBTICqQPU6oCx', // Site key for requests
+    version: 3, // Version
   },
 
   // !-------------------------------------------------------------------------!
