@@ -41,7 +41,7 @@
 // import mainNav from '~/components/mainNav.vue'
 // import mainFooter from '~/components/mainFooter.vue'
 import t from '~/components/textH2.vue'
-import tt from '~/components/textH3.vue'
+import tt from '~/components/tt.vue'
 export default {
   props: ['error'],
   methods: {
