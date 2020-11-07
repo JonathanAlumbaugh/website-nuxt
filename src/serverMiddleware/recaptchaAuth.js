@@ -25,34 +25,4 @@ app.post('/recaptcha', async (req, res) => {
   }
 })
 
-// export default {
-//   path: '/recaptcha',
-
-//   async handler(req, res) {
-//     let headers = {
-//       headers: {
-//         'Access-Control-Allow-Origin': '*',
-//         'Content-Type': 'application/json',
-//       },
-//     }
-
-//     console.log('middleware req', req)
-//     console.log('middleware headers', req.headers)
-//     console.log('middleware body', req.body)
-
-//     try {
-//       let ip = req.headers.host
-//       let token = req.body.token
-
-//       res = await this.$axios.post(
-//         `https://www.google.com/recaptcha/api/siteverify?secret=${SECRET_KEY}&response=${token}&remoteip=${ip}`,
-//         headers,
-//       )
-//     } catch (e) {
-//       res = e
-//       console.log('serverMiddleware error:', e)
-//     }
-//   },
-// }
-
 module.exports = app
