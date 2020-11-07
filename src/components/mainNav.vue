@@ -47,6 +47,14 @@
                 <a href="https://www.instagram.com/jonathan_alumbaugh/"><img src="../static/icons/instagram.svg"></a>
                 <a href="behance.net/jonathanalumbaugh"><img src="../static/icons/linkedin.svg"></a>
               </div> -->
+
+          <p class="disclaimer">
+            This site is protected by reCAPTCHA and the Google
+            <a href="https://policies.google.com/privacy">Privacy Policy</a>
+            and
+            <a href="https://policies.google.com/terms">Terms of Service</a>
+            apply.
+          </p>
         </div>
         <!-- Modal buttons -->
         <div class="dialog-buttons">
@@ -148,3 +156,9 @@ export default {
   // !-------------------------------------------------!
 }
 </script>
+
+<style lang="scss" scoped>
+.disclaimer {
+  font-size: 1em;
+}
+</style>
