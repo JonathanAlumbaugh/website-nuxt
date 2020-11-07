@@ -102,8 +102,7 @@ export default {
       try {
         const token = await this.$recaptcha.execute('contact')
 
-        if (token) this.$modal.show('contact-modal')
-        else throw new Error('looks like you might not be a human :(')
+        const res = await this.$axios.post('/recaptcha', token)
       } catch (e) {
         console.log('Error:', e)
       }

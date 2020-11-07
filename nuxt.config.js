@@ -146,6 +146,7 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   modules: [
     '@nuxtjs/apollo',
+    '@nuxtjs/axios',
     '@nuxtjs/prismic',
     '@nuxtjs/recaptcha',
     '@nuxtjs/sitemap',
@@ -157,6 +158,16 @@ module.exports = {
       default: {
         httpEndpoint: 'https://jonathanalumbaugh.prismic.io/graphql',
       },
+    },
+  },
+
+  axios: {
+    baseURL: 'http://localhost:3000', // Used as fallback if no runtime config is provided
+  },
+
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL,
     },
   },
 
