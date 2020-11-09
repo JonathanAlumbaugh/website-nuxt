@@ -47,6 +47,14 @@
                 <a href="https://www.instagram.com/jonathan_alumbaugh/"><img src="../static/icons/instagram.svg"></a>
                 <a href="behance.net/jonathanalumbaugh"><img src="../static/icons/linkedin.svg"></a>
               </div> -->
+
+          <p class="disclaimer">
+            This site is protected by reCAPTCHA and the Google
+            <a href="https://policies.google.com/privacy">Privacy Policy</a>
+            and
+            <a href="https://policies.google.com/terms">Terms of Service</a>
+            apply.
+          </p>
         </div>
         <!-- Modal buttons -->
         <div class="dialog-buttons">
@@ -90,9 +98,18 @@ export default {
       this.scrollPosition = window.scrollY
     },
     // !-------------------------------------------------!
-    show() {
-      this.$modal.show('contact-modal')
+    async show() {
+      try {
+        const token = await this.$recaptcha.execute('contact')
+        const res = await this.$axios.$post('/recaptcha', { token })
+
+        if ((res.success = true)) this.$modal.show('contact-modal')
+        else throw new Error('looks like you might not be a human :(')
+      } catch (e) {
+        console.log('Error:', e)
+      }
     },
+
     hide() {
       this.$modal.hide('contact-modal')
     },
@@ -100,8 +117,14 @@ export default {
   // !-------------------------------------------------!
   // Update scroll position when the page is mounted
   // !-------------------------------------------------!
-  mounted() {
+  async mounted() {
     window.addEventListener('scroll', this.updateScroll)
+
+    try {
+      await this.$recaptcha.init()
+    } catch (e) {
+      console.log('Error:', e)
+    }
   },
   // !-------------------------------------------------!
   // Change the class based on the position in page
@@ -134,3 +157,9 @@ export default {
   // !-------------------------------------------------!
 }
 </script>
+
+<style lang="scss" scoped>
+.disclaimer {
+  font-size: 1em;
+}
+</style>

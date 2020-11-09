@@ -44,6 +44,8 @@ module.exports = {
     // vendor: ['jquery']
   },
 
+  serverMiddleware: ['~/api/recaptchaAuth'],
+
   plugins: [
     // !-------------------------------------------------------------------------!
     // Hack solution: include all the stuff that isn't working as JS where
@@ -146,7 +148,9 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   modules: [
     '@nuxtjs/apollo',
+    '@nuxtjs/axios',
     '@nuxtjs/prismic',
+    '@nuxtjs/recaptcha',
     '@nuxtjs/sitemap',
     ['@nuxtjs/pwa', { icon: false }],
   ],
@@ -159,10 +163,26 @@ module.exports = {
     },
   },
 
+  axios: {
+    baseURL: 'http://localhost:3000', // Used as fallback if no runtime config is provided
+  },
+
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL,
+    },
+  },
+
   prismic: {
     endpoint: 'https://jonathanalumbaugh.cdn.prismic.io/api/v2',
     // linkResolver: '@/plugins/link-resolver',
     // htmlSerializer: '@/plugins/html-serializer',
+  },
+
+  recaptcha: {
+    hideBadge: true, // Hide badge element (v3 & v2 via size=invisible)
+    siteKey: '6LcvAOAZAAAAAN_eV5nZ2Jm927-HBTICqQPU6oCx', // Site key for requests
+    version: 3, // Version
   },
 
   // !-------------------------------------------------------------------------!
