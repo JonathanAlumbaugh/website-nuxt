@@ -21,10 +21,16 @@
         I'm working on the site right now.
       </tt>
 
-      <tt style="font-size: 1.5em;">
-        <pre>{{ error.message }}</pre>
-        <pre>{{ error.locations }}</pre>
-      </tt>
+        <tt>
+          <a @click="show"><span class="error-contact">Drop me a line</span></a>
+          and let me know?
+        </tt>
+      <pre class="tt box-shadow" style="font-size: 1.5em;">{{
+        error.message
+      }}</pre>
+      <pre class="tt box-shadow" style="font-size: 1.5em;">{{
+        error.locations
+      }}</pre>
     </section>
   </transition>
 </template>
