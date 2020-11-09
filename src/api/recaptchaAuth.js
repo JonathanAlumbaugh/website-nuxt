@@ -22,8 +22,10 @@ app.post('/recaptcha', async (req, res) => {
 
     res.send(data)
   } catch (e) {
-    console.log('ReCaptcha error:', e)
-    res.status(500).send(`<p>ReCaptcha error:</p> <pre>${e}</pre>`)
+    res.status(500).send(`
+      <p>ReCaptcha error:</p>
+      <pre>${e}</pre>
+    `)
   }
 })
 
