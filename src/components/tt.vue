@@ -9,11 +9,5 @@
 <script>
 export default {
   name: 'tt',
-
-  props: {
-    slice: {
-      required: false,
-    },
-  },
 }
 </script>
