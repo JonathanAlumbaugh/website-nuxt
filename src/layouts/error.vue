@@ -6,37 +6,33 @@
     leave-active-class="animated fadeOut"
   >
     <section class="error">
-      <template v-if="error.statusCode === 404">
-        <fragment>
-          <t>I was fiddling around and</t>
+      <fragment v-if="error.statusCode === 404">
+        <t>I was fiddling around and</t>
 
-          <tt>
-            I must have broken something here.
-            <br />
-            Would you
-            <a @click="show">
-              <span class="error-contact">drop me a line</span>
-            </a>
-            and let me know?
-          </tt>
-        </fragment>
-      </template>
+        <tt>
+          I must have broken something here.
+          <br />
+          Would you
+          <a @click="show">
+            <span class="error-contact">drop me a line</span>
+          </a>
+          and let me know?
+        </tt>
+      </fragment>
 
-      <template v-else>
-        <fragment>
-          <tt>
-            This {{ error.statusCode }} error normally only shows if you're me
-            and I'm working on the site right now.
-          </tt>
+      <fragment v-else>
+        <tt>
+          This {{ error.statusCode }} error normally only shows if you're me and
+          I'm working on the site right now.
+        </tt>
 
-          <tt>
-            <a @click="show">
-              <span class="error-contact">Drop me a line</span>
-            </a>
-            and let me know?
-          </tt>
-        </fragment>
-      </template>
+        <tt>
+          <a @click="show">
+            <span class="error-contact">Drop me a line</span>
+          </a>
+          and let me know?
+        </tt>
+      </fragment>
 
       <pre class="tt box-shadow" style="font-size: 1.5em;">{{
         error.message
