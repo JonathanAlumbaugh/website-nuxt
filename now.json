@@ -6,6 +6,7 @@
       "use": "@nuxtjs/now-builder",
       "config": {
         "serverFiles": [
+          "src/api/*.*",
           "src/static/*.*",
           "src/static/favicon/**",
           "src/static/js/**",
