@@ -6,7 +6,7 @@
       "use": "@dtinth/nuxtjs__vercel-builder@prerelease",
       "config": {
         "serverFiles": [
-          "src/api/*.*",
+          "src/api/**",
           "src/static/*.*",
           "src/static/favicon/**",
           "src/static/js/**",
