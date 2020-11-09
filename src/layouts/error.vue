@@ -6,25 +6,38 @@
     leave-active-class="animated fadeOut"
   >
     <section class="error">
-      <t v-if="error.statusCode === 404">I was fiddling around and</t>
+      <template v-if="error.statusCode === 404">
+        <fragment>
+          <t>I was fiddling around and</t>
 
-      <tt v-if="error.statusCode === 404">
-        I must have broken something here.
-        <br />
-        Would you
-        <a @click="show"><span class="error-contact">drop me a line</span></a>
-        and let me know?
-      </tt>
+          <tt>
+            I must have broken something here.
+            <br />
+            Would you
+            <a @click="show">
+              <span class="error-contact">drop me a line</span>
+            </a>
+            and let me know?
+          </tt>
+        </fragment>
+      </template>
 
-      <tt v-else>
-        this {{ error.statusCode }} error normally only shows if you're me and
-        I'm working on the site right now.
-      </tt>
+      <template v-else>
+        <fragment>
+          <tt>
+            This {{ error.statusCode }} error normally only shows if you're me
+            and I'm working on the site right now.
+          </tt>
 
-        <tt>
-          <a @click="show"><span class="error-contact">Drop me a line</span></a>
-          and let me know?
-        </tt>
+          <tt>
+            <a @click="show">
+              <span class="error-contact">Drop me a line</span>
+            </a>
+            and let me know?
+          </tt>
+        </fragment>
+      </template>
+
       <pre class="tt box-shadow" style="font-size: 1.5em;">{{
         error.message
       }}</pre>
@@ -36,6 +49,7 @@
 </template>
 
 <script>
+import { Fragment } from 'vue-fragment'
 import t from '~/components/textH2.vue'
 import tt from '~/components/tt.vue'
 export default {
@@ -56,6 +70,7 @@ export default {
   },
 
   components: {
+    Fragment,
     t,
     tt,
   },
