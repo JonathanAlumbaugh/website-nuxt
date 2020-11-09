@@ -1,12 +1,10 @@
 const app = require('express')()
-const cors = require('cors')
 const bodyParser = require('body-parser')
 import axios from 'axios'
 
 const SECRET_KEY = '6LcvAOAZAAAAAL--mWaIJlkBpimkV0U5A-72bNyF'
 
-app.use([bodyParser.json(), cors()])
-app.options('*', cors())
+app.use(bodyParser.json())
 
 app.post('/recaptcha', async (req, res) => {
   try {
