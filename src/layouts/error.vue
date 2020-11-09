@@ -35,6 +35,20 @@ import tt from '~/components/tt.vue'
 export default {
   props: ['error'],
 
+  methods: {
+    async show() {
+      try {
+        const token = await this.$recaptcha.execute('contact')
+        const res = await this.$axios.$post('/api/recaptcha', { token })
+
+        if ((res.success = true)) this.$modal.show('contact-modal')
+        else throw new Error('looks like you might not be a human :(')
+      } catch (e) {
+        console.log('Error:', e)
+      }
+    },
+  },
+
   components: {
     t,
     tt,
