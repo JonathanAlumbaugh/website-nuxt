@@ -9719,7 +9719,7 @@ pretty-time@^1.1.0:
   resolved "https://registry.yarnpkg.com/pretty-time/-/pretty-time-1.1.0.tgz#ffb7429afabb8535c346a34e41873adf3d74dd0e"
   integrity sha512-28iF6xPQrP8Oa6uxE6a1biz+lWeTOAPKggvjB8HAs6nVMKZwf5bG++632Dx614hIWgUPkgivRfG+a8uAXGTIbA==
 
-prismic-dom@^2.2.3:
+prismic-dom@^2.2.3, prismic-dom@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/prismic-dom/-/prismic-dom-2.2.4.tgz#8bcf7775127b2d30b52ee191fcfc898230517bd4"
   integrity sha512-NLOfOSp7XVpdhWBd92RSiOZ75QISsSTQPTQN1AqcILtg1/zumqpwYKvz41tl+FeWJYfKPTHanvukhWkanfTngA==
