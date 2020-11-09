@@ -90,6 +90,7 @@ export default {
       },
     }
   },
+
   methods: {
     // !-------------------------------------------------!
     // Update scroll position once there's been a change
@@ -98,6 +99,7 @@ export default {
       this.scrollPosition = window.scrollY
     },
     // !-------------------------------------------------!
+
     async show() {
       try {
         const token = await this.$recaptcha.execute('contact')
@@ -114,6 +116,7 @@ export default {
       this.$modal.hide('contact-modal')
     },
   },
+
   // !-------------------------------------------------!
   // Update scroll position when the page is mounted
   // !-------------------------------------------------!
@@ -126,6 +129,7 @@ export default {
       console.log('Error:', e)
     }
   },
+
   // !-------------------------------------------------!
   // Change the class based on the position in page
   // !-------------------------------------------------!
@@ -148,6 +152,7 @@ export default {
     //   return classPicker
     // }
   },
+
   // !-------------------------------------------------!
   // Destroy listener on page destroy
   // !-------------------------------------------------!
