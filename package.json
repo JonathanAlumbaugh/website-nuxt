@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@dtinth/nuxtjs__vercel-builder": "^0.17.13-0",
     "@nuxtjs/apollo": "^4.0.1-rc.3",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/now-builder": "^0.17.3",
