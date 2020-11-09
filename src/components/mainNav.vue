@@ -101,13 +101,10 @@ export default {
     async show() {
       try {
         const token = await this.$recaptcha.execute('contact')
-        console.log('token', token)
+        const res = await this.$axios.$post('/recaptcha', { token })
 
-        const res = await this.$axios.post('/recaptcha', token)
-        console.log('res', res)
-
-        this.$modal.show('contact-modal')
-        // else throw new Error('looks like you might not be a human :(')
+        if ((res.success = true)) this.$modal.show('contact-modal')
+        else throw new Error('looks like you might not be a human :(')
       } catch (e) {
         console.log('Error:', e)
       }
