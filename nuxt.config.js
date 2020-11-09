@@ -44,9 +44,7 @@ module.exports = {
     // vendor: ['jquery']
   },
 
-  serverMiddleware: [
-    { path: '/recaptcha', handler: '~/serverMiddleware/recaptchaAuth.js' },
-  ],
+  serverMiddleware: ['~/api/recaptchaAuth'],
 
   plugins: [
     // !-------------------------------------------------------------------------!
