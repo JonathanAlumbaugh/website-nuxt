@@ -150,6 +150,7 @@ module.exports = {
     '@nuxtjs/apollo',
     '@nuxtjs/axios',
     '@nuxtjs/prismic',
+    '@nuxtjs/proxy',
     '@nuxtjs/recaptcha',
     '@nuxtjs/sitemap',
     ['@nuxtjs/pwa', { icon: false }],
@@ -165,6 +166,7 @@ module.exports = {
 
   axios: {
     baseURL: 'http://localhost:3000', // Used as fallback if no runtime config is provided
+    proxy: true,
   },
 
   publicRuntimeConfig: {
@@ -177,6 +179,15 @@ module.exports = {
     endpoint: 'https://jonathanalumbaugh.cdn.prismic.io/api/v2',
     // linkResolver: '@/plugins/link-resolver',
     // htmlSerializer: '@/plugins/html-serializer',
+  },
+
+  proxy: {
+    '/api': {
+      target: process.env.BROWSER_BASE_URL,
+      pathRewrite: {
+        '^/api': `${process.env.BROWSER_BASE_URL}/api`,
+      },
+    },
   },
 
   recaptcha: {
