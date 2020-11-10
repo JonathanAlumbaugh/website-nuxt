@@ -44,8 +44,6 @@ module.exports = {
     // vendor: ['jquery']
   },
 
-  serverMiddleware: [{ path: '/api', handler: '~api/recaptchaAuth.js' }],
-
   plugins: [
     // !-------------------------------------------------------------------------!
     // Hack solution: include all the stuff that isn't working as JS where
@@ -62,6 +60,8 @@ module.exports = {
     // { src: '~/plugins/ga.js', ssr: false },
     { src: '~/plugins/vue-js-modal.js' },
   ],
+
+  serverMiddleware: [{ path: '/api', handler: '~api/recaptchaAuth.js' }],
 
   css: [
     '~assets/css/normalize.css',
