@@ -20,9 +20,11 @@
       </nuxt-link>
 
       <!-- Contact -->
-      <li class="nav-item-3 nav-item">
-        <a class="nav-link" @click="show">Contact</a>
-      </li>
+      <a class="nav-item-3 nav-link" @click="show">
+        <li class="nav-item">
+          Contact
+        </li>
+      </a>
 
       <!-- Contact modal -->
       <modal
