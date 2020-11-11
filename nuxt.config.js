@@ -8,6 +8,8 @@ const webpack = require('webpack')
 // !-------------------------------------------------------------------------!
 const { resolve } = require('path')
 
+require('dotenv').config()
+
 module.exports = {
   // !-------------------------------------------------------------------------!
   // Change src directory
@@ -165,14 +167,15 @@ module.exports = {
   },
 
   axios: {
-    baseURL: 'http://localhost:3000', // Used as fallback if no runtime config is provided
     proxy: true,
   },
 
   publicRuntimeConfig: {
     axios: {
-      browserBaseURL: process.env.BROWSER_BASE_URL,
+      baseURL: process.env.VERCEL_URL || 'http://localhost:3000',
     },
+
+    baseURL: process.env.VERCEL_URL || 'http://localhost:3000',
   },
 
   prismic: {
@@ -183,10 +186,10 @@ module.exports = {
 
   proxy: {
     '/api': {
-      target: process.env.BROWSER_BASE_URL,
-      pathRewrite: {
-        '^/api': `${process.env.BROWSER_BASE_URL}/api`,
-      },
+      target: process.env.VERCEL_URL || 'http://localhost:3000/api',
+      // pathRewrite: {
+      //   '^/api/': `${process.env.baseUrl}/api`,
+      // },
     },
   },
 

@@ -2,12 +2,11 @@ const app = require('express')()
 const bodyParser = require('body-parser')
 import axios from 'axios'
 
-const SECRET_KEY = '6LcvAOAZAAAAAL--mWaIJlkBpimkV0U5A-72bNyF'
-
 app.use(bodyParser.json())
 
 app.post('/recaptcha', async (req, res) => {
   try {
+    const { RECAPTCHA_SECRET_KEY: secretKey } = process.env
     const { host } = req.headers
     const { token } = req.body
 
@@ -17,7 +16,7 @@ app.post('/recaptcha', async (req, res) => {
     }
 
     const { data } = await axios.post(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${SECRET_KEY}&response=${token}`,
+      `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`,
     )
 
     res.send(data)
