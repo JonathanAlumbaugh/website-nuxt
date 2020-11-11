@@ -36,3 +36,7 @@ id_rsa
 sw.*
 sshLogin.sh
 .eslint*
+
+# Vercel stuff
+.vercel
+.env
