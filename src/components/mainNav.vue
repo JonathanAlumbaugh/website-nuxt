@@ -105,6 +105,8 @@ export default {
     async show() {
       const { baseURL } = this.$config
 
+      console.log('baseURL:', baseURL)
+
       try {
         const token = await this.$recaptcha.execute('contact')
         const res = await this.$axios.$post(`${baseURL}/api/recaptcha`, {
