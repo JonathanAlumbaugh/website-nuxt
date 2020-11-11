@@ -11,8 +11,15 @@ app.post('/recaptcha', async (req, res) => {
     const { token } = req.body
 
     if (!token) {
-      res.status(400).send('No token!')
-      throw 'No token!'
+      const errorMessage = 'No token!'
+      res.status(400).send(errorMessage)
+      throw errorMessage
+    }
+
+    if (!secretKey) {
+      const errorMessage = 'No secret key env variable!'
+      res.status(400).send(errorMessage)
+      throw errorMessage
     }
 
     const { data } = await axios.post(
