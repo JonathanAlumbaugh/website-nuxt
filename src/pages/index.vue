@@ -74,7 +74,7 @@ const client = new ApolloClient({
 
 import { Fragment } from 'vue-fragment'
 import t from '~/components/textH2.vue'
-import tt from '~/components/textH3.vue'
+import tt from '~/components/tt.vue'
 import isotopeGrid from '~/components/isotopeGrid.vue'
 import isotopeSort from '~/components/isotopeSort.vue'
 import isotopeItem from '~/components/isotopeItem.vue'
@@ -182,6 +182,7 @@ export default {
       ],
     }
   },
+
   // /Head content
   components: {
     // affix,

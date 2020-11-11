@@ -80,6 +80,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.tt:first-of-type {
+  grid-row-start: 1;
+
+  @media only screen and (max-width: 600px) {
+    grid-row-start: 2;
+  }
+
+  @media only screen and (min-width: 600px) and (max-width: 900px) {
+    grid-row-start: 2;
+  }
+
+  @media only screen and (min-width: 900px) and (max-width: 1200px) {
+    grid-row-start: 2;
+  }
+}
+
 .img-gallery__wrapper {
   grid-column: 2 / 5;
   display: grid;

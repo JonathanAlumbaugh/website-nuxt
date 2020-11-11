@@ -3,9 +3,10 @@
   "builds": [
     {
       "src": "nuxt.config.js",
-      "use": "@nuxtjs/now-builder",
+      "use": "@nuxtjs/vercel-builder",
       "config": {
         "serverFiles": [
+          "src/api/**",
           "src/static/*.*",
           "src/static/favicon/**",
           "src/static/js/**",

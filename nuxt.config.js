@@ -8,6 +8,8 @@ const webpack = require('webpack')
 // !-------------------------------------------------------------------------!
 const { resolve } = require('path')
 
+require('dotenv').config()
+
 module.exports = {
   // !-------------------------------------------------------------------------!
   // Change src directory
@@ -60,6 +62,8 @@ module.exports = {
     // { src: '~/plugins/ga.js', ssr: false },
     { src: '~/plugins/vue-js-modal.js' },
   ],
+
+  serverMiddleware: [{ path: '/api', handler: '~api/recaptchaAuth.js' }],
 
   css: [
     '~assets/css/normalize.css',
@@ -118,6 +122,12 @@ module.exports = {
         async: true,
       },
       { src: '/js/ga4.js' },
+      {
+        src:
+          'https://static.cdn.prismic.io/prismic.js?new=true&repo=jonathanalumbaugh',
+        async: true,
+        defer: true,
+      },
     ],
   },
 
@@ -140,7 +150,10 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   modules: [
     '@nuxtjs/apollo',
+    '@nuxtjs/axios',
     '@nuxtjs/prismic',
+    '@nuxtjs/proxy',
+    '@nuxtjs/recaptcha',
     '@nuxtjs/sitemap',
     ['@nuxtjs/pwa', { icon: false }],
   ],
@@ -153,10 +166,24 @@ module.exports = {
     },
   },
 
+  axios: {
+    proxy: true,
+  },
+
   prismic: {
     endpoint: 'https://jonathanalumbaugh.cdn.prismic.io/api/v2',
     // linkResolver: '@/plugins/link-resolver',
     // htmlSerializer: '@/plugins/html-serializer',
+  },
+
+  proxy: {
+    '/api': process.env.VERCEL_URL || 'http://localhost:3000',
+  },
+
+  recaptcha: {
+    hideBadge: true, // Hide badge element (v3 & v2 via size=invisible)
+    siteKey: '6LcvAOAZAAAAAN_eV5nZ2Jm927-HBTICqQPU6oCx', // Site key for requests
+    version: 3, // Version
   },
 
   // !-------------------------------------------------------------------------!
