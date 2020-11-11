@@ -111,8 +111,8 @@ export default {
           token,
         })
 
-        if ((res.success = true)) this.$modal.show('contact-modal')
-        else throw new Error('looks like you might not be a human :(')
+        if (res.success === true) this.$modal.show('contact-modal')
+        else throw new Error(`Looks like you might not be a human :(`)
       } catch (e) {
         console.log('Error:', e)
       }
