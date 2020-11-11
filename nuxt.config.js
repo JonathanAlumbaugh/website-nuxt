@@ -170,14 +170,6 @@ module.exports = {
     proxy: true,
   },
 
-  publicRuntimeConfig: {
-    // axios: {
-    //   baseURL: process.env.VERCEL_URL || 'http://localhost:3000',
-    // },
-
-    baseURL: process.env.VERCEL_URL || 'http://localhost:3000',
-  },
-
   prismic: {
     endpoint: 'https://jonathanalumbaugh.cdn.prismic.io/api/v2',
     // linkResolver: '@/plugins/link-resolver',
@@ -185,13 +177,7 @@ module.exports = {
   },
 
   proxy: {
-    '/api': process.env.VERCEL_URL,
-    // {
-    // target: process.env.VERCEL_URL || 'http://localhost:3000/api',
-    // pathRewrite: {
-    //   '^/api/': `${process.env.VERCEL_URL}/api/`,
-    // },
-    // },
+    '/api': process.env.VERCEL_URL || 'http://localhost:3000',
   },
 
   recaptcha: {
