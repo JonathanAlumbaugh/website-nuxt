@@ -171,9 +171,9 @@ module.exports = {
   },
 
   publicRuntimeConfig: {
-    axios: {
-      baseURL: process.env.VERCEL_URL || 'http://localhost:3000',
-    },
+    // axios: {
+    //   baseURL: process.env.VERCEL_URL || 'http://localhost:3000',
+    // },
 
     baseURL: process.env.VERCEL_URL || 'http://localhost:3000',
   },
