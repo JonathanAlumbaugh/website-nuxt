@@ -185,12 +185,13 @@ module.exports = {
   },
 
   proxy: {
-    '/api': {
-      target: process.env.VERCEL_URL || 'http://localhost:3000/api',
-      pathRewrite: {
-        '^/api/': `${process.env.baseUrl}/api/`,
-      },
-    },
+    '/api': process.env.VERCEL_URL,
+    // {
+    // target: process.env.VERCEL_URL || 'http://localhost:3000/api',
+    // pathRewrite: {
+    //   '^/api/': `${process.env.VERCEL_URL}/api/`,
+    // },
+    // },
   },
 
   recaptcha: {
