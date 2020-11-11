@@ -187,9 +187,9 @@ module.exports = {
   proxy: {
     '/api': {
       target: process.env.VERCEL_URL || 'http://localhost:3000/api',
-      // pathRewrite: {
-      //   '^/api/': `${process.env.baseUrl}/api`,
-      // },
+      pathRewrite: {
+        '^/api/': `${process.env.baseUrl}/api/`,
+      },
     },
   },
 
