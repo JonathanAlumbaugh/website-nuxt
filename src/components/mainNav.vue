@@ -135,7 +135,7 @@ export default {
         const token = await this.$recaptcha.execute('contact')
         const res = await this.$axios.$post('/api/recaptcha', { token })
 
-        if (res.success === true) this.$modal.show('contact-modal')
+        if (res.score >= 0.8) this.$modal.show('contact-modal')
         else {
           this.$modal.show('fail-modal')
           throw new Error(`Looks like you might not be a human :(`)
