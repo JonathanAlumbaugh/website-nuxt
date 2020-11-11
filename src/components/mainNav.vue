@@ -69,6 +69,34 @@
           <button @click="hide" style="flex: 1 1 50%;">&#10006;</button>
         </div>
       </modal>
+
+      <modal
+        name="fail-modal"
+        class="fail"
+        height="auto"
+        transition="fade"
+        :draggable="true"
+        :adaptive="true"
+        :pivotY="0.25"
+      >
+        <div class="dialog-content">
+          <p>
+            Sorry, it looks like you're not a human to ReCaptcha :(
+          </p>
+
+          <p class="disclaimer">
+            This site is protected by reCAPTCHA and the Google
+            <a href="https://policies.google.com/privacy">Privacy Policy</a>
+            and
+            <a href="https://policies.google.com/terms">Terms of Service</a>
+            apply.
+          </p>
+        </div>
+        <!-- Modal buttons -->
+        <div class="dialog-buttons">
+          <button @click="hide" style="flex: 1 1 50%;">&#10006;</button>
+        </div>
+      </modal>
     </ul>
   </nav>
   <!-- </div> -->
@@ -108,7 +136,10 @@ export default {
         const res = await this.$axios.$post('/api/recaptcha', { token })
 
         if (res.success === true) this.$modal.show('contact-modal')
-        else throw new Error(`Looks like you might not be a human :(`)
+        else {
+          this.$modal.show('fail-modal')
+          throw new Error(`Looks like you might not be a human :(`)
+        }
       } catch (e) {
         console.log('Error:', e)
       }
@@ -116,6 +147,7 @@ export default {
 
     hide() {
       this.$modal.hide('contact-modal')
+      this.$modal.hide('fail-modal')
     },
   },
 
