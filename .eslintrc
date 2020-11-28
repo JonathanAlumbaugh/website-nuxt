@@ -1,0 +1,16 @@
+{
+  "root": true,
+
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "sourceType": "module"
+  },
+
+  "ignorePatterns": ["src/pages/static/**"],
+
+  "extends": ["@nuxtjs/eslint-config-typescript", "prettier"],
+
+  "plugins": ["prettier"],
+
+  "rules": { "prettier/prettier": "error" }
+}
