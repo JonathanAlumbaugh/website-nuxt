@@ -8,7 +8,11 @@
 
   "ignorePatterns": ["src/pages/static/**"],
 
-  "extends": ["@nuxtjs/eslint-config-typescript", "prettier"],
+  "extends": [
+    "eslint-config-prettier",
+    "@nuxtjs/eslint-config-typescript",
+    "prettier"
+  ],
 
   "plugins": ["prettier"],
 
