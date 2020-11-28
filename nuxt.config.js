@@ -46,6 +46,16 @@ module.exports = {
     // vendor: ['jquery']
   },
 
+  buildModules: ['@nuxt/typescript-build'],
+
+  typescript: {
+    typeCheck: {
+      eslint: {
+        files: './**/*.{ts,js,vue}',
+      },
+    },
+  },
+
   plugins: [
     // !-------------------------------------------------------------------------!
     // Hack solution: include all the stuff that isn't working as JS where
