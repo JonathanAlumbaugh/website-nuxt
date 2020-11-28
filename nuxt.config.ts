@@ -1,12 +1,5 @@
-// !-------------------------------------------------------------------------!
-// This enables use of webpack plugins
-// !-------------------------------------------------------------------------!
-const webpack = require('webpack')
-
-// !-------------------------------------------------------------------------!
-// This enables changing of source directory
-// !-------------------------------------------------------------------------!
-const { resolve } = require('path')
+const { resolve } = require('path') // This enables changing of source directory
+const webpack = require('webpack') // This enables use of webpack plugins
 
 require('dotenv').config()
 
@@ -30,9 +23,9 @@ module.exports = {
       config.node = { fs: 'empty' }
 
       config.plugins = config.plugins.filter(
-        (plugin) => plugin.constructor.name !== 'UglifyJsPlugin',
+        (plugin) => plugin.constructor.name !== 'UglifyJsPlugin'
       )
-    },
+    }
 
     // !-------------------------------------------------------------------------!
     // Vendor is everything that needs to be client side or something like that
@@ -51,9 +44,9 @@ module.exports = {
   typescript: {
     typeCheck: {
       eslint: {
-        files: './**/*.{ts,js,vue}',
-      },
-    },
+        files: './**/*.{ts,js,vue}'
+      }
+    }
   },
 
   plugins: [
@@ -70,7 +63,7 @@ module.exports = {
     // { src: '~/plugins/jquery.js', ssr: false },
     // { src: '~/plugins/vue-sticky.js' },
     // { src: '~/plugins/ga.js', ssr: false },
-    { src: '~/plugins/vue-js-modal.js' },
+    { src: '~/plugins/vue-js-modal.js' }
   ],
 
   serverMiddleware: [{ path: '/api', handler: '~api/recaptchaAuth.js' }],
@@ -83,39 +76,39 @@ module.exports = {
     // !-------------------------------------------------------------------------!
     // TODO: Fix so that fancybox is not included on every page, only where necessary
     // !-------------------------------------------------------------------------!
-    '~assets/css/jquery.fancybox.css',
+    '~assets/css/jquery.fancybox.css'
   ],
 
   head: {
     htmlAttrs: {
-      lang: 'en',
+      lang: 'en'
     },
     title: '',
     meta: [
       {
         hid: 'default HID description',
         name: 'default description',
-        content: 'default content',
+        content: 'default content'
       },
       {
-        charset: 'utf-8',
+        charset: 'utf-8'
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
       },
       {
         name: 'author',
-        content: 'Jonathan Alumbaugh',
-      },
+        content: 'Jonathan Alumbaugh'
+      }
     ],
 
     link: [
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon/favicon.ico',
-      },
+        href: '/favicon/favicon.ico'
+      }
     ],
 
     script: [
@@ -129,22 +122,22 @@ module.exports = {
       { src: '/js/jquery.fancybox.js' },
       {
         src: 'https://www.googletagmanager.com/gtag/js?id=G-S3NHKKCBW9',
-        async: true,
+        async: true
       },
       { src: '/js/ga4.js' },
       {
         src:
           'https://static.cdn.prismic.io/prismic.js?new=true&repo=jonathanalumbaugh',
         async: true,
-        defer: true,
-      },
-    ],
+        defer: true
+      }
+    ]
   },
 
   manifest: {
     name: 'Jonathan',
     lang: 'en',
-    theme_color: '#ff0099',
+    theme_color: '#ff0099'
   },
 
   loading: {
@@ -152,7 +145,7 @@ module.exports = {
     // Progress bar options.
     // !-------------------------------------------------------------------------!
     color: '#00bfff',
-    height: '2px',
+    height: '2px'
   },
 
   // !-------------------------------------------------------------------------!
@@ -165,35 +158,35 @@ module.exports = {
     '@nuxtjs/proxy',
     '@nuxtjs/recaptcha',
     '@nuxtjs/sitemap',
-    ['@nuxtjs/pwa', { icon: false }],
+    ['@nuxtjs/pwa', { icon: false }]
   ],
 
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'https://jonathanalumbaugh.prismic.io/graphql',
-      },
-    },
+        httpEndpoint: 'https://jonathanalumbaugh.prismic.io/graphql'
+      }
+    }
   },
 
   axios: {
-    proxy: true,
+    proxy: true
   },
 
   prismic: {
-    endpoint: 'https://jonathanalumbaugh.cdn.prismic.io/api/v2',
+    endpoint: 'https://jonathanalumbaugh.cdn.prismic.io/api/v2'
     // linkResolver: '@/plugins/link-resolver',
     // htmlSerializer: '@/plugins/html-serializer',
   },
 
   proxy: {
-    '/api': process.env.VERCEL_URL || 'http://localhost:3000',
+    '/api': process.env.VERCEL_URL || 'http://localhost:3000'
   },
 
   recaptcha: {
     hideBadge: true, // Hide badge element (v3 & v2 via size=invisible)
     siteKey: '6LcvAOAZAAAAAN_eV5nZ2Jm927-HBTICqQPU6oCx', // Site key for requests
-    version: 3, // Version
+    version: 3 // Version
   },
 
   // !-------------------------------------------------------------------------!
@@ -202,7 +195,7 @@ module.exports = {
   sitemap: {
     path: '/sitemap.xml',
     // hostname: 'https://jonathanalumbaugh.com',
-    generate: false, // Enable when using nuxt generate
+    generate: false // Enable when using nuxt generate
   },
 
   // !-------------------------------------------------------------------------!
@@ -210,7 +203,7 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   cache: {
     max: 1000,
-    maxAge: 900000,
+    maxAge: 900000
   },
 
   // !-------------------------------------------------------------------------!
@@ -218,8 +211,8 @@ module.exports = {
   // !-------------------------------------------------------------------------!
   router: {
     // middleware: ['https'],
-    scrollBehavior: function (to, from, savedPosition) {
+    scrollBehavior(to, from, savedPosition) {
       return { x: 0, y: 0 }
-    },
-  },
+    }
+  }
 }
