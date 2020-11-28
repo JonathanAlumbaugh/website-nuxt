@@ -7,11 +7,13 @@
 
 <script>
 export default {
-  name: 'blockSmall',
+  name: 'BlockSmall',
+
   props: {
     title: {
       required: true,
     },
+
     description: {
       required: true,
     },

@@ -8,22 +8,24 @@
       <!-- TODO: Fix home button so it disappears on small screens > 600px -->
       <nuxt-link class="nav-item-1" exact to="/">
         <li class="nav-item home-hider">
-          <div class="nav-link">Home</div>
+          <div class="nav-link">
+            Home
+          </div>
         </li>
       </nuxt-link>
 
       <!-- About -->
       <nuxt-link class="nav-item-2" to="/about">
         <li class="nav-item">
-          <div class="nav-link">About</div>
+          <div class="nav-link">
+            About
+          </div>
         </li>
       </nuxt-link>
 
       <!-- Contact -->
       <a class="nav-item-3 nav-link" @click="show">
-        <li class="nav-item">
-          Contact
-        </li>
+        <li class="nav-item">Contact</li>
       </a>
 
       <!-- Contact modal -->
@@ -34,7 +36,7 @@
         transition="fade"
         :draggable="true"
         :adaptive="true"
-        :pivotY="0.25"
+        :pivot-y="0.25"
       >
         <div class="dialog-content">
           <p>
@@ -66,7 +68,9 @@
           >
             <button style="flex: 1 1 50%;">Email me!</button>
           </a>
-          <button @click="hide" style="flex: 1 1 50%;">&#10006;</button>
+          <button style="flex: 1 1 50%;" @click="hide">
+            &#10006;
+          </button>
         </div>
       </modal>
 
@@ -77,12 +81,10 @@
         transition="fade"
         :draggable="true"
         :adaptive="true"
-        :pivotY="0.25"
+        :pivot-y="0.25"
       >
         <div class="dialog-content">
-          <p>
-            Sorry, it looks like you're not a human to ReCaptcha :(
-          </p>
+          <p>Sorry, it looks like you're not a human to ReCaptcha :(</p>
 
           <p class="disclaimer">
             This site is protected by reCAPTCHA and the Google
@@ -94,7 +96,9 @@
         </div>
         <!-- Modal buttons -->
         <div class="dialog-buttons">
-          <button @click="hide" style="flex: 1 1 50%;">&#10006;</button>
+          <button style="flex: 1 1 50%;" @click="hide">
+            &#10006;
+          </button>
         </div>
       </modal>
     </ul>
@@ -104,15 +108,11 @@
 
 <script>
 export default {
-  name: 'mainNav',
+  name: 'MainNav',
 
   data() {
     return {
-      // !-------------------------------------------------!
-      // Set scroll position to nothing to begin with
-      // !-------------------------------------------------!
-      scrollPosition: null,
-      // !-------------------------------------------------!
+      scrollPosition: null, // Set scroll position to nothing to begin with
       classPicker: null,
       stickyConfig: {
         zIndex: 100,
@@ -121,14 +121,44 @@ export default {
     }
   },
 
+  computed: {
+    // Change the class based on the position in page
+    navHider: {
+      get() {
+        return this.firstName + ' ' + this.lastName
+      },
+      set(newValue) {
+        const names = newValue.split(' ')
+        this.firstName = names[0]
+        this.lastName = names[names.length - 1]
+      },
+    },
+
+    // navHider: function () {
+    //   var classPicker = 'navbarHidden';
+    //   if ( this.scrollPosition < 90 ) {
+    //     classPicker = 'navbarShown';
+    //   }
+    //   return classPicker
+    // }
+  },
+
+  async mounted() {
+    // Update scroll position when the page is mounted
+    window.addEventListener('scroll', this.updateScroll)
+
+    try {
+      await this.$recaptcha.init()
+    } catch (e) {
+      console.log('Error:', e)
+    }
+  },
+
   methods: {
-    // !-------------------------------------------------!
     // Update scroll position once there's been a change
-    // !-------------------------------------------------!
     updateScroll() {
       this.scrollPosition = window.scrollY
     },
-    // !-------------------------------------------------!
 
     async show() {
       try {
@@ -151,49 +181,10 @@ export default {
     },
   },
 
-  // !-------------------------------------------------!
-  // Update scroll position when the page is mounted
-  // !-------------------------------------------------!
-  async mounted() {
-    window.addEventListener('scroll', this.updateScroll)
-
-    try {
-      await this.$recaptcha.init()
-    } catch (e) {
-      console.log('Error:', e)
-    }
-  },
-
-  // !-------------------------------------------------!
-  // Change the class based on the position in page
-  // !-------------------------------------------------!
-  computed: {
-    navHider: {
-      get: function () {
-        return this.firstName + ' ' + this.lastName
-      },
-      set: function (newValue) {
-        var names = newValue.split(' ')
-        this.firstName = names[0]
-        this.lastName = names[names.length - 1]
-      },
-    },
-    // navHider: function () {
-    //   var classPicker = 'navbarHidden';
-    //   if ( this.scrollPosition < 90 ) {
-    //     classPicker = 'navbarShown';
-    //   }
-    //   return classPicker
-    // }
-  },
-
-  // !-------------------------------------------------!
-  // Destroy listener on page destroy
-  // !-------------------------------------------------!
   destroy() {
+    // Destroy listener on page destroy
     window.removeEventListener('scroll', this.updateScroll)
   },
-  // !-------------------------------------------------!
 }
 </script>
 

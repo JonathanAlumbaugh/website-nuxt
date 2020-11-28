@@ -1,12 +1,11 @@
 <template lang="html">
-    <h2 class="t">
-      <slot></slot>
-    </h2>
+  <h2 class="t">
+    <slot />
+  </h2>
 </template>
 
 <script>
-export default
-{
-  name: 'textH2'
+export default {
+  name: 'TextH2',
 }
 </script>

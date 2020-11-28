@@ -1,6 +1,8 @@
 <template lang="html">
   <section :id="$route.params.uid">
-    <t v-if="tagline">{{ text(tagline) }}</t>
+    <t v-if="tagline">
+      {{ text(tagline) }}
+    </t>
 
     <c
       :name="text(project_title)"
@@ -8,7 +10,7 @@
       :material="material"
       :dimension="text(dimensions)"
       :date="created"
-    ></c>
+    />
 
     <slices-block :slices="body" />
   </section>
@@ -16,11 +18,16 @@
 
 <script>
 import t from '~/components/textH2.vue'
-import featuredImg from '~/components/projectImgA.vue'
 import c from '~/components/projectCaption.vue'
 import slicesBlock from '~/components/slicesBlock.vue'
 export default {
-  name: 'project',
+  name: 'Project',
+
+  components: {
+    t,
+    c,
+    slicesBlock,
+  },
 
   async asyncData({ $prismic, params, error }) {
     try {
@@ -60,13 +67,6 @@ export default {
     text(prismicVar) {
       return this.$prismic.asText(prismicVar)
     },
-  },
-
-  components: {
-    t,
-    featuredImg,
-    c,
-    slicesBlock,
   },
 }
 </script>

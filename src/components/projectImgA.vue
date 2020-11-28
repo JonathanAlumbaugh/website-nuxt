@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="box-shadow img-1">
     <a
+      v-if="img.url"
       data-fancybox="gallery"
       :href="img.url.replace('auto=compress,format', 'auto=format')"
-      v-if="img.url"
     >
       <img
         :src="img.url"
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'projectImgA',
+  name: 'ProjectImgA',
 
   props: {
     slice: {

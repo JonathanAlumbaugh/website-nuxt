@@ -15,13 +15,14 @@
 </template>
 
 <script>
-import mainHeader from '~/components/mainHeader.vue'
 import mainNav from '../components/projectNav'
+import mainHeader from '~/components/mainHeader.vue'
 import mainFooter from '~/components/mainFooter.vue'
+
 export default {
   components: {
-    mainHeader,
     mainNav,
+    mainHeader,
     mainFooter,
   },
 }

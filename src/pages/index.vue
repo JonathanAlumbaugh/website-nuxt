@@ -4,7 +4,9 @@
     <!-- Isotope sort -->
     <isotope-sort>
       I'm a
-      <button class="btn designer" data-filter=".design">designer,</button>
+      <button class="btn designer" data-filter=".design">
+        designer,
+      </button>
       <button class="btn photographer" data-filter=".photography">
         photographer,
       </button>
@@ -12,12 +14,14 @@
         photojournalist,
       </button>
       competitive fencer, and professional referee based in Massachusetts
-      <button id="show-all" class="btn" data-filter="*">&#9679;</button>
+      <button id="show-all" class="btn" data-filter="*">
+        &#9679;
+      </button>
     </isotope-sort>
 
     <!-- Isotope grid -->
     <div id="isotope-grid" class="tt isotope-grid grid">
-      <div class="grid-sizer"></div>
+      <div class="grid-sizer" />
 
       <template v-if="!projects.loading && !projects.error">
         <isotope-item
@@ -27,12 +31,12 @@
           :img="project.cover.url"
           :uid="project._meta.uid"
           :category="project.category.title[0].text"
-        ></isotope-item>
+        />
       </template>
     </div>
 
     <!-- WIP -->
-    <t v-if="projects.featured.length">right now I'm working on</t>
+    <t v-if="projects.featured.length"> right now I'm working on </t>
     <fragment v-if="projects.featured && !projects.loading">
       <main-wip
         v-for="project in projects.featured"
@@ -42,7 +46,7 @@
         :category="project.category.title[0].text"
         :uid="project._meta.uid"
         class="tt"
-      ></main-wip>
+      />
     </fragment>
 
     <!-- Extra -->
@@ -65,6 +69,13 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import ApolloClient from 'apollo-client'
 import gql from 'graphql-tag'
 
+import { Fragment } from 'vue-fragment'
+import t from '~/components/textH2.vue'
+import tt from '~/components/tt.vue'
+import isotopeSort from '~/components/isotopeSort.vue'
+import isotopeItem from '~/components/isotopeItem.vue'
+import mainWip from '~/components/mainWip.vue'
+
 const client = new ApolloClient({
   link: PrismicLink({
     uri: 'https://jonathanalumbaugh.prismic.io/graphql',
@@ -72,26 +83,22 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
-import { Fragment } from 'vue-fragment'
-import t from '~/components/textH2.vue'
-import tt from '~/components/tt.vue'
-import isotopeGrid from '~/components/isotopeGrid.vue'
-import isotopeSort from '~/components/isotopeSort.vue'
-import isotopeItem from '~/components/isotopeItem.vue'
-import mainWip from '~/components/mainWip.vue'
-
 export default {
   // Head content all up in here
-  name: 'home',
+  name: 'Home',
 
-  data() {
-    return {
-      title: 'Jonathan',
-      projects: [],
-    }
+  // /Head content
+  components: {
+    // affix,
+    Fragment,
+    t,
+    tt,
+    isotopeSort,
+    isotopeItem,
+    mainWip,
   },
 
-  async asyncData({ $prismic, error }) {
+  async asyncData() {
     const GET_PROJECTS = gql`
       {
         allProjects {
@@ -125,6 +132,7 @@ export default {
     `
 
     try {
+      // eslint-disable-next-line prefer-const
       let { data, loading, error } = await client.query({
         query: GET_PROJECTS,
       })
@@ -152,6 +160,13 @@ export default {
     }
   },
 
+  data() {
+    return {
+      title: 'Jonathan',
+      projects: [],
+    }
+  },
+
   // apollo: {
   //   allProjects: {
   //     query: GET_PROJECTS,
@@ -169,6 +184,7 @@ export default {
             'Graphic designer. Photographer/photojournalist. Competitive fencer. Professional referee.',
         },
       ],
+
       script: [
         {
           src: '/js/isotope.pkgd.js',
@@ -181,18 +197,6 @@ export default {
         },
       ],
     }
-  },
-
-  // /Head content
-  components: {
-    // affix,
-    Fragment,
-    t,
-    tt,
-    isotopeGrid,
-    isotopeSort,
-    isotopeItem,
-    mainWip,
   },
 }
 </script>

@@ -7,12 +7,16 @@
           <!-- Add active class to both li and nuxt-link based on which is active -->
           <!-- Home -->
           <li class="nav-item">
-            <nuxt-link class="nav-link" exact to="/">Home</nuxt-link>
+            <nuxt-link class="nav-link" exact to="/">
+              Home
+            </nuxt-link>
           </li>
 
           <!-- About -->
           <li class="nav-item">
-            <nuxt-link class="nav-link" to="/about">About</nuxt-link>
+            <nuxt-link class="nav-link" to="/about">
+              About
+            </nuxt-link>
           </li>
 
           <!-- Contact -->
@@ -42,7 +46,7 @@
             transition="fade"
             :draggable="true"
             :adaptive="true"
-            :pivotY="0.25"
+            :pivot-y="0.25"
           >
             <div class="dialog-content">
               <p>
@@ -59,7 +63,9 @@
               >
                 <button style="flex: 1 1 50%;">Email me!</button>
               </a>
-              <button @click="hide" style="flex: 1 1 50%;">Never mind</button>
+              <button style="flex: 1 1 50%;" @click="hide">
+                Never mind
+              </button>
             </div>
           </modal>
         </ul>
@@ -71,17 +77,13 @@
 <script>
 // import VueSticky from 'vue-sticky'
 export default {
-  name: 'mainNav',
+  name: 'MainNav',
   // directives: {
   //   sticky: VueSticky,
   // },
   data() {
     return {
-      // !-------------------------------------------------!
-      // Set scroll position to nothing to begin with
-      // !-------------------------------------------------!
-      scrollPosition: null,
-      // !-------------------------------------------------!
+      scrollPosition: null, // Set scroll position to nothing to begin with
       classPicker: null,
       stickyConfig: {
         zIndex: 100,
@@ -89,37 +91,15 @@ export default {
       },
     }
   },
-  methods: {
-    // !-------------------------------------------------!
-    // Update scroll position once there's been a change
-    // !-------------------------------------------------!
-    updateScroll() {
-      this.scrollPosition = window.scrollY
-    },
-    // !-------------------------------------------------!
-    show() {
-      this.$modal.show('contact-modal')
-    },
-    hide() {
-      this.$modal.hide('contact-modal')
-    },
-  },
-  // !-------------------------------------------------!
-  // Update scroll position when the page is mounted
-  // !-------------------------------------------------!
-  mounted() {
-    window.addEventListener('scroll', this.updateScroll)
-  },
-  // !-------------------------------------------------!
-  // Change the class based on the position in page
-  // !-------------------------------------------------!
+
   computed: {
+    // Change the class based on the position in page
     navHider: {
-      get: function () {
+      get() {
         return this.firstName + ' ' + this.lastName
       },
-      set: function (newValue) {
-        var names = newValue.split(' ')
+      set(newValue) {
+        const names = newValue.split(' ')
         this.firstName = names[0]
         this.lastName = names[names.length - 1]
       },
@@ -138,12 +118,28 @@ export default {
     //   return classPicker
     // }
   },
-  // !-------------------------------------------------!
-  // Destroy listener on page destroy
-  // !-------------------------------------------------!
+
+  mounted() {
+    // Update scroll position when the page is mounted
+    window.addEventListener('scroll', this.updateScroll)
+  },
+
+  methods: {
+    // Update scroll position once there's been a change
+    updateScroll() {
+      this.scrollPosition = window.scrollY
+    },
+    show() {
+      this.$modal.show('contact-modal')
+    },
+    hide() {
+      this.$modal.hide('contact-modal')
+    },
+  },
+
   destroy() {
+    // Destroy listener on page destroy
     window.removeEventListener('scroll', this.updateScroll)
   },
-  // !-------------------------------------------------!
 }
 </script>

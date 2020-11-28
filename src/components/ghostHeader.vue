@@ -17,15 +17,11 @@
 
 <script>
 export default {
-  name: 'ghostHeader',
+  name: 'GhostHeader',
 
   data() {
     return {
-      // !-------------------------------------------------!
-      // Set scroll position to nothing to begin with
-      // !-------------------------------------------------!
-      scrollPosition: null,
-      // !-------------------------------------------------!
+      scrollPosition: null, // Set scroll position to nothing to begin with
       classPicker: null,
       stickyConfig: {
         zIndex: 101,
@@ -33,25 +29,20 @@ export default {
       },
     }
   },
-  methods: {
-    // !-------------------------------------------------!
-    // Update scroll position once there's been a change
-    // !-------------------------------------------------!
-    updateScroll() {
-      this.scrollPosition = window.scrollY
-    },
-    // !-------------------------------------------------!
-  },
-  // !-------------------------------------------------!
-  // Update scroll position when the page is mounted
-  // !-------------------------------------------------!
   mounted() {
+    // Update scroll position when the page is mounted
     window.addEventListener('scroll', this.updateScroll)
   },
-  // !-------------------------------------------------!
-  // Destroy listener on page destroy
-  // !-------------------------------------------------!
+
+  methods: {
+    updateScroll() {
+      // Update scroll position once there's been a change
+      this.scrollPosition = window.scrollY
+    },
+  },
+
   destroy() {
+    // Destroy listener on page destroy
     window.removeEventListener('scroll', this.updateScroll)
   },
 }

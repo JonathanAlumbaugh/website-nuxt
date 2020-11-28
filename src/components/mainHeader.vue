@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  name: 'mainHeader',
+  name: 'MainHeader',
 }
 </script>

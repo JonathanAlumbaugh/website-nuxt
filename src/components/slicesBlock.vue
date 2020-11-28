@@ -10,19 +10,19 @@
       <!-- Image Gallery slice component -->
       <template v-else-if="slice.slice_type === 'image_gallery'">
         <template v-if="slice.items.length === 1">
-          <image-gallery-1 :slice="slice" :key="'slice-' + index" />
+          <image-gallery-1 :key="'slice-' + index" :slice="slice" />
         </template>
 
         <template v-else-if="slice.items.length === 3">
-          <div class="img-gallery__wrapper" :key="`slice-${index}`">
+          <div :key="`slice-${index}`" class="img-gallery__wrapper">
             <image-gallery-1
-              :slice="slice"
               :key="'slice-' + index + '-gallery-single'"
+              :slice="slice"
             />
 
             <image-gallery-2
-              :slice="slice.items.slice(1)"
               :key="'slice-' + index + '-gallery-double'"
+              :slice="slice.items.slice(1)"
             />
           </div>
         </template>
@@ -52,29 +52,29 @@ import { Fragment } from 'vue-fragment'
 const TextSlice = () => import('~/components/textH3.vue')
 const ImageGallery1 = () => import('~/components/projectImgA.vue')
 const ImageGallery2 = () => import('~/components/projectImgB.vue')
-const ImageGallery3 = () => import('~/components/projectImgC.vue')
+// const ImageGallery3 = () => import('~/components/projectImgC.vue')
 // const QuoteSlice = () => import('~/components/slices/QuoteSlice.vue')
 // const FullWidthImage = () => import('~/components/slices/FullWidthImage.vue')
 // const ImageHighlight = () => import('~/components/slices/ImageHighlight.vue')
 
 export default {
-  props: {
-    slices: {
-      required: true,
-    },
-  },
-
-  name: 'slices-block',
+  name: 'SlicesBlock',
 
   components: {
     Fragment,
     TextSlice,
     ImageGallery1,
     ImageGallery2,
-    ImageGallery3,
+    // ImageGallery3,
     // QuoteSlice,
     // FullWidthImage,
     // ImageHighlight,
+  },
+
+  props: {
+    slices: {
+      required: true,
+    },
   },
 }
 </script>

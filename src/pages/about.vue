@@ -54,7 +54,7 @@
       title="Graphic designer"
       subtitle="M.S. Walker, Feb 2018-present"
       description="Rounded out an excellent team with my web, photo, and editorial layout experience"
-    ></blk-lg>
+    />
 
     <blk-lg
       class="even"
@@ -62,7 +62,7 @@
       title="In house designer"
       subtitle="Minuteman Press Dartmouth, May 2017-present"
       description="Took over design and print prep work enabling staff to go on more in-person sales &amp; customer service calls"
-    ></blk-lg>
+    />
 
     <blk-lg
       class="odd bump"
@@ -70,7 +70,7 @@
       title="Staff photographer"
       subtitle="Horizons Inc, 2014-2016"
       description="Photographed campers, creating a varied database of photos used for promotions, social media, and to capture and preserve the memories made at camp"
-    ></blk-lg>
+    />
 
     <blk-lg
       class="even"
@@ -78,7 +78,7 @@
       title="Freelance photographer"
       subtitle="The Chronicle Newspaper, 2012-2015"
       description="Consistently delivered engaging, high-quality human interest photos for use as standalone features or to go with stories"
-    ></blk-lg>
+    />
 
     <!-- <blk-lg class="abt-body-3"
     category="designer"
@@ -92,7 +92,7 @@
       title="Volunteer"
       subtitle="Windham Area Interfaith Ministry, Jun-Oct 2013"
       description="Volunteered over 200 hours at local organization that supports underprivileged families"
-    ></blk-lg>
+    />
 
     <!-- Awards -->
     <t>I received an award for</t>
@@ -167,8 +167,15 @@ import blkLg from '~/components/blockLarge.vue'
 import blkSm from '~/components/blockSmall.vue'
 export default {
   // Head content all up in here
-  name: 'about',
-  data: function () {
+  name: 'About',
+  // /Head content
+  components: {
+    t,
+    tt,
+    blkLg,
+    blkSm,
+  },
+  data() {
     return {
       title: 'About',
     }
@@ -185,13 +192,6 @@ export default {
         },
       ],
     }
-  },
-  // /Head content
-  components: {
-    t,
-    tt,
-    blkLg,
-    blkSm,
   },
 }
 </script>

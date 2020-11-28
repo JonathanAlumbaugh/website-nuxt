@@ -1,6 +1,6 @@
 <template lang="html">
   <div :class="'img-' + className">
-    <div class="box-shadow" v-for="(image, i) in slice.items" :key="i">
+    <div v-for="(image, i) in slice.items" :key="i" class="box-shadow">
       <a data-fancybox="gallery" :href="image.gallery_image.url">
         <img
           :src="image.gallery_image.url"
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'projectImgC',
+  name: 'ProjectImgC',
 
   props: {
     slice: {

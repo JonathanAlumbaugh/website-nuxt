@@ -20,18 +20,21 @@
 
 <script>
 export default {
-  name: 'isotopeItem',
+  name: 'IsotopeItem',
 
   props: {
     name: {
       required: true,
     },
+
     img: {
       require: true,
     },
+
     uid: {
       require: true,
     },
+
     category: {
       required: true,
     },

@@ -21,7 +21,7 @@
 <script>
 export default {
   // TODO: This can't be right, so fix this.
-  name: 'projectCaption',
+  name: 'ProjectCaption',
 
   props: {
     name: {

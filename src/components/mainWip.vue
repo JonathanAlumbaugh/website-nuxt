@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'mainWip',
+  name: 'MainWip',
 
   props: {
     img: { required: true },

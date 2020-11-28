@@ -1,7 +1,7 @@
 <template>
   <!-- <affix relative-element-selector="#isotope-grid"> -->
   <t id="filters" class="isotope-sort">
-    <slot></slot>
+    <slot />
   </t>
   <!-- </affix> -->
 </template>
@@ -11,7 +11,7 @@
 import t from '~/components/textH2.vue'
 
 export default {
-  name: 'isotopeSort',
+  name: 'IsotopeSort',
   components: {
     // affix,
     t,
