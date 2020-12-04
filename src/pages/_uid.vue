@@ -1,5 +1,5 @@
 <template lang="html">
-  <section :id="$route.params.uid">
+  <section :id="$route.params.uid" class="project">
     <t v-if="tagline">{{ text(tagline) }}</t>
 
     <c
