@@ -9,7 +9,13 @@
   "ignorePatterns": ["src/pages/static/**"],
 
   "extends": [
+    "plugin:vue/essential",
+    "plugin:vue/recommended",
+    "plugin:prettier/recommended",
+    "tslint:latest",
+    "eslint:recommended",
     "eslint-config-prettier",
+    "tslint-config-prettier",
     "@nuxtjs/eslint-config-typescript",
     "prettier"
   ],
