@@ -21,7 +21,7 @@
 
       <template v-if="!projects.loading && !projects.error">
         <isotope-item
-          v-for="project in projects.data"
+          v-for="project in publicProjects"
           :key="project._meta.uid"
           :name="project.title[0].text"
           :img="project.cover.url"
@@ -91,6 +91,12 @@ export default {
     }
   },
 
+  computed: {
+    publicProjects() {
+      return this.projects.data.filter((p) => p.public === true)
+    },
+  },
+
   async asyncData({ $prismic, error }) {
     const GET_PROJECTS = gql`
       {
@@ -100,7 +106,9 @@ export default {
               _meta {
                 uid
               }
+              public
               featured
+              wip
               title
               category {
                 ... on Tag {
