@@ -37,7 +37,6 @@
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "nuxt": "^2.14.6",
-    "nuxt-ts": "^2.8.1",
     "prismic-dom": "^2.2.4",
     "prismic-javascript": "^3.0.2",
     "prismic-vue": "^2.0.1",
