@@ -103,7 +103,10 @@ export default {
   grid-template-areas: 'main main img';
 
   @media only screen and (max-width: 900px) {
-    grid-column: 1 / 5;
+    grid-column: 2 / 5;
+    grid-template-areas:
+      'main main'
+      'img img';
 
     .img-1 {
       grid-area: 'main';
@@ -114,11 +117,8 @@ export default {
     }
   }
 
-  @media only screen and (max-width: 900px) {
-    grid-column: 2 / 5;
-    grid-template-areas:
-      'main main'
-      'img img';
+  @media only screen and (max-width: 600px) {
+    grid-column: 1 / 5;
   }
 
   @media only screen and (min-width: 901px) {
