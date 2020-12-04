@@ -101,7 +101,8 @@ h5 {
   margin-top: 0;
 }
 
-p {
+p,
+li {
   font-family: $font-family-text;
   font-size: 2rem;
   line-height: 3rem;
@@ -186,6 +187,24 @@ a {
 
   &:hover {
     color: $black;
+  }
+}
+
+.project {
+  a {
+    text-decoration: underline;
+    text-decoration-color: $primary-orange;
+    text-decoration-thickness: 0.125em;
+    text-underline-offset: 1.5px;
+
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      color: $primary-magenta;
+      text-decoration-color: $primary-magenta;
+      text-underline-offset: 6px;
+      // text-decoration-thickness: 0.2em;
+    }
   }
 }
 
