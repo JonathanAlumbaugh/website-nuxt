@@ -1,25 +1,11 @@
-# Welcome to the repository for **[jonathanalumbaugh.com](https://jonathanalumbaugh.com)**
+This repository chronicles my first steps with git, implementing Vue.js for the first time, Nuxt.js, CSS grids, a whole lot of bad commits, SASS, and more for my **[website](https://jonathanalumbaugh.com)**.
 
-This repository chronicles the long and arduous process of implementing Vue.js, Nuxt.js, Isotope, CSS grids, SASS, and more on my **[website](https://jonathanalumbaugh.com)**, all while learning how the hell to use git (I'm still not sure I know).
+## Todos:
 
-## Things I've done:
-
-* Moved from pure HTML/CSS to Vue.js!
-* Moved from Vue.js to Nuxt.js!
-* Made the navbar sticky!
-* Ditched Bootstrap.css for pure CSS grids!
-* Implemented @nuxtjs/pwa progressive web app stuff!
-
-## Things I'll do:
-
-* Replace vue-sticky with VueAffix
-* Include Fancybox CSS only pages where it's necessary
-* Retool home button hiding on small views
-* Redirect to HTTPs using middleware or something...
-* Implement jQuery as a plugin?
-* Use only SASS?
-* Use webpack imagemin?
-
-<!-- TODO: link vue-sticky, VueAffix, Fancybox, @nuxtjs/pwa, and webpack imagemin -->
+- [x] Deploy on **[Vercel](https://vercel.com/)**
+- [x] Refactor with **[Prismic](https://prismic.io/)** as a CMS
+- [x] Ditch Bootstrap for pure CSS grids
+- [x] Implement @nuxtjs/pwa
+- [ ] Refactor with TypeScript
 
 Built with love and **[Nuxt.js](https://github.com/nuxt/nuxt.js)**.
