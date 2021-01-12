@@ -99,7 +99,9 @@ export default {
             node {
               _meta {
                 uid
+                lastPublicationDate
               }
+              created
               public
               featured
               wip
@@ -135,6 +137,7 @@ export default {
       const featured = dataCopy.filter((el) => el.featured)
       data = dataCopy
         .filter((el) => !el.featured && el.public === true)
+        .sort((a, b) => a.created - b.created)
 
       return { projects: { data, featured, loading, error } }
 
