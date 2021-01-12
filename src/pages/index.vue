@@ -21,7 +21,7 @@
 
       <template v-if="!projects.loading && !projects.error">
         <isotope-item
-          v-for="project in publicProjects"
+          v-for="project in projects.data"
           :key="project._meta.uid"
           :name="project.title[0].text"
           :img="project.cover.url"
@@ -91,12 +91,6 @@ export default {
     }
   },
 
-  computed: {
-    publicProjects() {
-      return this.projects.data.filter((p) => p.public === true)
-    },
-  },
-
   async asyncData({ $prismic, error }) {
     const GET_PROJECTS = gql`
       {
@@ -105,7 +99,9 @@ export default {
             node {
               _meta {
                 uid
+                lastPublicationDate
               }
+              created
               public
               featured
               wip
@@ -139,7 +135,9 @@ export default {
 
       const dataCopy = data.allProjects.edges.map((el) => el.node)
       const featured = dataCopy.filter((el) => el.featured)
-      data = dataCopy.filter((el) => !el.featured)
+      data = dataCopy
+        .filter((el) => !el.featured && el.public === true)
+        .sort((a, b) => a.created - b.created)
 
       return { projects: { data, featured, loading, error } }
 
